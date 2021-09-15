@@ -11,8 +11,8 @@ CAFECA Standard Operation Procedure
   - Develop
 
 - Product / Project
+  - User Research
   - Mockup Design
-  - User Experence Survey
   - Minimum Viable Product
   - Web Development
   - APP Development
