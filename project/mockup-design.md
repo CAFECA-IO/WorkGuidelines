@@ -1,6 +1,6 @@
 # Mockup Design
 ## 使用工具
-- [Lucid Chart](https://www.lucidchart.com/)
+- [Sketch](https://www.sketch.com/)
 
 ## 執行時程
 - 2 - 5 人日
