@@ -1,5 +1,5 @@
 # WorkGuidelines
-CAFECA Work Flow and SOP
+CAFECA Standard Operation Procedure
 
 ## 工作規範
 - General
