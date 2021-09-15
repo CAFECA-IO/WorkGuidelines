@@ -1,11 +1,13 @@
 # WorkGuidelines
-CAFECA Standard Operation Procedure 提供日常工作規範、工作流程與時程參考資訊。
+CAFECA Standard Operation Procedure
 
 ## 工作規範
 - [General](code-of-conduct/general.md)
 - [Remote Work](code-of-conduct/remote-work.md)
 
 ## 工作流程
+提供各項工作輔助工具、時程要求與產出要求資訊。
+
 ### Meeting
 團隊成員須定期參與會議，以確認團隊目標，分配工作，成果考核，以及技術分享
 - [Daily](meeting/daily)
