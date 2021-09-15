@@ -1,5 +1,5 @@
 # WorkGuidelines
-CAFECA Standard Operation Procedure
+CAFECA Standard Operation Procedure 提供日常工作規範、工作流程與時程參考資訊。
 
 ## 工作規範
 - [General](general.md)
