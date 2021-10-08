@@ -82,7 +82,7 @@ ssh -i TideBitChain.pem ubuntu@ec2-15-152-47-193.ap-northeast-3.compute.amazonaw
 
 - TideWallet-Mainnet-Database-BTC-testnat
 ```
-ssh -i TideBitChain.pem ubuntu@ec2-13-208-248-16.ap-northeast-3.compute.amazonaws.com
+ssh -i TideBitChain.pem ubuntu@ec2-13-208-253-146.ap-northeast-3.compute.amazonaws.com
 ```
 
 - TideWallet-Mainnet-Database-ETH
