@@ -57,7 +57,7 @@ ssh -i TideBitChain.pem ubuntu@ec2-13-208-42-193.ap-northeast-3.compute.amazonaw
 
 - TideWallet-Mainnet-RabbitMQ
 ```
-ssh -i TideBitChain.pem ubuntu@ec2-13-208-128-47.ap-northeast-3.compute.amazonaws.com
+ssh -i TideBitChain.pem ubuntu@ec2-13-208-184-58.ap-northeast-3.compute.amazonaws.com
 ```
 
 - TideWallet-Mainnet-Database-User
