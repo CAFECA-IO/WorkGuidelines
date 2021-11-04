@@ -12,10 +12,13 @@
 - lowerCamelCase
 
 ## Argument
+- lowerCamelCase_
+
+## Parameter (Public)
 - lowerCamelCase
 
-## Parameter
-- lowerCamelCase
+## Parameter (Private)
+- _lowerCamelCase
 
 ## Constant
 - UPPER_SNAKE_CASE
