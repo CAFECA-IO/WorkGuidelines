@@ -1,5 +1,5 @@
 # Code Convention
-1. [命名規範](#命名規範)
+1. [命名規範](./coding-convention/naming-convention.md)
 2. [物件導向設計模式](#物件導向設計模式)
    1. [開閉原則](#開閉原則)
    2. [單一職責原則](#單一職責原則)
