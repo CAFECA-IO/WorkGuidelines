@@ -18,4 +18,4 @@
 - lowerCamelCase
 
 ## Constant
-- UPPER_CASE
+- UPPER_SNAKE_CASE
