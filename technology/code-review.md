@@ -11,6 +11,7 @@
 - Record in pull request
 
 ## Sample
+[PR 101](https://github.com/CAFECA-IO/cafeca/pull/101)
 ```markdown
 ## Feature Summary
 新增英文版隱私權聲明
