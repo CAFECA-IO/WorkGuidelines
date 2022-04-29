@@ -1,7 +1,7 @@
 # Code Review
-- feature summary
-- naming rule verification
-- coding style verification
+- Feature summary
+- Naming convention verification
+- Coding style verification
 - Any new libraries ?
 - Any new Class ?
 - Any new File ?
