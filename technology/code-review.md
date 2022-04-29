@@ -20,7 +20,7 @@
 - Coding style verification: checked
 - new Library: 0
 - new Class: 0
-- new File :0
+- new File: 0
 - new loop: 0
 - new recursive: 0
 ```
