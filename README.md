@@ -2,6 +2,7 @@
 CAFECA Standard Operation Procedure
 
 ## 工作規範
+- [On Board](code-of-conduct/on-board.md)
 - [General](code-of-conduct/general.md)
 - [Remote Work](code-of-conduct/remote-work.md)
 
