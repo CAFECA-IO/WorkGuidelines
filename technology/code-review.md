@@ -8,6 +8,7 @@
 - Any new File ?
 - Any loop ?
 - Any recursive ?
+- Any high risk operation ?
 - Record in pull request
 
 ## Sample
@@ -23,4 +24,5 @@
 - new File: 0
 - new loop: 0
 - new recursive: 0
+- high risk: 0
 ```
