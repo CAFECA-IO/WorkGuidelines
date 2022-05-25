@@ -1,19 +1,15 @@
 # Mockup Design
 > v1.0.0 20220502
 
-## 執行時程
-- 2 - 5 人日
+## 使用工具
 
-## 前置需求
-- Use Case Diagram
-### 使用工具
-- [Sketch](https://www.sketch.com/)
 
-## 產出
-- wireframe
-### 規格需求
+## 產出規格
+- 檔案格式
+- 標註資訊
 
 ## SOP
+（參考用，待調整）
 - 根據 Use Case Diagram 確認需求內容
 - 設計大綱：頁面、功能項目
 - 設計文件
