@@ -1,4 +1,4 @@
-# Event Template
+# Remote Event Report
 > v1.0.0 20220502
 
 ## Event
