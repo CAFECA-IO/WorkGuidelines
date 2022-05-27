@@ -8,9 +8,8 @@ WF
 Adobe XD
 
 ## 產出規格
-（參考用，待調整）
-- 檔案格式:pdf
-- 版本資訊、作者、email
+- 檔案格式:.pdf/.xd
+- 浮水印：版本資訊、作者、email
 
 ## SOP
 - 制定 function Map
