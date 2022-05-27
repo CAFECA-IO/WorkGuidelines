@@ -22,3 +22,4 @@ Adobe After Effect
 - 設計文件：Design Guideline，產品內容視覺搞
 
 ## 參考文件
+https://drive.google.com/file/d/1lZZkBBVENF8KmPJ14ixejM-_u42pUMLe/view?usp=sharing
