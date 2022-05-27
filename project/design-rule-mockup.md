@@ -1,4 +1,5 @@
 # Design Mockup
+> v1.0.1 20220527
 > v1.0.0 20220502
 
 ## 文件代碼
@@ -18,8 +19,8 @@ Adobe After Effect
 ## SOP
 
 - 根據 Use Case Diagram 確認需求內容
-- 設計大綱：根據 UX 設計出的 wireframe，考量品牌及產品特色，設計完整視覺搞及 Design Guideline
-- 設計文件：Design Guideline，產品內容視覺搞
+- 設計大綱：根據 UX 設計出的 wireframe，考量品牌及產品特色，設計完整視覺稿及 Design Guideline
+- 設計文件：Design Guideline，產品內容視覺稿
 
 ## 參考文件
 https://drive.google.com/file/d/1lZZkBBVENF8KmPJ14ixejM-_u42pUMLe/view?usp=sharing
