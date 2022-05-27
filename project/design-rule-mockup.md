@@ -1,15 +1,15 @@
 # Design Mockup
-> v1.0.1 20220527
+> v1.0.1 20220527  
 > v1.0.0 20220502
 
 ## 文件代碼
 MK
 
 ## 使用工具
-Adobe XD
-Adobe illustrator
-Adobe photoshop
-Adobe After Effect
+Adobe XD  
+Adobe illustrator  
+Adobe photoshop  
+Adobe After Effect  
 
 ## 產出規格
 
