@@ -33,3 +33,8 @@ CAFECA Standard Operation Procedure
 ### Product
 
 ### Business
+
+### 文件代碼規範
+- 所屬專案 [A-Z]{3}
+- 文件類別 [A-Z]{2}
+- 流水號 [0-9]{5}
