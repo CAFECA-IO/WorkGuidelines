@@ -21,5 +21,5 @@
 ## Parameter (Private)
 - _lowerCamelCase
 
-## Constant
+## Static Constant
 - UPPER_SNAKE_CASE
