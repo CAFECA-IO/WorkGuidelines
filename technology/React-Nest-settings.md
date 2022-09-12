@@ -90,6 +90,40 @@
 ```
 npm install
 ```
+# [ts] 若需要使用 ts 需要設定 tsconfig.json
+
+tsconfig.json
+```
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "rootDir": "server",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["server/", "server/config/.env"]
+}
+
+```
+
+# [ts] 接著需要設定 tsconfig.build.json
+``` 
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+}
+```
 
 # 設定 .lintstagedrc
 在 root folder 建立 .lintstagedrc 檔案
