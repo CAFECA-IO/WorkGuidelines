@@ -32,7 +32,7 @@
     "ts-custom-error": "^3.2.0",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4", // 若要使用網站指標加入此行
-    "webpack": "^5.73.0", // 若要使用 webpack 加入此行
+    "webpack": "^5.73.0" // 若要使用 webpack 加入此行
   },
   "scripts": {
     "start:react": "react-scripts start",
@@ -81,7 +81,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^4.3.8",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "^13.0.3"
   }
 }
 
