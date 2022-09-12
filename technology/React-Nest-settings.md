@@ -1,6 +1,9 @@
 # Overview
 
 # package.json 設定
+為了確保下載 typescript、nest 框架、react、prettier、eslint 相關插件，需要先針對 package.json 進行設定
+
+以下提供一個包含上述需要下載的 dependencies 的 package.json:
 ```
 {
   "name": "Your package name",
@@ -16,42 +19,19 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "babel-loader": "^8.2.5",
-    "deep-equal": "^2.0.5",
-    "file-name": "^0.1.0",
-    "fs": "^0.0.1-security",
-    "hound": "^1.0.5",
-    "i18next": "^21.8.13",
-    "i18next-browser-languagedetector": "^6.1.4",
-    "i18next-express-middleware": "^2.0.0",
-    "i18next-http-backend": "^1.4.1",
-    "i18next-node-fs-backend": "^2.1.3",
-    "imap": "^0.8.19",
-    "immutability-helper": "^3.1.1",
-    "moment": "^2.29.4",
+    "babel-loader": "^8.2.5", // 若要使用 webpack 記得加入此檔案
     "nest": "^0.1.6",
-    "nestjs-i18n": "^9.1.3",
-    "node-schedule": "^2.1.0",
-    "node-tika": "^0.0.1",
-    "nodemailer": "^6.7.6",
-    "pem": "^1.14.6",
     "prettier": "^2.7.1",
-    "queue": "^6.0.2",
-    "react": "^18.1.0",
-    "react-cookie": "^4.1.1",
-    "react-dom": "^18.1.0",
-    "react-player": "^2.10.1",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.1.13", //ts es7
     "sass": "^1.53.0",
     "ts-custom-error": "^3.2.0",
     "typescript": "^4.6.4",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.73.0",
-    "xlsx": "^0.18.5"
+    "web-vitals": "^2.1.4", // 若要使用網站指標加入此行
+    "webpack": "^5.73.0", // 若要使用 webpack 加入此行
   },
   "scripts": {
     "start:react": "react-scripts start",
@@ -109,4 +89,5 @@
 
 ```
 設定完 package.json 進行 npm install
+
 # 設定 Eslintignore
