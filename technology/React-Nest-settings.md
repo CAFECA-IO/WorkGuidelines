@@ -1,9 +1,9 @@
-
-# Summary
+#
+## Summary
 為了讓 react、typescript 和 eslint 、 prettier 的整合更為方便，且避免未來發生設定錯誤而產生的報錯 error，此篇研究將 package.json、eslint、prettier 設定寫成一個範本提供參考，期待能減少因為 eslint 設定而產生的未知錯誤。 
 
-# 設定步驟
-## package.json 設定
+## 設定步驟
+### package.json 設定
 為了確保下載 typescript、nest 框架、react、prettier、eslint、pre-commit 要用的 husky 等相關插件，需要先針對 package.json 進行設定
 
 以下提供一個包含上述需要下載的 dependencies 的 package.json 範本:
@@ -92,7 +92,7 @@
 ```
 npm install
 ```
-## [ts] 若需要使用 ts 需要設定 tsconfig.json
+### [ts] 若需要使用 ts 需要設定 tsconfig.json
 
 tsconfig.json
 ```
@@ -119,7 +119,7 @@ tsconfig.json
 
 ```
 
-## [ts] 接著需要設定 tsconfig.build.json
+### [ts] 接著需要設定 tsconfig.build.json
 ``` 
 {
   "extends": "./tsconfig.json",
@@ -127,7 +127,7 @@ tsconfig.json
 }
 ```
 
-## 設定 .lintstagedrc
+### 設定 .lintstagedrc
 在 root folder 建立 .lintstagedrc 檔案
 
 將 prettier 和 eslint 加入並整合
@@ -140,7 +140,7 @@ tsconfig.json
   ]
 }
 ```
-## 設定 Eslintrc.js
+### 設定 Eslintrc.js
 ```
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -194,7 +194,7 @@ module.exports = {
 
 
 ```
-## 設定 Eslintignore
+### 設定 Eslintignore
 在 root folder 建立 .eslintignore 檔案
 
 將 eslint 需要排除的檔案（ 不要進行 eslint 的檔案 ）放入 .eslintignore
@@ -208,7 +208,7 @@ module.exports = {
 *.json
 ```
 
-## 設定 .prettierrc
+### 設定 .prettierrc
 在 root folder 建立 .prettierrc 檔案
 
 將 airbnb 的 coding style config 加入 prettier 設定檔中
@@ -230,7 +230,7 @@ module.exports = {
     "useTabs": false
 }
 ```
-## 設定 .env
+### 設定 .env
 設定一些 http port 相關的設定，可以自行加入想要的設定
 
 ```
@@ -241,7 +241,7 @@ HTTPS_ENABLE = true
 HTTP_PORT = 80
 HTTPS_PORT = 443
 ```
-## 設定 .gitignore (記得加入 package-lock.json、.env)
+### 設定 .gitignore (記得加入 package-lock.json、.env)
 
 內含一些原始內建的檔案，主要是要確認使否有將 package-lock.json、env 加入
 ```
@@ -328,7 +328,7 @@ build/
 
 ```
 
-# File Structure
+## File Structure
 前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component、pages folder 放入頁面、container folder 放入主要的 app component。
 
 另外，需要新增 public folder 放入 asset folder (images) 、 favicon.ico (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
