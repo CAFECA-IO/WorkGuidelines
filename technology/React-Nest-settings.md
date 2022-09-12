@@ -175,7 +175,7 @@ tsconfig.json
     "useTabs": false
 }
 ```
-# Folder Structure
+# File Structure
 前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component、pages folder 放入頁面、container folder 放入主要的 app component。
 
 另外，需要新增 public folder 放入 asset folder (images) 、 favicon.ico (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
@@ -183,7 +183,7 @@ tsconfig.json
 ---
 
 以下為 react 的參考 folder structure
-- 前端 folder structure
+- 前端 file structure
 
 <img width="192" alt="Screen Shot 2022-09-12 at 11 23 04 AM" src="https://user-images.githubusercontent.com/29693123/189568195-e9ab38a9-a50f-4f42-bed2-c3018f7cf646.png">
 
@@ -207,7 +207,7 @@ root.render(
 );
 ```
 
-component/about/about.js
+components/about/about.js
 ```
 import React, {Component} from 'react';
 import './about.scss';
@@ -239,7 +239,7 @@ export default About;
 
 ```
 
-component/routers/router.js
+components/routers/router.js
 ```
 import React from 'react';
 import HomePage from '../../pages/homepage/homepage';
@@ -376,7 +376,12 @@ index.html
 
 ```
 
-- 後端 folder structure
+---
+後端使用 nest 框架，此處將 nest 後端的 root folder 設置為 server
+
+在以下的 file structure 中，會有主要的 main.ts
+
+- 後端 file structure
 
 <img width="162" alt="Screen Shot 2022-09-12 at 11 26 54 AM" src="https://user-images.githubusercontent.com/29693123/189568552-14a59e51-d610-4f1c-82c0-381cf20c06e2.png">
 
