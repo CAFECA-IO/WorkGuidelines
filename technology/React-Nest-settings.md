@@ -176,15 +176,29 @@ tsconfig.json
 }
 ```
 # Folder Structure
+前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component
+
+另外需要新增 public folder 放入 asset (images) 、 favcon (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
+
+以下為 react 的參考 folder structure
 - 前端 folder structure
 
 <img width="192" alt="Screen Shot 2022-09-12 at 11 23 04 AM" src="https://user-images.githubusercontent.com/29693123/189568195-e9ab38a9-a50f-4f42-bed2-c3018f7cf646.png">
 
-在 
+參考程式碼：
 
+main.ts
+```
+```
 - public folder - index.html 入口點
 
 <img width="149" alt="Screen Shot 2022-09-12 at 11 24 55 AM" src="https://user-images.githubusercontent.com/29693123/189568430-9a297627-7d6e-4c93-ac87-fa422243bc9e.png">
+
+
+
+
+
+
 
 - 後端 folder structure
 
