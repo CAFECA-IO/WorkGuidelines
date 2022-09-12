@@ -88,8 +88,22 @@
 ```
 設定完 package.json 需要進行 npm install
 
+# 設定 .lintstagedrc
+在 root folder 建立 .lintstagedrc 檔案
+
+將 prettier 和 eslint 加入並整合
+
+```
+{
+  "**/*.{js,jsx,ts,tsx,css}": [
+    "prettier --write",
+    "eslint ."
+  ]
+}
+```
+
 # 設定 Eslintignore
-建立 .eslintignore 檔案
+在 root folder 建立 .eslintignore 檔案
 
 將 eslint 需要排除的檔案（ 不要進行 eslint 的檔案 ）放入 .eslintignore
 
@@ -102,6 +116,28 @@
 *.json
 ```
 
+# 設定 .prettierrc
+在 root folder 建立 .prettierrc 檔案
+
+將 airbnb 的 coding style config 加入 prettier 設定檔中
+
+.prettierrc
+```
+{
+    "$schema": "http://json.schemastore.org/prettierrc",
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "jsxSingleQuote": false,
+    "printWidth": 100,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+}
+```
 # Folder Structure
 前端 folder structure
 
