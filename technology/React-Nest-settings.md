@@ -99,4 +99,9 @@ public folder - index.html 入口點
 
 <img width="149" alt="Screen Shot 2022-09-12 at 11 24 55 AM" src="https://user-images.githubusercontent.com/29693123/189568430-9a297627-7d6e-4c93-ac87-fa422243bc9e.png">
 
+後端 folder structure
+
+<img width="162" alt="Screen Shot 2022-09-12 at 11 26 54 AM" src="https://user-images.githubusercontent.com/29693123/189568552-14a59e51-d610-4f1c-82c0-381cf20c06e2.png">
+
+
 
