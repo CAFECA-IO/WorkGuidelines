@@ -93,7 +93,8 @@
 
 將 eslint 需要排除的檔案（ 不要進行 eslint 的檔案 ）放入 .eslintignore
 
-.eslintignore```
+.eslintignore :
+```
 !.eslintrc.js
 /dist
 /build
