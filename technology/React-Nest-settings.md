@@ -1,3 +1,4 @@
+
 # Overview
 
 # package.json 設定
@@ -88,3 +89,6 @@
 設定完 package.json 需要進行 npm install
 
 # 設定 Eslintignore
+
+# Folder Structure
+<img width="192" alt="Screen Shot 2022-09-12 at 11 23 04 AM" src="https://user-images.githubusercontent.com/29693123/189568195-e9ab38a9-a50f-4f42-bed2-c3018f7cf646.png">
