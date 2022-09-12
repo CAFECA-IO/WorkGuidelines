@@ -87,6 +87,9 @@
 
 ```
 設定完 package.json 需要進行 npm install
+```
+npm install
+```
 
 # 設定 .lintstagedrc
 在 root folder 建立 .lintstagedrc 檔案
