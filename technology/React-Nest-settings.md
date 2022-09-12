@@ -3,7 +3,7 @@
 # package.json 設定
 為了確保下載 typescript、nest 框架、react、prettier、eslint、pre-commit 要用的 husky 等相關插件，需要先針對 package.json 進行設定
 
-以下提供一個包含上述需要下載的 dependencies 的 package.json:
+以下提供一個包含上述需要下載的 dependencies 的 package.json 範本:
 ```
 {
   "name": "Your package name",
