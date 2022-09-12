@@ -176,7 +176,7 @@ tsconfig.json
 }
 ```
 # Folder Structure
-前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component
+前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component、pages folder 放入頁面、container folder 放入主要的 app component
 
 另外需要新增 public folder 放入 asset (images) 、 favcon (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
 
