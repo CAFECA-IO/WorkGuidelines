@@ -27,7 +27,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "reflect-metadata": "^0.1.13", //ts es7
-    "sass": "^1.53.0",
+    "sass": "^1.53.0", // 若要使用 sass 加入這行
     "ts-custom-error": "^3.2.0",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4", // 若要使用網站指標加入此行
