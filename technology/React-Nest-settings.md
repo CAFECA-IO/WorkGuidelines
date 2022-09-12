@@ -640,7 +640,7 @@ curl -X GET http://localhost/api/v1/chinasun/programlist
 
 若收到回傳 test 表示 node server 已經成功被運行
 
-接下來我們就可以試試看檢查 eslint 的功能，可以執行以下 command 進行檢查
+接下來我們就可以試試看 eslint 、 prettier 的功能，可以執行以下 command 進行檢查
 ```
 npm run validate
 ```
