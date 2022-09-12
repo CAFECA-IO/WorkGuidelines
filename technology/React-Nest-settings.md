@@ -143,54 +143,55 @@ tsconfig.json
 ## 設定 Eslintrc.js
 ```
 module.exports = {
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2021, // 支援 ECMAScript2019
-    sourceType: 'module', // 使用 ECMAScript ****module
     ecmaFeatures: {
-      jsx: true, // 支援 JSX
-      experimentalObjectRestSpread: true,
+      jsx: true,
     },
+  },
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+  ],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    'plugin:import/typescript',
+  ],
+  rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
     'import/resolver': {
       typescript: {},
-    },
-  },
-  // 加上 ts 相關規則
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:import/recommended',
-        'eslint:recommended',
-        'plugin:react/recommended',
-      ],
-      parser: '@typescript-eslint/parser',
-      plugins: [      
-      'react',
-      '@typescript-eslint'],
-      rules: {
-        '@typescript-eslint/ban-types': [
-          'error',
-          {
-            extendDefaults: true,
-            types: {
-              '{}': false,
-            },
-          },
-        ],
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
-  ],
-  extends: ['plugin:import/errors', 'plugin:import/typescript'],
-  // 整合 prettier 和解決 prettier 衝突問題
-  plugins: ['prettier'],
+    react: {
+      version: 'detect'
+    }
+  },
 };
+
 
 ```
 ## 設定 Eslintignore
