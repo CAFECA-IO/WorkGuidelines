@@ -1,7 +1,7 @@
 # Overview
 
 # package.json 設定
-為了確保下載 typescript、nest 框架、react、prettier、eslint 相關插件，需要先針對 package.json 進行設定
+為了確保下載 typescript、nest 框架、react、prettier、eslint、precommit 要用的 husky 等相關插件，需要先針對 package.json 進行設定
 
 以下提供一個包含上述需要下載的 dependencies 的 package.json:
 ```
@@ -88,6 +88,6 @@
 }
 
 ```
-設定完 package.json 進行 npm install
+設定完 package.json 需要進行 npm install
 
 # 設定 Eslintignore
