@@ -176,9 +176,11 @@ tsconfig.json
 }
 ```
 # Folder Structure
-前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component、pages folder 放入頁面、container folder 放入主要的 app component
+前端 react 的部分需要新增 src folder 放入主程式， 再新增 component 資料夾放入 react component、pages folder 放入頁面、container folder 放入主要的 app component。
 
-另外需要新增 public folder 放入 asset (images) 、 favcon (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
+另外，需要新增 public folder 放入 asset folder (images) 、 favicon.ico (網站縮圖) 、 index.html（入口 html) 、 manifest.json (網站縮圖尺寸等設定）
+
+---
 
 以下為 react 的參考 folder structure
 - 前端 folder structure
@@ -187,18 +189,192 @@ tsconfig.json
 
 參考程式碼：
 
-main.ts
+index.js
 ```
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import './index.scss';
+import App from './container/app/app';
+
+// create react root
+const root = createRoot(document.getElementById('root'));
+
+// initialize I18nProvider, CookieProvider, App
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 ```
+
+component/about/about.js
+```
+import React, {Component} from 'react';
+import './about.scss';
+
+class About extends Component {
+  // A constructor is used to inherit the value (prop)  from upper class
+  /**
+   * @param props means value from the upper class
+   */
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  // show the text in about component
+  render() {
+    return (
+      <div className="c_about">
+        <div>
+          <div className="title">關於我們</div>
+        </div>
+        <div> Test sample</div>
+      </div>
+    );
+  }
+}
+
+export default About;
+
+```
+
+component/routers/router.js
+```
+import React from 'react';
+import HomePage from '../../pages/homepage/homepage';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+// routers return the BrowserRouter and pages(viewer)
+const routers = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default routers;
+
+```
+
+container/app/app.js
+```
+import React from 'react';
+import './app.scss';
+import Routers from '../../components/routers/routers';
+
+const APP = () => {
+  // app create routers
+  return <Routers></Routers>;
+};
+
+export default APP;
+
+```
+
+pages/homepage/homepage.js
+```
+import React, {Component} from 'react';
+import About from '../../components/about/about';
+import './homepage.scss';
+
+class HomePage extends Component {
+  render() {
+    // put header , chinasuntv, programlist, about, contact, footer in the homepage
+    return <About></About>;
+  }
+}
+
+export default HomePage;
+
+```
+
 - public folder - index.html 入口點
 
 <img width="149" alt="Screen Shot 2022-09-12 at 11 24 55 AM" src="https://user-images.githubusercontent.com/29693123/189568430-9a297627-7d6e-4c93-ac87-fa422243bc9e.png">
+ 
+參考程式碼：
 
+manifest.json
+```
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
 
+```
 
+index.html
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>website title</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+```
 
 - 後端 folder structure
 
