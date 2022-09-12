@@ -379,11 +379,17 @@ index.html
 ---
 後端使用 nest 框架，此處將 nest 後端的 root folder 設置為 server
 
-在以下的 file structure 中，會有主要的 main.ts
+在以下的 file structure 中，會有主要的啟動 module 的 main.ts、主要的 module : app_module.ts、主要的 controller : app_controller.ts、主要的 app service app_service.ts，其他的 folder 介紹則如下：
+
+- controller folder: 放入其他新建立的 controller
+- service folder: 放入其他新建立的 service
+- module folder: 放入其他新建立的 module
+- middleware folder: 放入主要的 middleware
+- util: 任何要共用的程式碼 function 放入此
 
 - 後端 file structure
 
-<img width="162" alt="Screen Shot 2022-09-12 at 11 26 54 AM" src="https://user-images.githubusercontent.com/29693123/189568552-14a59e51-d610-4f1c-82c0-381cf20c06e2.png">
+<img width="163" alt="Screen Shot 2022-09-12 at 1 32 02 PM" src="https://user-images.githubusercontent.com/29693123/189580336-b750a208-858d-4bb5-9ec2-9b40089436b8.png">
 
 
 
