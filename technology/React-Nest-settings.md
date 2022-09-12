@@ -1,5 +1,6 @@
 
-# Overview
+# Summary
+為了讓 react、typescript 和 eslint 、 prettier 的整合更為方便，且避免未來發生設定錯誤而產生的報錯 error，此篇研究將 package.json、eslint、prettier 設定寫成一個範本提供參考，期待能減少因為 eslint 設定而產生的未知錯誤。 
 
 # package.json 設定
 為了確保下載 typescript、nest 框架、react、prettier、eslint、pre-commit 要用的 husky 等相關插件，需要先針對 package.json 進行設定
@@ -472,7 +473,13 @@ index.html
 
 ```
 
+在完成上述的架設後，需要執行 npm run build:react 來 build react
+```
+npm run build:react
+```
+
 ---
+
 後端使用 nest 框架，此處將 nest 後端的 root folder 設置為 server
 
 在以下的 file structure 中，會有用來啟動 module 的 main.ts、主要的 module : app_module.ts、主要的 controller : app_controller.ts、主要的 app service app_service.ts，其他的 folder 介紹則如下：
@@ -547,7 +554,7 @@ import MiddlewaremainMiddleware from './middleware/middlewaremain_middleware';
 // import ConfigModule, ApiModule
 @Module({
   imports: [
-    // original host Module
+    // original host Module -> 用來設定 run 前端的 static file
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'build'),
       exclude: ['/api/v1*'],
@@ -585,11 +592,11 @@ app_controller.ts
 ```
 import {Controller, Get} from '@nestjs/common';
 
-@Controller()
+@Controller('chinasun')
 class AppController {
-  @Get()
+  @Get('programlist')
   getHello() {
-    return 404;
+    return 'test';
   }
 }
 
@@ -612,3 +619,40 @@ export default AppService;
 
 ```
 
+接著我們可以下以下 command 來 build nest
+
+```
+npm run build:nest
+```
+
+執行後端 node server
+```
+npm run start
+```
+
+以下提供 Server API 測試方式：
+
+
+curl -X GET http://localhost/api/v1/chinasun/programlist
+
+若收到回傳 test 表示 node server 已經成功被運行
+
+接下來我們就可以試試看檢查 eslint 的功能，可以執行以下 command 進行檢查
+```
+npm run validate
+```
+
+# Reference
+reflect metadata: https://jkchao.github.io/typescript-book-chinese/tips/metadata.html#%E5%9F%BA%E7%A1%80
+
+eslint 相關問題： 
+
+https://blog.csdn.net/keepfriend/article/details/100858645
+
+https://stackoverflow.com/questions/68878189/eslint-definition-for-rule-import-extensions-was-not-found
+
+https://stackoverflow.com/questions/55198502/using-eslint-with-typescript-unable-to-resolve-path-to-module
+
+react eslint 設定： https://ithelp.ithome.com.tw/articles/10217743
+
+airbnb 的相關問題： https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
