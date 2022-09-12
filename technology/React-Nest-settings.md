@@ -176,15 +176,17 @@ tsconfig.json
 }
 ```
 # Folder Structure
-前端 folder structure
+- 前端 folder structure
 
 <img width="192" alt="Screen Shot 2022-09-12 at 11 23 04 AM" src="https://user-images.githubusercontent.com/29693123/189568195-e9ab38a9-a50f-4f42-bed2-c3018f7cf646.png">
 
-public folder - index.html 入口點
+在 
+
+- public folder - index.html 入口點
 
 <img width="149" alt="Screen Shot 2022-09-12 at 11 24 55 AM" src="https://user-images.githubusercontent.com/29693123/189568430-9a297627-7d6e-4c93-ac87-fa422243bc9e.png">
 
-後端 folder structure
+- 後端 folder structure
 
 <img width="162" alt="Screen Shot 2022-09-12 at 11 26 54 AM" src="https://user-images.githubusercontent.com/29693123/189568552-14a59e51-d610-4f1c-82c0-381cf20c06e2.png">
 
