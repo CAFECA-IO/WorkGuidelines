@@ -1,4 +1,4 @@
-#
+# React 、 Nest 建立步驟
 ## Summary
 為了讓 react、typescript 和 eslint 、 prettier 的整合更為方便，且避免未來發生設定錯誤而產生的報錯 error，此篇研究將 package.json、eslint、prettier 設定寫成一個範本提供參考，期待能減少因為 eslint 設定而產生的未知錯誤。 
 
