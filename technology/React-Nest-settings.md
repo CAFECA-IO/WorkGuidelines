@@ -381,11 +381,11 @@ index.html
 
 在以下的 file structure 中，會有用來啟動 module 的 main.ts、主要的 module : app_module.ts、主要的 controller : app_controller.ts、主要的 app service app_service.ts，其他的 folder 介紹則如下：
 
-- controller folder: 放入其他新建立的 controller
-- service folder: 放入其他新建立的 service
-- module folder: 放入其他新建立的 module
-- middleware folder: 放入主要的 middleware
-- util: 任何要共用的程式碼 function 放入此
+  * controller folder: 放入其他新建立的 controller
+  * service folder: 放入其他新建立的 service
+  * module folder: 放入其他新建立的 module
+  * middleware folder: 放入主要的 middleware
+  * util: 任何要共用的程式碼 function 放入此
 
 - 後端 file structure
 
