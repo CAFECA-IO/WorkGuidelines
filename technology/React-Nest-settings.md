@@ -44,7 +44,7 @@
     "check-format": "prettier --ignore-path .gitignore --list-different \"**/*.+(js|ts|json)\"",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "lint": "eslint --ignore-path .gitignore .",
-    "validate": "npm run check-format && npm run lint"
+    "validate": "npm run lint && npm run check-format"
   },
   "husky": {
     "hooks": {
@@ -89,6 +89,18 @@
 設定完 package.json 需要進行 npm install
 
 # 設定 Eslintignore
+建立 .eslintignore 檔案
+
+將 eslint 需要排除的檔案（ 不要進行 eslint 的檔案 ）放入 .eslintignore
+
+.eslintignore
+```
+!.eslintrc.js
+/dist
+/build
+*.html
+*.json
+```
 
 # Folder Structure
 前端 folder structure
