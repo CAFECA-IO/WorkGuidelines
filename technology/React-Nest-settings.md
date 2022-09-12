@@ -39,7 +39,6 @@
     "build:nest": "nest build",
     "debug:nest": "nest start --debug --watch",
     "build:react": "react-scripts build",
-    "test:react": "react-scripts test",
     "eject:react": "react-scripts eject",
     "check-format": "prettier --ignore-path .gitignore --list-different \"**/*.+(js|ts|json)\"",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
@@ -82,8 +81,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^4.3.8",
     "lint-staged": "^13.0.3",
-    "react-i18next": "^11.18.1",
-    "video.js": "^7.19.2"
   }
 }
 
