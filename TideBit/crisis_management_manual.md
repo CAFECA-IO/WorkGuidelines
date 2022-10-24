@@ -41,7 +41,7 @@ WHERE
 INSERT INTO account_versions (id, member_id, account_id, reason, balance, locked, fee, amount, modifiable_id, modifiable_type, created_at, updated_at, currency, fun)
 		VALUES(DEFAULT, 4724, 859507, 610, 29281.27545, -29281.27545, 0, 27919.080972, 391839558, 'Order', NOW(), NOW(), 34, 1);
 ```
-4. 更新用戶餘額（將用戶餘額恢復成掛 order_id: 391839558 的委託之前的餘額）
+4. 更新用戶餘額（將用戶餘額恢復成掛 order_id: 391839558 的委託之前的餘額），account（id = 859507）對應的是 member_id：4724，USDT 的帳號 id。
 ```
 UPDATE
 	accounts
