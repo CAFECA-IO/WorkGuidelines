@@ -1,5 +1,5 @@
 # Code Review
-> v1.0.0 20220429
+> v1.0.1 20221028
 - Feature summary
 - [Naming convention](coding-convention/naming-convention.md) verification
 - Coding style verification
@@ -8,6 +8,7 @@
 - Any new File ?
 - Any loop ?
 - Any recursive ?
+- Any SQL operation ?
 - Any high risk operation ?
 - Record in pull request
 
@@ -24,5 +25,6 @@
 - new File: 0
 - new loop: 0
 - new recursive: 0
+- new SQL: 0
 - high risk: 0
 ```
