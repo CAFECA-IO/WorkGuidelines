@@ -23,5 +23,11 @@ Basic Information:
 > Test Case Result: Documents/${Project}/testresult/${Document}
 
 ## Bug Issues
+- Test Environment
+- How To Reproduce
+- Exception Description
+- Expect Result
+- Refference
+- [Example](https://github.com/CAFECA-IO/TideBitEx/issues/1026)
 
 ## To Be Verified Issues
