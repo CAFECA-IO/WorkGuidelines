@@ -1,8 +1,8 @@
 # Quality Assurance Work Flow
-- Test Cases
-- Test Report
-- Bug Issues
-- To Be Verified Issues
+- [Test Cases](#test-cases)
+- [Test Report](#test-report)
+- [Bug Issues](#bug-issues)
+- [To Be Verified Issues](#to-be-verified-issues)
 
 ## Test Cases
 > Path: Documents/${Project}/testcases/${Document}
