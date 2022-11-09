@@ -5,10 +5,8 @@
 - 開啟安裝程式進行安裝
 - 安裝完成後，打開本機終端機，輸入指令
 ```shell
-node
-12+34
+node -v
 ```
-若回應答案 46 ，表示安裝成功
 
 # 2. 安裝 VSCode & 設定 IDE
 - [VSCode 官網](https://code.visualstudio.com/)
@@ -20,7 +18,7 @@ node
   - 3. 將 Editor:Default Formatter 設定為 Prettier-Code formatter
   - Prettier 套件會在存檔(Command + S)時自動整理程式碼格式
 
-# 3. 安裝 create-next-app
+# 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
 npx create-next-app
@@ -35,7 +33,7 @@ npm run dev
 
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
-# 4. 安裝 create-react-app
+# 4. 建立 React 專案
 - 打開終端機，輸入指令
 ```shell
 npx create-react-app {projectName}
