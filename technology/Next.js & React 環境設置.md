@@ -32,6 +32,7 @@ Y
 npm install
 npm run dev
 ```
+
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
 # 4. 安裝 create-react-app
