@@ -18,6 +18,10 @@ node -v
   - 3. 將 Editor:Default Formatter 設定為 Prettier-Code formatter
   - Prettier 套件會在存檔(Command + S)時自動整理程式碼格式
 
+## 2.1 安裝版本控制系統
+
+## 2.2 設定 Precommit 機制
+
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
