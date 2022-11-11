@@ -20,6 +20,8 @@ node -v
   - Prettier 套件會在存檔(Command + S)時自動整理程式碼格式
 
 ## 2.1 安裝版本控制系統
+1. 在延伸模組中安裝 Git History 與 GitLens — Git supercharged
+2. 
 
 ## 2.2 設定 Precommit 機制
 
