@@ -7,6 +7,7 @@
 ```shell
 node -v
 ```
+- 回傳版本號代表 Node 安裝成功
 
 # 2. 安裝 VSCode & 設定 IDE
 - [VSCode 官網](https://code.visualstudio.com/)
@@ -49,3 +50,5 @@ npm start
 ```
 - 執行完成後打開 http://localhost:3000/ ，看到旋轉的 React 代表 project 已成功運作
 
+# 參考來源
+[VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
