@@ -9,6 +9,9 @@
 ## Class
 - UpperCamelCase
 
+## React Component
+- UpperCamelCase
+
 ## Function
 - lowerCamelCase
 
