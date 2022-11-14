@@ -20,14 +20,14 @@ node -v
   - Prettier 套件會在存檔(Command + S)時自動整理程式碼格式
 
 ## 2.1 安裝版本控制系統
-1. 在「延伸模組」中安裝 Git Extension Pack
-2. 擴充包安裝完成後可能會彈出要求安裝 Git 軟體的視窗，點擊安裝
-3. 在 VS Code 新增終端機，輸入以下指令加入用戶標籤
+- 在「延伸模組」中安裝 Git Extension Pack
+- 擴充包安裝完成後可能會彈出要求安裝 Git 軟體的視窗，點擊安裝
+  - git version 2.37.0 (Apple Git-136)
+- 在 VS Code 新增終端機，輸入以下指令加入用戶標籤
 ```shell
 git config --global user.email "your email"
 git config --global user.name "your name"
 ```
-4. 在左邊工具列的「原始檔控制」，點擊「將存放庫初始化」，建立 git 存放庫
 
 ## 2.2 設定 Precommit 機制
 
