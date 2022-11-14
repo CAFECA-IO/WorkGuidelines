@@ -30,6 +30,10 @@ git config --global user.name "your name"
 ```
 
 ## 2.2 設定 Precommit 機制
+- 安裝 pre-commit
+```shell
+python3 -m pip install pre-commit
+```
 
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
