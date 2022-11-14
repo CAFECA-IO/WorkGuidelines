@@ -21,7 +21,13 @@ node -v
 
 ## 2.1 安裝版本控制系統
 1. 在「延伸模組」中安裝 Git Extension Pack
-2. 在左邊工具列的「原始檔控制」，點擊「將存放庫初始化」，建立 git 存放庫
+2. 擴充包安裝完成後可能會彈出要求安裝 Git 軟體的視窗，點擊安裝
+3. 在 VS Code 新增終端機，輸入以下指令加入用戶標籤
+```shell
+git config --global user.email "your email"
+git config --global user.name "your name"
+```
+4. 在左邊工具列的「原始檔控制」，點擊「將存放庫初始化」，建立 git 存放庫
 
 ## 2.2 設定 Precommit 機制
 
@@ -53,5 +59,5 @@ npm start
 - 執行完成後打開 http://localhost:3000/ ，看到旋轉的 React 代表 project 已成功運作
 
 # 參考來源
-[VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
-[VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
+- [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
+- [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
