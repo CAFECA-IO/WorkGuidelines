@@ -45,6 +45,11 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 ```
+- 安裝 husky
+```shell
+npm install -D husky@4
+npm install -D husky
+```
 - Commit 指令(要先 Stage Changes)
 ```shell
 git commit -m "Your Commit"
