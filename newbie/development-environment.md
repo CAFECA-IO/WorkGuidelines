@@ -30,11 +30,22 @@ git config --global user.name "your name"
 ```
 
 ## 2.2 設定 Precommit 機制
-
+- 安裝 pre-commit
 ```shell
-
+pip3 install pre-commit 
+pre-commit install   
 ```
-
+- 在專案下設定 .pre-commit-config.yaml 這個 config 檔
+```shell
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+```
+- Commit 指令
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
