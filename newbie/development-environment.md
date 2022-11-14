@@ -45,7 +45,10 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 ```
-- Commit 指令
+- Commit 指令(要先 Stage Changes)
+```shell
+git commit -m "Your Commit"
+```
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
