@@ -49,6 +49,7 @@ repos:
 ```shell
 git commit -m "Your Commit"
 ```
+- 如果出現 "husky > pre-commit (node v18.12.1)" 訊息，在專案根目錄下 Ctrl + Command + . ，進入 .git/hook ，將 pre-commit 檔案刪除
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
