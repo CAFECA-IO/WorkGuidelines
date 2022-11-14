@@ -1,4 +1,5 @@
 # 1. 安裝 Node.js & npm
+>2.2 20221114 測試不通過
 - [Node.js 官網](https://nodejs.org/en/)
 - 選擇最新的 LTS 版本，較為穩定。
   - 注意： npm 5.2 以上的才有包含 npx
