@@ -1,5 +1,4 @@
 # 1. 安裝 Node.js & npm
->2.2 20221114 測試不通過
 - [Node.js 官網](https://nodejs.org/en/)
 - 選擇最新的 LTS 版本，較為穩定。
   - 注意： npm 5.2 以上的才有包含 npx
@@ -41,9 +40,13 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
-      - id: check-yaml
+      - id: check-yaml 
+      - id: check-json
+      - id: check-xml
       - id: end-of-file-fixer
       - id: trailing-whitespace
+      - id: check-merge-conflict
+      - id: pretty-format-json
 ```
 - 將 pre-commit 設定到 git hooks
 ```shell
