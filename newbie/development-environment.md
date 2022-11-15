@@ -28,6 +28,10 @@ node -v
 git config --global user.email "your email"
 git config --global user.name "your name"
 ```
+- 建立 local repository
+```shell
+git init
+```
 ## 2.2 設定 Precommit 機制
 - 安裝 pre-commit
 ```shell
@@ -54,15 +58,22 @@ pre-commit install
 ```shell
 echo $PATH
 ```
-- 如果沒有 "/Users/{Your_Name}/Library/Python/3.8/bin" 就補上去
+- 如果沒有就補上去
+  - Python version 3.9
 ```shell
-PATH=$PATH:/Users/{Your_Name}/Library/Python/3.8/bin
+PATH=$PATH:/Users/{Your_Name}/Library/Python/3.9/bin
 ```
 - 執行 Commit 指令(記得先 Stage Changes)
 ```shell
 git commit -m "Your Commit"
 ```
-- 如果出現 "Your pre-commit configuration is unstaged." 錯誤訊息，將 .pre-commit-config.yaml commit 後再試一次
+如果出現 "Your pre-commit configuration is unstaged." 錯誤訊息，將 .pre-commit-config.yaml commit 後再試一次
+
+- 加入 Github repository
+```shell
+git remote add origin <your url>
+git push -u origin main
+```
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
