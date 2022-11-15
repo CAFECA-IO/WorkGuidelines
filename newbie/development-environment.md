@@ -34,19 +34,18 @@ git config --global user.name "your name"
 ```shell
 pip3 install pre-commit  
 ```
-- 在專案下設定 .pre-commit-config.yaml 這個 config 檔
+- 在專案下設定 .pre-commit-config.yaml 這個 config 檔(以下//後為說明，套用時記得刪除)
 ```shell
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
-      - id: check-yaml 
-      - id: check-json
-      - id: check-xml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-merge-conflict
-      - id: pretty-format-json
+      - id: check-yaml //檢查 yaml 格式是否正確
+      - id: check-json //檢查 json 格式是否正確
+      - id: check-xml //檢查 xml 格式是否正確
+      - id: end-of-file-fixer //修正檔案結尾
+      - id: trailing-whitespace //移除行尾空白
+      - id: pretty-format-json //檢查 json 格式是否整齊
 ```
 - 將 pre-commit 設定到 git hooks
 ```shell
