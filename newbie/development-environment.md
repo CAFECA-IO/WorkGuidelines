@@ -51,16 +51,19 @@ repos:
 ```shell
 pre-commit install  
 ```
-- 安裝 husky
+- 如果出現 'pre-commit: command not found' 的錯誤，檢查看看環境變數
 ```shell
-npm install -D husky@4
-npm install -D husky
+echo $PATH
 ```
-- 執行 Commit 指令(要先 Stage Changes)
+- 如果沒有 "/Users/{Your_Name}/Library/Python/3.8/bin" 就補上去
+```shell
+PATH=$PATH:/Users/{Your_Name}/Library/Python/3.8/bin
+```
+- 執行 Commit 指令(記得先 Stage Changes)
 ```shell
 git commit -m "Your Commit"
 ```
-- 如果出現 "husky > pre-commit (node v18.12.1)" 訊息，在專案根目錄下 Ctrl + Command + . ，進入 .git/hook ，將 pre-commit 檔案刪除
+- 如果出現 "Your pre-commit configuration is unstaged." 錯誤訊息，將 .pre-commit-config.yaml commit 後再試一次
 # 3. 建立 Next 專案 
 - 打開本機終端機，輸入指令
 ```shell
@@ -91,3 +94,4 @@ npm start
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
+- [pre-commit hooks 設置步驟](https://ashine02.medium.com/python-pre-commit-hook-%E8%A8%AD%E7%BD%AE%E6%AD%A5%E9%A9%9F-25d98f44183b)
