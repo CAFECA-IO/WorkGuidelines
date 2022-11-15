@@ -33,8 +33,7 @@ git config --global user.name "your name"
 ## 2.2 設定 Precommit 機制
 - 安裝 pre-commit
 ```shell
-pip3 install pre-commit 
-pre-commit install   
+pip3 install pre-commit  
 ```
 - 在專案下設定 .pre-commit-config.yaml 這個 config 檔
 ```shell
@@ -46,12 +45,16 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 ```
+- 將 pre-commit 設定到 git hooks
+```shell
+pre-commit install  
+```
 - 安裝 husky
 ```shell
 npm install -D husky@4
 npm install -D husky
 ```
-- Commit 指令(要先 Stage Changes)
+- 執行 Commit 指令(要先 Stage Changes)
 ```shell
 git commit -m "Your Commit"
 ```
