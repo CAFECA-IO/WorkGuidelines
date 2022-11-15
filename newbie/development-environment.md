@@ -28,7 +28,6 @@ node -v
 git config --global user.email "your email"
 git config --global user.name "your name"
 ```
-
 ## 2.2 設定 Precommit 機制
 - 安裝 pre-commit
 ```shell
@@ -95,3 +94,4 @@ npm start
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
 - [pre-commit hooks 設置步驟](https://ashine02.medium.com/python-pre-commit-hook-%E8%A8%AD%E7%BD%AE%E6%AD%A5%E9%A9%9F-25d98f44183b)
+- [使用 pre-commit](https://matthung0807.blogspot.com/2021/08/pre-commit-code-check.html)
