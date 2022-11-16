@@ -1,11 +1,10 @@
 # Code Review
-> v1.0.1 20221028
+> v1.0.2 20221116
 - Feature summary
 - [Naming convention](coding-convention/naming-convention.md) verification
 - Coding style verification
 - Any new libraries ?
 - Any new Class ?
-- Any new File ?
 - Any loop ?
 - Any recursive ?
 - Any SQL operation ?
@@ -22,7 +21,6 @@
 - Coding style verification: checked
 - new Library: 0
 - new Class: 0
-- new File: 0
 - new loop: 0
 - new recursive: 0
 - new SQL: 0
