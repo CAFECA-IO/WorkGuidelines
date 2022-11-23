@@ -1,9 +1,7 @@
 # Naming Convention
-> v1.0.1 20221111
-## Folder
-- snake_case
+> v1.0.2 20221123
 
-## File
+## File and Folder
 - snake_case
 
 ## Class
@@ -26,3 +24,9 @@
 
 ## Static Constant
 - UPPER_SNAKE_CASE
+
+## Github Project
+- UpperCamelCase
+
+## Github File and Folder
+- spinal-case
