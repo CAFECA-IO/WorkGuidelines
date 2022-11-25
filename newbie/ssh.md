@@ -42,10 +42,15 @@ ssh-keygen  <==用預設的方法建立金鑰
 
 ```
 ~$ ssh-keygen
+
 Generating public/private rsa key pair.
+
 Enter file in which to save the key (/home/shirley/.ssh/id_rsa): [按Enter]
+
 Enter passphrase (empty for no passphrase): [按Enter]
+
 Enter same passphrase again: [按Enter]
+
 Your identification has been saved in /home/shirley/.ssh/id_rsa
 Your public key has been saved in /home/shirley/.ssh/id_rsa.pub
 The key fingerprint is:
