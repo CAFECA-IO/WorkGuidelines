@@ -54,7 +54,7 @@ Enter same passphrase again: [按Enter]
 Your identification has been saved in /home/shirley/.ssh/id_rsa
 Your public key has been saved in /home/shirley/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:y6A+bNJnVZ6eUegIldMr4eSO/EtNa9g7q/x5oOysciE shirley@DESKTOP-VFJQDCP
+SHA256:y6A+bNJnVZ6eUegIldMr4eSO/EtNa9g7q/x5oOysciE shirley@DCPDCP
 The key's randomart image is:
 +---[RSA 3072]----+
 |         o       |
