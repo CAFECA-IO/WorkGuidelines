@@ -92,6 +92,10 @@ ssh -i {私鑰的檔案路徑} {USER}@{SERVER}
 - 使用 IP、帳號、密碼連線登入遠端主機，127.0.0.1 為範例 IP
 
 ```
+ssh {USER}@{SERVER}
+```
+
+```
 
 > ssh ACCOUNT_NAME@127.0.0.1
 The authenticity of host '127.0.0.1 (127.0.0.1)' can't be established.
