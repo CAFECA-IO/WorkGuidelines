@@ -83,7 +83,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub {USER}@{SERVER}
 將公開金鑰放在 Linux 伺服器上之後，就可以不用打密碼登入 Linux 了：
 
 ```
-ssh {USER}@{SERVER}
+ssh -i {私鑰的檔案路徑} {USER}@{SERVER}
 
 ```
 
