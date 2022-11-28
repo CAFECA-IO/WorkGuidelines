@@ -89,18 +89,6 @@ npm run dev
 
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
-# 4. 建立 React 專案
-- 打開終端機，輸入指令
-```shell
-npx create-react-app {projectName}
-Y
-```
-```shell
-cd {projectName}
-npm start
-```
-- 執行完成後打開 http://localhost:3000/ ，看到旋轉的 React 代表 project 已成功運作
-
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
