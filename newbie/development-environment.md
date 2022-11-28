@@ -89,8 +89,11 @@ npm run dev
 
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
+# 4. 建立 API
+
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
 - [pre-commit hooks 設置步驟](https://ashine02.medium.com/python-pre-commit-hook-%E8%A8%AD%E7%BD%AE%E6%AD%A5%E9%A9%9F-25d98f44183b)
 - [使用 pre-commit](https://matthung0807.blogspot.com/2021/08/pre-commit-code-check.html)
+- [Next.js API](https://ithelp.ithome.com.tw/articles/10273049)
