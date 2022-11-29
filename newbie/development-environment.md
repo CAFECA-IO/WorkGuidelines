@@ -89,7 +89,42 @@ npm run dev
 
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
-# 4. 建立 API
+# 4. 在 Nested Routes 中建立 Link Component
+- 專案資料夾結構
+```
+|_page
+     |_index.js //localhost:3000
+     |_about.js //loclahost:3000/about
+     |_portfolio
+          |_index.js //localhost:3000/portfolio
+          |_[pageid].js //localhost:3000/portfolio/(id)
+```
+- 在 page/index.js 中引入 Link
+```
+import Link from "next/link";
+```
+- 完整 page/index.js 如下：
+```
+import Link from "next/link";
+
+function HomePage() {
+  return (
+    <div>
+      <h1>The Home Page</h1>
+      <ul>
+        <li>
+          <Link href="/about">About</Link> //指向 about.js
+        </li>
+        <li>
+          <Link href="/portfolio">Profolio</Link> 指向 portfolio/index.js
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+export default HomePage;
+```
 
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
@@ -97,3 +132,4 @@ npm run dev
 - [pre-commit hooks 設置步驟](https://ashine02.medium.com/python-pre-commit-hook-%E8%A8%AD%E7%BD%AE%E6%AD%A5%E9%A9%9F-25d98f44183b)
 - [使用 pre-commit](https://matthung0807.blogspot.com/2021/08/pre-commit-code-check.html)
 - [Next.js API](https://ithelp.ithome.com.tw/articles/10273049)
+- [Next.js Routing](https://powerfultraveling.coderbridge.io/2021/12/11/nexjs-routing/)
