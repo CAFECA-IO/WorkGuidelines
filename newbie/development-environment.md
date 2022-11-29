@@ -126,6 +126,9 @@ function HomePage() {
 export default HomePage;
 ```
 # 5. 建立 API Error
+```
+npm install http-status
+```
 
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
@@ -134,3 +137,4 @@ export default HomePage;
 - [使用 pre-commit](https://matthung0807.blogspot.com/2021/08/pre-commit-code-check.html)
 - [Next.js API](https://ithelp.ithome.com.tw/articles/10273049)
 - [Next.js Routing](https://powerfultraveling.coderbridge.io/2021/12/11/nexjs-routing/)
+- [自定義 API Error 拋出錯誤訊息](https://ithelp.ithome.com.tw/articles/10196735?sc=iThelpR)
