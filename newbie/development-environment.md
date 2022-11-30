@@ -133,7 +133,8 @@ function HomePage() {
 export default HomePage;
 ```
 # 5. 建立 API Routes
-- 在 /pages 底下新增 api/feedback.js (api 是特別名稱，不可擅自改動)
+- 建立一個 URI 為 /api/feedback 的 API ，根據 file-based routing ，檔案路徑與名稱即是 URI
+- 新增 /pages/api/feedback.js (api folder 是特別名稱，不可擅自改動)
 ```
 function handler(req, res) {
   res.status(200).json({ message: "This works!" }); // HTTP status code 200
@@ -141,7 +142,8 @@ function handler(req, res) {
 
 export default handler;
 ```
-- 當我們向 api/feedback.js 發送請求時，得到的回覆是 json 格式的資料，內容為 { message: "This works!" }
+- 當我們向 /api/feedback 發送請求時，得到的回覆是 json 格式的資料，內容為 { message: "This works!" }
+
 # 參考來源
 - [VS Code 版本控制](https://ithelp.ithome.com.tw/articles/10250436)
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
