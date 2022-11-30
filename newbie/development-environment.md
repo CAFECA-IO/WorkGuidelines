@@ -90,6 +90,13 @@ npm run dev
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
 
 # 4. 在 Nested Routes 中建立 Link Component
+## 4.1 file-based routing 說明
+Next.js 的基本單位是 page ，一個 page 即是一個 component ，這些 component 被放置在 'pages' 資料夾中，並由其檔案名稱來決定路由的名稱。在 Next.js 可分為三種 routing 方式：
+  1. static routes ：舉例來說， pages/index.js 的路徑為 '/' ， pages/post.js 的路徑為 '/post' ，以此類推。每個 index 檔案代表其根目錄，如果檔案被放置在 pages/post/index.js ，則路徑同樣會是 '/post'。
+  2. dynamic routes ：當需要定義 /post/1 、 /post/2 等動態 URL 時，可用 dynamic routes 來處理，只要定義一個 pages/post/[postId].js 即可達成。多層級的路由也是以這個方式處理，例如 /pages/post/[postId]/[commentId].js 。
+  3. catch all routes ：屬於一種 dynamic routes ，這個方法不需要一個個定義多層級資料夾，可以一次拿到所有層級的參數。例如我們要設計  /pages/post/[year]/[month]/[day] 的 URL ，只需定義 /pages/post/[...date].js 即可。
+
+## 4.2 執行步驟
 - 專案資料夾結構
 ```
 |_page
@@ -125,9 +132,9 @@ function HomePage() {
 
 export default HomePage;
 ```
-# 5. 建立 API Error
+# 5. 建立 API
 ```
-npm install http-status
+
 ```
 
 # 參考來源
@@ -135,6 +142,5 @@ npm install http-status
 - [VS Code 中啟用 Git](https://pythonviz.com/git/use-git-in-vs-code-basic-operations/)
 - [pre-commit hooks 設置步驟](https://ashine02.medium.com/python-pre-commit-hook-%E8%A8%AD%E7%BD%AE%E6%AD%A5%E9%A9%9F-25d98f44183b)
 - [使用 pre-commit](https://matthung0807.blogspot.com/2021/08/pre-commit-code-check.html)
-- [Next.js API](https://ithelp.ithome.com.tw/articles/10273049)
+- [從零開始學習 Next.js](https://ithelp.ithome.com.tw/users/20110504/ironman/4269)
 - [Next.js Routing](https://powerfultraveling.coderbridge.io/2021/12/11/nexjs-routing/)
-- [自定義 API Error 拋出錯誤訊息](https://ithelp.ithome.com.tw/articles/10196735?sc=iThelpR)
