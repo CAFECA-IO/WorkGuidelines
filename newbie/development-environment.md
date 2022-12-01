@@ -98,7 +98,7 @@ mkdir src
 mv pages src
 mv styles src
 ```
-- 這樣
+- 將開發目錄集中在 src 資料夾，便利整理
 
 # 4. 在 Nested Routes 中建立 Link Component
 ## 4.1 file-based routing 說明
