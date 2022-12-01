@@ -81,13 +81,24 @@ npx create-next-app
 {projectName}
 Y
 ```
-- 安裝完成後用 VSCode 開啟，並打開 VSCode 終端機
+- 運行專案
 ```shell
+cd {projectName}
 npm install
 npm run dev
 ```
 
 - 執行完成後將回傳本機伺服器開設在 http://localhost:3000/ 的訊息 ，打開應該會看到初始的 Welcome to Next.js! 畫面，代表 project 已成功運作
+
+## 3.1 將開發目錄轉移至 src
+- 打開本機終端機，輸入指令
+```shell
+cd {projectName}
+mkdir src
+mv pages src
+mv styles src
+```
+- 這樣
 
 # 4. 在 Nested Routes 中建立 Link Component
 ## 4.1 file-based routing 說明
