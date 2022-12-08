@@ -14,7 +14,7 @@ git pull <remotename> <branchname> --allow-unrelated-histories
 ```shell
 push -f
 ```
-這個指令會強制 push ，並覆蓋掉遠端分支，請不要在多人協同開發專案時使用
+這個指令會強制 push ，並覆蓋掉遠端分支，請不要在多人協同開發專案時使用。
 
 可以使用的時機：
 1. 單獨開發專案時
@@ -24,7 +24,8 @@ git push -f origin <mybranch>
 這個指令只會修改到 mybranch 這個分支，不會影響到其他人
 
 2. 整理歷史紀錄
-
+使用 rebase 指令清理 commit 紀錄後， GitHub 會因為記錄不符拒絕 push ，這時候就可以使用 force push 強制上傳，但一定要先通知其他的專案參與者。
+GitHub 也有提供避免分支被 force push 的保護機制，在專案的 Settings ➡️ Branches ➡️ Branch protection rules ，選擇要保護的分支和項目
 
 
 參考
