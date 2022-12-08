@@ -26,7 +26,7 @@ git push -f origin <mybranch>
 2. 整理歷史紀錄
 
 使用 rebase 指令清理 commit 紀錄後， GitHub 會因為記錄不符拒絕 push ，這時候就可以使用 force push 強制上傳，但一定要先通知其他的專案參與者。
-GitHub 也有提供避免分支被 force push 的保護機制，在專案的 Settings ➡️ Branches ➡️ Branch protection rules ，選擇要保護的分支和項目
+GitHub 也有提供避免分支被 force push 的保護機制，在專案的 Settings ➡️ Branches ➡️ Branch protection rules ，選擇要保護的分支和項目。
 
 
 參考
