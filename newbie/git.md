@@ -2,6 +2,7 @@
 
 ## How to solve this
 - push failed
+
 push failed 的原因是其他人已經 push 了新的版本上去，導致 GitHub 判斷遠端和目前推的兩者為無關的 Git 版本，因此拒絕 git push 指令。解決的方法是拉下最新版本的 repository，合併回 local branch，即可建立兩個不同版本庫之間的關聯，就能進行 push 了。
 ```shell
 git pull <remotename> <branchname> --allow-unrelated-histories
