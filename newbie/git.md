@@ -20,7 +20,7 @@ push -f
 ```shell
 git push -f origin <mybranch>
 ```
-這個指令只會修改到 <mybranch> 分支，不會影響到其他人
+這個指令只會修改到 mybranch 這個分支，不會影響到其他人
 
 2. 整理歷史紀錄
 
