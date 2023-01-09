@@ -14,7 +14,7 @@ git pull <remotename> <branchname> --allow-unrelated-histories
 ```shell
 push -f
 ```
-這個指令會強制 push ，並覆蓋掉遠端分支，請不要在多人協同開發專案時使用。
+這個指令會強制 push ，並覆蓋掉遠端分支，__請不要在多人協同開發專案時使用__。
 
 可以使用的時機：
 1. 單獨開發專案時
