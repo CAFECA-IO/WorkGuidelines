@@ -10,17 +10,24 @@
 RWD 則是將各個對應版面設計整合在單一網址中，使用此種設計方式將使網頁的維護更便利，也因為 Google 鼓勵 RWD 設計方式，對網頁 SEO 的排名較有利。但也不是所有網站都適合使用 RWD ，如果網站資訊量大，或是希望針對特定裝置重新設計版面，就比較適合使用 AWD 或傳統網頁設計。
 # 3. 實現方法
 常見的 RWD 實作方法是使用 CSS3 提供的媒體查詢功能(Media Query)，指定不同的螢幕尺寸套用到對應的 RWD 樣式。
+```
+@media (min-width: 768px) { ... }
 
-```shell
+@media (min-width: 992px) { ... }
 
+@media (min-width: 1200px) { ... }
 ```
 
 關於 Media Query 的其他用法可參考 [W3Schools](https://www.w3schools.com/css/css3_mediaqueries.asp)
 
-也可以使用框架工具(如：Boostrap)進行開發，直接套用現成語法和模組提升開發的效率。
+也可以使用框架工具(如：Boostrap)進行開發，直接套用現成語法和模組，提升網頁開發的效率。
 # 4. 其他技巧
+* 行動裝置設計優先(Mobile first)
 
-另外，使用框架工具雖然可以節省許多開發時間，但也會有大量的累贅程式碼，修改起來不容易，也可能拉低網頁的 SEO 效能。而手工切版可以精簡程式，掌握較多的程式自主權，也可以達到 HTML 最佳化，缺點就是需要花費很長的製作時間。開始實作前應該先評估
+由於手機的使用率比桌機來的高，以行動裝置為設計的優先考量可以省去不必要的元素，讓使用者的焦點能放在網頁的核心資訊上。Mobile first 也有助於縮短網頁載入的時間，因為行動裝置的使用者不用等待桌機版樣式先跑完即可瀏覽網站，降低網頁跳出率，提升 SEO 排名。
+
+
+另外，使用框架工具雖然可以節省許多開發時間，但也會有大量的累贅程式碼，修改起來不容易，也可能拉低網頁的 SEO 效能。而手工切版可以精簡程式，掌握較多的程式自主權，也可以達到 HTML 最佳化，缺點就是需要花費很長的製作時間。開始實作前應該先評估適合專案的作法。
 
 ## 參考來源
 - [維基百科](https://zh.wikipedia.org/zh-tw/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1)
@@ -28,3 +35,5 @@ RWD 則是將各個對應版面設計整合在單一網址中，使用此種設�
 - [Da-vinci](https://www.da-vinci.com.tw/tw/blog/rwd)
 - [CADIIS](https://www.cadiis.com.tw/blog/rwd-web-design-infographic)
 - [ALPHAcamp](https://tw.alphacamp.co/blog/rwd-responsive-web-design-introduction)
+- [Media Query 小撇步](https://blog.hinablue.me/css-media-query-tips/)
+- [什麼是行動優先設計](https://tenten.co/learning/mobile-first-design/)
