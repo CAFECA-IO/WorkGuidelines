@@ -30,10 +30,18 @@ RWD 則是將各個對應版面設計整合在單一網址中，使用此種設�
 /* 螢幕寬度大於 992px 又小於 1199.99px 時 */
 @media (min-width: 992px) and (max-width: 1199.99px) { ... }
 ```
-
 更多 Media Query 用法可參考 [W3Schools](https://www.w3schools.com/css/css3_mediaqueries.asp)。
 
-也有許多框架工具(如：Boostrap)可以輔助開發，直接套用現成版型和模組，提升網頁開發的效率。
+市面上也有許多輔助開發的框架工具(如：Bootstrap)，可以直接套用現成版型和模組，提升網頁開發的效率。
+```
+npm install bootstrap react-bootstrap
+```
+依據需求，在專案中引入 Bootstrap 的 button component 以及 css 樣式。
+```
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
+```
+更多詳情請參考[官方網頁](https://getbootstrap.com/)
 
 # 4. 其他技巧
 * 行動裝置設計優先(Mobile first)
