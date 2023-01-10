@@ -33,7 +33,7 @@ RWD 則是將各個對應版面設計整合在單一網址中，使用此種設�
 
 更多 Media Query 用法可參考 [W3Schools](https://www.w3schools.com/css/css3_mediaqueries.asp)。
 
-也有許多框架工具(如：Boostrap)可以輔助開發，直接套用現成語法和模組，提升網頁開發的效率。
+也有許多框架工具(如：Boostrap)可以輔助開發，直接套用現成版型和模組，提升網頁開發的效率。
 
 # 4. 其他技巧
 * 行動裝置設計優先(Mobile first)
