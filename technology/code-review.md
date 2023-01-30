@@ -27,9 +27,9 @@
 - [x] 039-TradeStatistics
 - [ ] 103-MarketSection
 - [ ] 038-CandlestickChart
-- [x]  040-CryptoSummary
-- [x]  041-CryptoNewsSection
-- [x]  042-CryptoNewsItem
+- [x] 040-CryptoSummary
+- [x] 041-CryptoNewsSection
+- [x] 042-CryptoNewsItem
 
 ### CHECK LIST
 - [Naming convention](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/coding-convention/naming-convention.md) verification: checked
