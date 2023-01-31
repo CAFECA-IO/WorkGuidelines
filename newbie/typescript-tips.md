@@ -9,7 +9,7 @@
 - [`null` and `undefined`](#null-and-undefined)
 - [Reference](#reference)
 
-以下 code snippet 都可在 [TS Playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgJKoCYXMMBPZAbwChlkQ4BbCALmQGcwpQBzAblOQCNgowALDHDx0QAV0pdoHAL7FiMMSARhgAexDJgWHPgA8AFQB8ACjhQWdAwEorRTmSgQwYqJvPtic4gBtnyNTEwAAcg5ABeLR1VfXRo3DxTQgpqOgAiAEEfYCQ0gBpuXgEhEWQAJgAGMoBmCoBGarqZaw5iBA16NT8AOh81FhNAkKDrIA) 運行
+以下 code snippet 可在 [TS Playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgJKoCYXMMBPZAbwChlkQ4BbCALmQGcwpQBzAblOQCNgowALDHDx0QAV0pdoHAL7FiMMSARhgAexDJgWHPgA8AFQB8ACjhQWdAwEorRTmSgQwYqJvPtic4gBtnyNTEwAAcg5ABeLR1VfXRo3DxTQgpqOgAiAEEfYCQ0gBpuXgEhEWQAJgAGMoBmCoBGarqZaw5iBA16NT8AOh81FhNAkKDrIA) 運行
 
 ## Type
 
@@ -221,13 +221,19 @@ console.log(output);
 ```
 
 - 用 extends 將 interface 用在 generic 上能解決 `Property 'length' does not exist on type 'Type'.(2339)View Problem (Alt+F8)` 的問題
+  - 需在宣告 function 時定義好 generic (用 extends )，才能確定 function 內要用到的 property (此為 length ) 存在。
 
 ```tsx
+interface Lengthwise {
+	length: number;
+}
+
 function loggingIdentity<Type>(arg: Type): Type {
-	console.log(arg.length);
-	// Property 'length' does not exist on type 'Type'.
+	console.log(arg.length); // Property 'length' does not exist on type 'Type'.
 	return arg;
 }
+
+loggingIdentity<Lengthwise>({ length: 2333 });
 ```
 
 ```tsx
