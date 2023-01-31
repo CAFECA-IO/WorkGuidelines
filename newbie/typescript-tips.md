@@ -9,7 +9,7 @@
 - [Generics](#generics)
 - [**Type Assertions**](#type-assertions)
 - [`null` and `undefined` (`strictNullChecks` on)](#null-and-undefined-strictnullchecks-on)
-  - [Non-null Assertion Operator (Postfix`!`)](#non-null-assertion-operator-postfix)
+  - [Non-null Assertion Operator (Postfix `!`)](#non-null-assertion-operator-postfix-)
 - [Reference](#reference)
 
 以下 code snippet 可在 [TS Playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgJKoCYXMMBPZAbwChlkQ4BbCALmQGcwpQBzAblOQCNgowALDHDx0QAV0pdoHAL7FiMMSARhgAexDJgWHPgA8AFQB8ACjhQWdAwEorRTmSgQwYqJvPtic4gBtnyNTEwAAcg5ABeLR1VfXRo3DxTQgpqOgAiAEEfYCQ0gBpuXgEhEWQAJgAGMoBmCoBGarqZaw5iBA16NT8AOh81FhNAkKDrIA) 運行
@@ -310,7 +310,7 @@ function doSomething(x: string | null) {
 }
 ```
 
-### Non-null Assertion Operator (Postfix`!`)
+### Non-null Assertion Operator (Postfix `!`)
 
 - 在 TS 中， 可用非空值斷言運算子 `!.` 將型別排除 null 跟 undefined
 
