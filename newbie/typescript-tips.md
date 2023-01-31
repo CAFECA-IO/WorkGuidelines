@@ -7,7 +7,7 @@
 - [Interfaces](#interfaces)
   - [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
 - [Generics](#generics)
-- [**Type Assertions**](#type-assertions)
+- [**🏮 Type Assertions**](#-type-assertions)
 - [`null` and `undefined` (`strictNullChecks` on)](#null-and-undefined-strictnullchecks-on)
   - [Non-null Assertion Operator (Postfix `!`)](#non-null-assertion-operator-postfix-)
 - [Reference](#reference)
@@ -271,7 +271,7 @@ console.log(output);
 // "2023/01/31"
 ```
 
-## **Type Assertions**
+## **🏮 Type Assertions**
 
 TS 不知道某些值的型別時，可使用型別斷言。
 
