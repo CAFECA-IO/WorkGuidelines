@@ -19,7 +19,7 @@
 ```tsx
 let message: string = 'Hello World';
 
-// 其實不需要 type annotation ， TS 會將 'message' 推斷為 'string'
+// 其實不需要明確指定變數類型 ， TS 會將 'message' 推斷為 'string'
 let message = 'Hello World';
 ```
 
