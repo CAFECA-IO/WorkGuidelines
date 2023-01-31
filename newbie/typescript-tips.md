@@ -2,12 +2,14 @@
 
 - [Type](#type)
   - [Union Types](#union-types)
-  - [Type **Aliases**](#type-aliases)
+  - [Type Aliases](#type-aliases)
 - [Interfaces](#interfaces)
 - [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
 - [Generics](#generics)
 - [`null` and `undefined`](#null-and-undefined)
 - [Reference](#reference)
+
+以下 code snippet 都可在 [TS Playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgJKoCYXMMBPZAbwChlkQ4BbCALmQGcwpQBzAblOQCNgowALDHDx0QAV0pdoHAL7FiMMSARhgAexDJgWHPgA8AFQB8ACjhQWdAwEorRTmSgQwYqJvPtic4gBtnyNTEwAAcg5ABeLR1VfXRo3DxTQgpqOgAiAEEfYCQ0gBpuXgEhEWQAJgAGMoBmCoBGarqZaw5iBA16NT8AOh81FhNAkKDrIA) 運行
 
 ## Type
 
@@ -52,7 +54,7 @@ function printId(id: number | string) {
 }
 ```
 
-### Type **Aliases**
+### Type Aliases
 
 ```tsx
 type Point = {
@@ -216,6 +218,29 @@ console.log(output);
   "birthday": 20230131
 }
 */
+```
+
+- 用 extends 將 interface 用在 generic 上能解決 `Property 'length' does not exist on type 'Type'.(2339)View Problem (Alt+F8)` 的問題
+
+```tsx
+function loggingIdentity<Type>(arg: Type): Type {
+	console.log(arg.length);
+	// Property 'length' does not exist on type 'Type'.
+	return arg;
+}
+```
+
+```tsx
+interface Lengthwise {
+	length: number;
+}
+
+function loggingIdentity<Type extends Lengthwise>(arg: Type): Type {
+	console.log(arg.length); // Now we know it has a .length property, so no more error
+	return arg;
+}
+
+loggingIdentity({ length: 2333 });
 ```
 
 - type and generics；接受類型為 T 的參數，並回傳類型為 `TOutput` 的結果
