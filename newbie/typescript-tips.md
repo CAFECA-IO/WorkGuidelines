@@ -290,8 +290,8 @@ const myCanvas = <HTMLCanvasElement>document.getElementById('main_canvas');
 
 - 🏮 避免太保守而無法應對複雜的情況，可使用兩次斷言 (先斷言為 `any` 或 `unknown`，再斷言為所需的類型)
 
-```tsx
-const a = expr as any as T;
+```js
+const a = (expr as any) as T;
 ```
 
 ## `null` and `undefined` (`strictNullChecks` on)
