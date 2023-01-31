@@ -4,9 +4,11 @@
   - [Union Types](#union-types)
   - [Type Aliases](#type-aliases)
 - [Interfaces](#interfaces)
-- [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
+  - [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
 - [Generics](#generics)
-- [`null` and `undefined`](#null-and-undefined)
+- [**Type Assertions**](#type-assertions)
+- [`null` and `undefined` (`strictNullChecks` on)](#null-and-undefined-strictnullchecks-on)
+  - [Non-null Assertion Operator (Postfix`!`)](#non-null-assertion-operator-postfix)
 - [Reference](#reference)
 
 以下 code snippet 可在 [TS Playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgJKoCYXMMBPZAbwChlkQ4BbCALmQGcwpQBzAblOQCNgowALDHDx0QAV0pdoHAL7FiMMSARhgAexDJgWHPgA8AFQB8ACjhQWdAwEorRTmSgQwYqJvPtic4gBtnyNTEwAAcg5ABeLR1VfXRo3DxTQgpqOgAiAEEfYCQ0gBpuXgEhEWQAJgAGMoBmCoBGarqZaw5iBA16NT8AOh81FhNAkKDrIA) 運行
@@ -16,7 +18,7 @@
 ```tsx
 let message: string = 'Hello World';
 
-// 其實不需要 type annotation ， TS 會 'message' 推斷為 'string'
+// 其實不需要 type annotation ， TS 會將 'message' 推斷為 'string'
 let message = 'Hello World';
 ```
 
@@ -108,7 +110,7 @@ interface Person {
 let p: Person = { name: 'John', age: 30 };
 ```
 
-## Interfaces vs **Type Aliases**
+### Interfaces vs **Type Aliases**
 
 幾乎所有 `interface` 的功能都能用 `type` 替代，唯一差別是 `interface` 可以被繼承 (extends) 、被擴充 (加入新的 fields/ properties)，`type` 不能被重新打開 (re-open) 並加入新屬性 (property)。
 
@@ -264,9 +266,63 @@ console.log(output);
 // "2023/01/31"
 ```
 
-## `null` and `undefined`
+## **Type Assertions**
+
+TS 不知道某些值的型別時，可使用型別斷言。
+
+- 例如用 `document.getElementById` 時，TS 只知道會回傳某種 `HTMLElement`，實際上明確的回傳結果為 _給定 ID 的 HTMLCanvasElement_，可用型別斷言來指定更具體的型別。
+
+```tsx
+const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement;
+```
+
+- 跟 type annotation 一樣， type assertions 會被編譯器刪掉，所以不會影響 runtime 時的代碼行為。(換句話說，如果型別斷言錯誤，不會產生 exception 或 null。)
+- 在 `.tsx`檔案下，可用 `<>` (angle-bracket syntax) 代替。
+
+```tsx
+const myCanvas = <HTMLCanvasElement>document.getElementById('main_canvas');
+```
+
+- 🏮 避免太保守而無法應對複雜的情況，可使用兩次斷言 (先斷言為 `any` 或 `unknown`，再斷言為所需的類型)
+
+```tsx
+const a = expr as any as T;
+```
+
+## `null` and `undefined` (`strictNullChecks` on)
+
+- 跟 JS 一樣， TS 有`null` 跟`undefined`；這兩個型別的行為取決於是否開啟 [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks)
+  - 沒開啟則類似沒有空值檢查的語言，容易出錯，故建議打開 [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks)
+- 需檢查是否為 null
+
+```tsx
+function doSomething(x: string | null) {
+	if (x === null) {
+		// do nothing
+	} else {
+		console.log('Hello, ' + x.toUpperCase());
+	}
+}
+```
+
+### Non-null Assertion Operator (Postfix`!`)
+
+- 在 TS 中， 可用非空值斷言運算子 `!.` 將型別排除 null 跟 undefined
+
+```tsx
+function liveDangerously1(x?: number | null) {
+	// No error
+	console.log(x!.toFixed()); // 排除 null 跟 undefined
+}
+
+function liveDangerously2(x?: number) {
+	// No error
+	console.log(x!.toFixed()); // 排除 undefined
+}
+```
 
 ## Reference
 
 - [Documentation - Generics - TypeScript](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 - [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#enums)
+- [TypeScript: TS Playground - An online editor for exploring TypeScript and JavaScript](https://www.typescriptlang.org/play#code/Q)
