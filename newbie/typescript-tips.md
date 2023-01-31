@@ -1,6 +1,7 @@
 目錄
 
 - [Type](#type)
+  - [Type Annotations](#type-annotations)
   - [Union Types](#union-types)
   - [Type Aliases](#type-aliases)
 - [Interfaces](#interfaces)
@@ -21,6 +22,10 @@ let message: string = 'Hello World';
 // 其實不需要 type annotation ， TS 會將 'message' 推斷為 'string'
 let message = 'Hello World';
 ```
+
+### Type Annotations
+
+定義變數、參數、回傳的值的型別之後，可看到型別註釋。
 
 ### Union Types
 
