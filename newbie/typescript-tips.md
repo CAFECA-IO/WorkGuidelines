@@ -6,6 +6,7 @@
   - [Type Aliases](#type-aliases)
 - [Interfaces](#interfaces)
   - [Arbitrary key and value of object](#arbitrary-key-and-value-of-object)
+  - [Extend arbitrary type definition](#extend-arbitrary-type-definition)
   - [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
 - [Generics](#generics)
 - [**🏮 Type Assertions**](#-type-assertions)
@@ -155,6 +156,26 @@ console.log(game);
   }
 }
 */
+```
+
+### Extend arbitrary type definition
+
+- interface
+
+```tsx
+interface Base {
+	value: number;
+}
+
+interface Extension extends Base {
+	[key: string]: unknown;
+}
+```
+
+- type extended via intersections
+
+```tsx
+type TypeExtension = Base & Record<string, unknown>;
 ```
 
 ### Interfaces vs **Type Aliases**
