@@ -5,6 +5,7 @@
   - [Union Types](#union-types)
   - [Type Aliases](#type-aliases)
 - [Interfaces](#interfaces)
+  - [Arbitrary key and value of object](#arbitrary-key-and-value-of-object)
   - [Interfaces vs **Type Aliases**](#interfaces-vs-type-aliases)
 - [Generics](#generics)
 - [**🏮 Type Assertions**](#-type-assertions)
@@ -113,6 +114,47 @@ interface Person {
 }
 
 let p: Person = { name: 'John', age: 30 };
+```
+
+### Arbitrary key and value of object
+
+- Solution 1: interface
+
+```tsx
+// 定義 interface
+interface Dictionary {
+	[key: string]: any;
+}
+
+// 使用 interface
+const myObject: Dictionary = {
+	key1: 'value1',
+	key2: 42,
+	key3: true,
+};
+```
+
+- Solution 2: `Record<keyType, valueType>`
+
+```tsx
+type Creep = {
+	id: number;
+};
+
+function printIt(c: Creep) {
+	console.log(c.id);
+}
+
+let game: Record<string, Creep> = { 'test': { id: 0 } };
+// printIt(game.Creep);
+console.log(game);
+/*
+{
+  "test": {
+    "id": 0
+  }
+}
+*/
 ```
 
 ### Interfaces vs **Type Aliases**
