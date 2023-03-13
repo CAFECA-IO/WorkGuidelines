@@ -89,7 +89,7 @@
 
 - Multi-Line
 ```typescript
-/* Info: (date after 14 days - author)
+/* Info: (date - author)
 { some message }
 { another message }
 { another message again }
