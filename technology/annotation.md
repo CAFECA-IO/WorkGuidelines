@@ -3,6 +3,8 @@
 - Deprecated
 - Till
 
+v1.0.1 20230313
+
 ## ToDo
 - Single Line
 ```
@@ -31,10 +33,20 @@
 ```
 // Deprecated: say something (date after 28 days - author)
 ```
+```
+// Deprecated: say something (20230407 - Luphia)
+```
 
 - Multi-Line
 ```
-// Deprecated: say something (date after 28 days - author) [start]
+// Deprecated: say something (date after 28 days - Luphia) [start]
+{ some code }
+{ another code }
+{ another code again }
+// Deprecated: [end]
+```
+```
+// Deprecated: say something (20230407 - Luphia) [start]
 { some code }
 { another code }
 { another code again }
@@ -46,10 +58,20 @@
 ```
 // Till: (date after 14 days - author) {some code or message}
 ```
+```
+// Till: (20230327 - Luphia) {some code or message}
+```
 
 - Multi-Line
 ```
 /* Till: (date after 14 days - author)
+{ some code or message }
+{ another code or message }
+{ another code or message again }
+ */
+```
+```
+/* Till: (20230327 - Luphia)
 { some code or message }
 { another code or message }
 { another code or message again }
