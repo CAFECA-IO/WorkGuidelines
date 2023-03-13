@@ -3,6 +3,7 @@
 - ToDo
 - Deprecated
 - Till
+- Info
 
 ## ToDo
 - Single Line
@@ -74,5 +75,30 @@
 { some code or message }
 { another code or message }
 { another code or message again }
+ */
+```
+
+## Info
+- Single Line
+```typescript
+// Info: (date - author) {some message}
+```
+```typescript
+// Info: (20230327 - Luphia) {some message}
+```
+
+- Multi-Line
+```typescript
+/* Info: (date after 14 days - author)
+{ some message }
+{ another message }
+{ another message again }
+ */
+```
+```typescript
+/* Info: (20230327 - Luphia)
+{ some message }
+{ another message }
+{ another message again }
  */
 ```
