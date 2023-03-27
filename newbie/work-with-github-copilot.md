@@ -18,7 +18,8 @@
  * 3. Step 3
 ...
  */
- 
+
+// Info: (date - author) 1. Step 1
 your code 
 ```
 
@@ -27,9 +28,10 @@ your code
  * Collect market data from the database and other exchanges
  * 1. connect to okx websocket and list from specific market trade data
  * 2. when data is received, save to parans and push to client by websocket
- * 3. periodically (10mins) fetch market data from okx api and save to params 4. data cleaning (merge duplicate data, remove invalid data, etc)
- * 4. periodically save data to database
- * 5. record the lastest data was saved to database
+ * 3. periodically (10mins) fetch market data from okx api and save to params
+ * 4. data cleaning (merge duplicate data, remove invalid data, etc)
+ * 5. periodically save data to database
+ * 6. record the lastest data was saved to database
  */
 ```
 
