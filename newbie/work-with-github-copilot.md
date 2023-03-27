@@ -10,16 +10,42 @@
 <img width="502" alt="image" src="https://user-images.githubusercontent.com/114177573/227883051-6ed6899c-eb1d-465d-8bdf-21ef8e6455e6.png">
 
 # 3. 註解規範
-- 開始工作前，請在每個檔案的開頭寫上該程式的執行步驟說明，並根據[註解規範](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/annotation.md)撰寫，幫助自己和其他工程師更快掌握狀況，也減少誤改程式碼的情形發生。
+- 開始工作前，請在每個檔案的開頭寫上該程式的開發目的與功能範疇，並記錄實現方法或執行步驟。請根據[註解規範](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/annotation.md)撰寫，幫助自己和其他工程師更快掌握狀況，也減少誤改程式碼的情形發生。
 ```
-/* Info: (date - author)
-1. Step 1
-2. Step 2
-3. Step 3
+/** Info: (date - author)
+ * 1. Step 1
+ * 2. Step 2
+ * 3. Step 3
 ...
  */
  
 your code 
+```
+
+```
+/** Info: (20230327 - Shirley)
+ * Collect market data from the database and other exchanges
+ * 1. connect to okx websocket and list from specific market trade data
+ * 2. when data is received, save to parans and push to client by websocket
+ * 3. periodically (10mins) fetch market data from okx api and save to params 4. data cleaning (merge duplicate data, remove invalid data, etc)
+ * 4. periodically save data to database
+ * 5. record the lastest data was saved to database
+ */
+```
+
+```
+/** Info: (20230327 - Shirley)
+ * Draw a lvie candlestick chart with Tradingview Lightweight Charts Library
+ * 1. Initial job
+ * 1.1 setup chart container and chart options with window size
+ * 1.2 fetch candlestick chart data from market context
+ * 1.3 data cleaning
+ * 1.4 draw candlestick chart with data
+ * 2. Periodically job
+ * 2.1 renew chart with candlestick chart data in marketcontext is updated
+ * 2.2 data cleaning
+ * 2.3 draw candlestick chart with data
+ */
 ```
 # 4. 注意事項
 - 可以試著先寫幾行程式，讓 AI 多學習。
