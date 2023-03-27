@@ -10,7 +10,7 @@
 <img width="502" alt="image" src="https://user-images.githubusercontent.com/114177573/227883051-6ed6899c-eb1d-465d-8bdf-21ef8e6455e6.png">
 
 # 3. 註解規範
-- 開始工作前，請在每個檔案的開頭寫上該程式的開發目的與功能範疇，並記錄實現方法或執行步驟。請根據[註解規範](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/annotation.md)撰寫，幫助自己和其他工程師更快掌握狀況，也減少誤改程式碼的情形發生。
+- 開始工作前，請在每個檔案的開頭寫上該程式的開發目的與功能範疇(目錄)，並記錄實現方法或執行步驟。請根據[註解規範](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/annotation.md)撰寫，幫助自己和其他工程師更快掌握狀況，也減少誤改程式碼的情形發生。
 ```
 /** Info: (date - author)
  * 1. Step 1
@@ -47,6 +47,24 @@ your code
  * 2.1 renew chart with candlestick chart data in marketcontext is updated
  * 2.2 data cleaning
  * 2.3 draw candlestick chart with data
+ */
+```
+
+```
+/** Info: (20230327 - Shirley)
+ * Collect market trade data from backend and transform it to a format that can be used by the candlestick chart. 
+ * 1. Initial job
+ * 1.1 register a listener to the market trade data
+ * 1.2 collect market trade data from backend api
+ * 1.3 data cleaning
+ * 1.4 transform data to a format that can be used by the candlestick chart
+ * 2. Periodically job
+ * 2.1 set interval to update candlestick chart data every 0.2 second
+ * 2.2 add new data ppint with ceil(tine)
+ * 2.3 If there is no data for ceil(tine), add a new data point with the last data point close price
+ * 2.4 If there is data for ceil(tine), update the data point and remove the last data point close price
+ * 2.5 data cleaning for new data point
+ * 2.6 transform data to a format that can be used by the candlestick chart
  */
 ```
 # 4. 注意事項
