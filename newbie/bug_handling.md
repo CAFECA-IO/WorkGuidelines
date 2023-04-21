@@ -1,4 +1,5 @@
 # Bug Handling Working Guidelines
+![Bug Tracking](https://user-images.githubusercontent.com/114177573/233566552-25246505-e623-4c7e-98d1-c3b85332d48d.jpg)
 
 ## Bug Reporting
 - [Format and Sample](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/issue-format.md)
@@ -50,4 +51,4 @@ if (!userCtx.isConnected) {
 7. 例外處理優化：程式出錯時應有try catch
 
 ## Bug Fixing
-- 根據 bug issue 的紀錄修復問題
+- 根據 bug issue 的紀錄修復問題，再按照 Bug Reporting 的步驟跑一次流程，確認問題沒有再現後， bug 的修復就完成了。
