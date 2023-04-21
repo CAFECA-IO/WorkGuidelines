@@ -1,5 +1,5 @@
 # Bug Handling Working Guidelines
-![Bug Tracking](https://user-images.githubusercontent.com/114177573/233566552-25246505-e623-4c7e-98d1-c3b85332d48d.jpg)
+![Bug Tracking](https://user-images.githubusercontent.com/114177573/233570941-9a451e8f-a8aa-4e53-97e6-9e92ed93a581.jpg)
 
 ## Bug Reporting
 - [Format and Sample](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/issue-format.md)
