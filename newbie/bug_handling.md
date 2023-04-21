@@ -6,7 +6,7 @@
 
 ## Bug Tracking
 ### Standard Operation Procedure
-1. 現象分析：分析問題
+1. 現象分析：根據 Bug Reporting 分析問題
    - 連接錢包時，Send Request Button 點擊了卻沒有反應
    
 2. 事件程式碼起點識別：尋找出錯的程式碼位置
@@ -48,7 +48,9 @@ if (!userCtx.isConnected) {
   ...
 ```
 6. 確認錯誤原因：將找出的錯誤原因記錄到 bug issue 上
-7. 例外處理優化：程式出錯時應有try catch
+   - 沒有抓到 lunar.isConnected
+
+7. 例外處理優化：程式出錯時應有 try catch ，將錯誤吐出到畫面上讓使用者能看到
 
 ## Bug Fixing
 - 根據 bug issue 的紀錄修復問題，再按照 Bug Reporting 的步驟跑一次流程，確認問題沒有再現後， bug 的修復就完成了。
