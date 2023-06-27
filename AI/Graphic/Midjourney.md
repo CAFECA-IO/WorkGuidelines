@@ -29,4 +29,19 @@
 
 - Chaos [製圖變化，Default為0]
 
-    於所有關鍵字後加入"--chaos <value> or --c <value>"，value 數值為 0-100，數字越大，所產出的四張圖
+    於所有關鍵字後加入"--chaos <value> or --c <value>"，value 數值為 0-100，數字越大，所產出的四張圖之間的差距越大，也越容易產生較天馬行空的圖
+
+- No [排除關鍵字]
+
+    於所有關鍵字後加入"--no item1, item2, item3“，可排除不要的物體、顏色等
+
+- Quality [算圖品質，Default為1]
+
+    於所有關鍵字後加入"--quality <value> or --q <value>"，value 數值為 .25 或 .5 或 1，數字越大，圖片細節越多，算圖時間越長
+
+- Repeat[預設算圖次數，Default為1]
+   於所有關鍵字後加入"--repeat <values>“， value 為 2–10，可直接設定算圖次數
+
+- Seed [種子參數，Default為隨機]
+
+    於所有關鍵字後加入"--seed <value>“，value 為 0–4294967295，可於 Discord 中針對某圖像回覆“✉️ ”，並改獲取該圖像的 seed value，透過限縮圖像的seed值可產出較相近的圖片。
