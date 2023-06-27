@@ -25,6 +25,8 @@
 
 - Aspect Ratios [製圖比例，Default為1:1]
 
- 於所有關鍵字後加入 ”--aspect <value>:<value>, or --ar <value>:<value>“ 可調整產圖比例
+   於所有關鍵字後加入 ”--aspect <value>:<value>, or --ar <value>:<value>“ 可調整產圖比例
 
- 
+- Chaos [製圖變化，Default為0]
+
+    於所有關鍵字後加入"--chaos <value> or --c <value>"，value 數值為 0-100，數字越大，所產出的四張圖
