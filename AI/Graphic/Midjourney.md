@@ -26,10 +26,19 @@
 - Aspect Ratios [製圖比例，Default為1:1]
 
    於所有關鍵字後加入 ”--aspect <value>:<value>, or --ar <value>:<value>“ 可調整產圖比例
+    ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/fc5258d7-ed22-41c1-9e6f-ef3c2609c1d3)
 
 - Chaos [製圖變化，Default為0]
 
     於所有關鍵字後加入"--chaos <value> or --c <value>"，value 數值為 0-100，數字越大，所產出的四張圖之間的差距越大，也越容易產生較天馬行空的圖
+
+    Low:
+    ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/710f2889-e05c-48aa-a44c-92f73795fecd)
+
+
+    High:
+    ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/466ca732-1811-4da6-824e-f4dc2190a16a)
+
 
 - No [排除關鍵字]
 
@@ -38,6 +47,13 @@
 - Quality [算圖品質，Default為1]
 
     於所有關鍵字後加入"--quality <value> or --q <value>"，value 數值為 .25 或 .5 或 1，數字越大，圖片細節越多，算圖時間越長
+
+    --quality .25
+  ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/ae40b85b-9a8c-4f97-9231-b9b843c8237f)
+
+     --quality 1
+  ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/9f44c8ef-ec84-4193-af9b-4fb28da8fa8f)
+
 
 - Repeat[預設算圖次數，Default為1]
    於所有關鍵字後加入"--repeat <values>“， value 為 2–10，可直接設定算圖次數
@@ -50,11 +66,32 @@
 
     於所有關鍵字後加入"--stop <value>"，value 為 10-100，數值越低，越能產出細節較少較模糊的圖像
 
+
+    --stop 10
+
+    ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/e40d4068-303e-4dae-8859-4df18607453f)
+
+    --stop 100
+
+    ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/74297515-c0ac-461e-9f4f-d1ea354b0e1f)
+
+
+
 - Stylize [藝術化程度，Default為100]
 
   於所有關鍵字後加入"--stylize <value> or --s <value>"，value 為 10-1000，數值越低能產出與關鍵字較為接近但創意度較低的圖片，數字越高則反之
 
+  --stylize 100 (default)
+
+  ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/d6d363b4-d3ee-48f9-b976-df8e0c94b59f)
+
+  --stylize 1000
+
+  ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/5ee50a8a-465b-4fa1-a9d3-b1d782e00678)
+
+  
 - Tile [產出可重複排列之pattern]
 
   於所有關鍵字後加入"--tile“ 可產出可重複排列之圖，方便用於材質或pattern使用
 
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/f4717a6b-a098-448d-8200-fd1810e807b8)
