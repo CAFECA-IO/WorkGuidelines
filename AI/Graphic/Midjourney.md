@@ -33,10 +33,12 @@
     於所有關鍵字後加入"--chaos <value> or --c <value>"，value 數值為 0-100，數字越大，所產出的四張圖之間的差距越大，也越容易產生較天馬行空的圖
 
     Low:
+  
     ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/710f2889-e05c-48aa-a44c-92f73795fecd)
 
 
     High:
+  
     ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/466ca732-1811-4da6-824e-f4dc2190a16a)
 
 
@@ -49,9 +51,11 @@
     於所有關鍵字後加入"--quality <value> or --q <value>"，value 數值為 .25 或 .5 或 1，數字越大，圖片細節越多，算圖時間越長
 
     --quality .25
+  
   ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/ae40b85b-9a8c-4f97-9231-b9b843c8237f)
 
      --quality 1
+  
   ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/98379087/9f44c8ef-ec84-4193-af9b-4fb28da8fa8f)
 
 
