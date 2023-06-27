@@ -45,3 +45,16 @@
 - Seed [種子參數，Default為隨機]
 
     於所有關鍵字後加入"--seed <value>“，value 為 0–4294967295，可於 Discord 中針對某圖像回覆“✉️ ”，並改獲取該圖像的 seed value，透過限縮圖像的seed值可產出較相近的圖片。
+
+- Stop [預先中斷算圖，Default為100]
+
+    於所有關鍵字後加入"--stop <value>"，value 為 10-100，數值越低，越能產出細節較少較模糊的圖像
+
+- Stylize [藝術化程度，Default為100]
+
+  於所有關鍵字後加入"--stylize <value> or --s <value>"，value 為 10-1000，數值越低能產出與關鍵字較為接近但創意度較低的圖片，數字越高則反之
+
+- Tile [產出可重複排列之pattern]
+
+  於所有關鍵字後加入"--tile“ 可產出可重複排列之圖，方便用於材質或pattern使用
+
