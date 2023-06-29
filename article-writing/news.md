@@ -113,7 +113,7 @@
 
 ### 給人設
 
-*依照回答滿意度考慮下次要不要給人射
+*依照回答滿意度考慮下次要不要給人設
 
 - You’re a sophisticated financial journalist with broad blockchain and computer science expertise.
 - `Do sth` with insights of a professional and experienced economist with profound knowledge of software engineering
