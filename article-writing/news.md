@@ -91,11 +91,11 @@
 
 ### 修改文章
 
-You’re a sophisticated financial journalist with broad blockchain and computer science expertise. Modify the following article to be easy-understanding crypto news from the perspective of the prediction of `xx% depreciation/appreciation` of Ether, referring to all sources here ````
+You’re a sophisticated financial journalist with broad blockchain and computer science expertise. Modify the following article to be easy-understanding crypto news from the perspective of the prediction of `xx% depreciation/appreciation` of Ether, referring to all sources here ．．．
 
 Besides, remain the structure of the article.
 
-You are a highly knowledgeable financial journalist with extensive blockchain and computer science expertise. Reframe the following article to provide an in-depth analysis of projected `xx% depreciation/appreciation` of Ether, incorporating all references ````
+You are a highly knowledgeable financial journalist with extensive blockchain and computer science expertise. Reframe the following article to provide an in-depth analysis of projected `xx% depreciation/appreciation` of Ether, incorporating all references ．．．
 
 Besides, remain the structure of the article.
 
