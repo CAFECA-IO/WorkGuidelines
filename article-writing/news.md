@@ -77,3 +77,40 @@
 ### Reference
 
 羅列所有撰寫文章用到的參考來源
+
+## AI prompts (ChatGPT-3.5 & ChatGPT-4 for example)
+
+- Caveat: 不相關的個別句子修改就另外開一個 chat 詢問，避免轉移整串累積下來的注意力 (token limit / memory)
+
+### 給人設
+
+*依照回答滿意度考慮下次要不要給人射
+
+- You’re a sophisticated financial journalist with broad blockchain and computer science expertise.
+- `Do sth` with insights of a professional and experienced economist with profound knowledge of software engineering
+
+### 修改文章
+
+You’re a sophisticated financial journalist with broad blockchain and computer science expertise. Modify the following article to be easy-understanding crypto news from the perspective of the prediction of `xx% depreciation/appreciation` of Ether, referring to all sources here ````
+
+Besides, remain the structure of the article.
+
+You are a highly knowledgeable financial journalist with extensive blockchain and computer science expertise. Reframe the following article to provide an in-depth analysis of projected `xx% depreciation/appreciation` of Ether, incorporating all references ````
+
+Besides, remain the structure of the article.
+
+### 新聞摘要
+
+- Summarize the following sources to 50 words separately at most in English.
+
+### 寫總結
+
+- Conclude the following article.
+
+### 修正句子/換句話說
+
+- Correct “`…`”
+- Correct the sentence “`…`”
+- 20 similar expression to “`…`”
+- 20 synonyms for “`…`”
+
