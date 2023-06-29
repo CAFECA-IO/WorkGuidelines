@@ -108,8 +108,8 @@
 - Caveat
     - 不相關的個別句子修改就另外開一個 chat 詢問，避免轉移整串累積下來的注意力 (token limit / memory)
     - 視情況打開 Browsing plugin 或選擇 default
-![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/c02978ea-07f0-4d97-9bbf-04eee527fbe3)
-
+<img width="500" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/7f828d08-fba5-49cf-abef-1a150222c8fb">
+<img width="400" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/c02978ea-07f0-4d97-9bbf-04eee527fbe3">
 
 ### 給人設
 
