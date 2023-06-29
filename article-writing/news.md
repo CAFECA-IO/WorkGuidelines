@@ -105,7 +105,11 @@
 
 ## AI prompts (ChatGPT-3.5 & ChatGPT-4 for example)
 
-- Caveat: 不相關的個別句子修改就另外開一個 chat 詢問，避免轉移整串累積下來的注意力 (token limit / memory)
+- Caveat
+    - 不相關的個別句子修改就另外開一個 chat 詢問，避免轉移整串累積下來的注意力 (token limit / memory)
+    - 視情況打開 Browsing plugin 或選擇 default
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/c02978ea-07f0-4d97-9bbf-04eee527fbe3)
+
 
 ### 給人設
 
@@ -138,3 +142,17 @@ Besides, remain the structure of the article.
 - Correct the sentence “`…`”
 - 20 similar expression to “`…`”
 - 20 synonyms for “`…`”
+
+### Examples
+![screencapture-chat-openai-c-3dbdac9e-58a5-4cd1-a7b1-6bd51e91b34b-2023-06-29-15_56_23](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/70bafa35-adc7-4b46-b6c2-3c1a98f6f9b8)
+
+![screencapture-chat-openai-2023-06-29-16_15_39](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/7daa2566-3674-4693-a936-1c116e7b48da)
+
+![screencapture-chat-openai-2023-06-29-16_28_29](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/b28d2304-e56b-4182-a3c7-b0b9d4d03cca)
+
+![screencapture-chat-openai-2023-06-29-16_52_20](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/9fc80155-8dc6-4639-af66-6aa42eeb4eb1)
+
+
+
+
+
