@@ -17,7 +17,7 @@
 const regex = /[a-z]/;
 
 // 適合用在需要動態產生 pattern 的場合
-const regex = new RegExp('[a-z]);
+const regex = new RegExp('[a-z]');
 ```
 
 ### 2. 使用正規表達式
