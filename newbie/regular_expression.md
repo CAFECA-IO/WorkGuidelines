@@ -17,46 +17,42 @@
 const regex = /[a-z]/;
 
 // 適合用在需要動態產生 pattern 的場合
-const regex = new RegExp('[a-z]');
+const name = 'Kenny';
+const regex = new RegExp(name);
 ```
 
 ### 2. 使用正規表達式
-- RegExp 物件中的 exec & test 方法 (未完成)
-- match & replace & search (未完成)
+建立完正規表達式，就可以使用 RegExp 物件中的 `test` 和 `exec` 方法來比對字串
+- `test` 的回傳值為 boolean
+- `exec` 會回傳詳細資訊的 array ，如果匹配失敗則會回傳 null ，詳細可以[見此](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
+```
+const regex = /\d/;
+
+regex.test('abc'); //false
+
+regex.exec('123'); //['1', index: 0, input: '123', groups: undefined]
+regex.exec('abc'); //null
+```
+
+- 除此之外， `match` 、 `replace` 、 `search` 等方法也支援正規表達式
+```
+const str = 'The quick brown fox jumps over the lazy dog';
+
+str.search(/\d/); //-1
+//search回傳值為指定文字在字串中的起始位置，沒有找到則回傳 -1
+
+str.match(/fox/); //['fox', index: 16, input: 'The quick brown fox jumps over the lazy dog', groups: undefined]
+//match方法會回傳第一個匹配成功的詳細資訊
+
+str.replace(/dog/,cat); //'The quick brown fox jumps over the lazy cat'
+```
 
 ## 正規表達式的語法
-
-### 1. 簡易模式
-即直接輸入匹配的字元，如：/World/ 這條規則將會直接匹配 'World' 這個文字
-```
-const paragraphOne = 'Hello World !';
-paragraphOne.test(/World/); //true ，因為含有 'World'
-
-const paragraphTwo = 'Hello John !';
-paragraphTwo.test(/World/); //false ，因為不包含任何 'World' 字符
-```
-
-### 2. 特殊字元
-需要搜尋較複雜的規則時使用，例如中華民國的身分證字號格式為：
-
-1. 開頭為一個大寫英文字母 `/^[A-Z]/`
-2. 數字第一位為 1 或 2 `/[12]/`
-3. 後面為隨機八位數字 `/\d{8}/`
-
-根據上述規則整理出以下正規表達式
-```
-const regex = /^[A-Z][12]\d{8}/;
-const myId = A123456789;
-const fakeId = D029482425
-
-myId.test(regex); //true
-fakeId.test(regex); //false
-```
 
 ### 常用特殊規則(以下內容引用自[此文章](https://moojing.medium.com/javascript-%E5%88%9D%E6%8E%A2regex-%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-1da2f4d94795))
 
 1. 跳脫字元：
-這邊有個好記的規則：小寫邏輯跟大寫邏輯是相對的，小寫代表「是」，大寫代表「否」
+有個好記的規則：小寫邏輯跟大寫邏輯是相對的，小寫代表「是」，大寫代表「否」
 
 |  符號   | 說明  |
 |  ----  | ----  |
@@ -96,10 +92,45 @@ fakeId.test(regex); //false
 | {m,n} | 從m次到n次 |
 | {m,n}? | 從m次到n次，選到匹配最少次的 |
 
+### 1. 簡易模式
+即直接輸入匹配的字元，如：`/World/` 這條規則將會直接匹配 'World' 這個文字
+```
+const regex = /World/;
+const paragraphOne = 'Hello World !';
+regex.test(paragraphOne); //true
+//匹配成功，因為字串裡含有 'World'字符
+
+const paragraphTwo = 'Hello John !';
+regex.test(paragraphTwo); //false
+//匹配失敗，因為字串不包含任何 'World' 字符
+```
+
+### 2. 特殊字元
+需要搜尋較複雜的規則時使用，例如中華民國的身分證字號格式為：
+
+1. 開頭為一個大寫英文字母 `/^[A-Z]/`
+2. 數字第一位為 1 或 2 `/[12]/`
+3. 後面為隨機八位數字 `/\d{8}/`
+
+根據上述規則整理出以下正規表達式
+```
+const regex = /^[A-Z][12]\d{8}/;
+const myId = 'A123456789';
+const fakeId = 'D029482425';
+
+regex.test(myId); //true
+regex.test(fakeId); //false
+```
+
 ## 小技巧
-- 有許多線上工具和教學可供學習和測試正規表達式，例如 [Regex101](https://regex101.com/)
+- 有許多線上工具和教學可供學習和測試正規表達式，例如 [Regex101](https://regex101.com/) 。使用方法也相當簡單，非常適合練習和複習。
+
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/68411dd0-91b1-46b9-a282-a0a1917562eb)
+
+- 電子郵件地址
 
 ## 參考來源
+- https://zh.wikipedia.org/zh-tw/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F
 - https://5xruby.tw/posts/15min-regular-expression
 - https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 - https://www.minwt.com/webdesign-dev/html/20352.html
