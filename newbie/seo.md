@@ -30,3 +30,4 @@ SEO 的核心目的是讓網站更容易被搜尋引擎接受。搜尋引擎會�
 - https://zh.wikipedia.org/zh-tw/%E6%90%9C%E5%B0%8B%E5%BC%95%E6%93%8E%E6%9C%80%E4%BD%B3%E5%8C%96
 - https://welly.tw/serp-rank-optimization/what-is-seo
 - https://www.shopjkl.com/pages/seo
+- https://www.awoo.ai/zh-hant/blog/301-302-redirect/
