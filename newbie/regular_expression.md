@@ -44,7 +44,7 @@ str.search(/\d/); //-1
 str.match(/fox/); //['fox', index: 16, input: 'The quick brown fox jumps over the lazy dog', groups: undefined]
 //match方法會回傳第一個匹配成功的詳細資訊
 
-str.replace(/dog/,cat); //'The quick brown fox jumps over the lazy cat'
+str.replace(/\w*$/,'cat'); //'The quick brown fox jumps over the lazy cat'
 ```
 
 ## 正規表達式的語法
