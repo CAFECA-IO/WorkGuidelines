@@ -1,7 +1,7 @@
 # SEO
 
 ## 什麼是 SEO
-搜尋引擎最佳化（Search engine optimization），簡稱為 SEO，是藉由調整網站的架構或內容，提高網站在搜尋引擎內排名的行銷方法。提升網站的能見度與流量能夠打響品牌知名度和創造業績，因此所以不少網站都希望以各種形式來影響搜尋引擎的排序，讓自己的網站可以有優秀的搜尋排名。
+搜尋引擎最佳化(Search engine optimization)，簡稱為 SEO，是藉由調整網站的架構或內容，提高網站在搜尋引擎內排名的行銷方法。提升網站的能見度與流量能夠打響品牌知名度和創造業績，因此所以不少網站都希望以各種形式來影響搜尋引擎的排序，讓自己的網站可以有優秀的搜尋排名。
 
 ## 為何做 SEO
 SEO 的核心目的是讓網站更容易被搜尋引擎接受。搜尋引擎會將網站間的內容做一些相關性的比對，再由瀏覽器將這些內容以最快速且接近最完整的方式，呈現給使用者，為其打造更好的使用者體驗。
@@ -16,11 +16,35 @@ SEO 的核心目的是讓網站更容易被搜尋引擎接受。搜尋引擎會�
 ## 如何實作 SEO 優化
 我們必須先了解 Google 搜尋的運作方式，根據 [Google 搜尋指南](https://developers.google.com/search/docs/fundamentals/how-search-works?hl=zh-tw)的說明，主要分為三個階段：
 
-1. 檢索(Crawling)：Google 會透過稱為檢索器的自動化程式，從網際網路上找到的網頁下載文字、圖片和影片。然而 Google 不可能把所有網站的內容一一爬完，因此，如何讓 Google 爬蟲有效完成網站的檢索，並排入建立索引的等候階段，即是 SEO 的技術所在。
+1. 檢索(Crawling)：Google 會透過稱為檢索器的自動化程式，從網際網路上找到的網頁下載文字、圖片和影片。然而 Google 不可能把所有網站的內容一一爬完，因此，讓 Google 爬蟲有效完成網站的檢索，並排入建立索引的等候階段，即是 SEO 的技術所在。
 2. 建立索引(Indexing)：完成檢索後， Google 會嘗試解讀網頁內容，並將相關資訊儲存在大型資料庫—— Google 索引之中，其中解讀的方式包括分析文字內容、關鍵內容標記和屬性，例如 `<title>` 元素和 alt 屬性、圖片、影片等等。 Google 也是在這個階段判斷網頁在網際網路上是否有**重複版本或標準網頁**，如果 Google 發現某些網頁有高度重複的內容，會將這些網頁視為重複版本，並從中選出一個網址做為「標準」版本進行檢索，降低其他網址的檢索頻率。
 3. 提供搜尋結果(Serving search results)：Google 面對不同搜尋需求時，會根據該使用者的所在地、語言、使用裝置、瀏覽紀錄等各種的因素，提供對使用者來說最有幫助的資訊內容。當使用者輸入查詢字詞時， Google 會搜尋索引資料庫並找出符合的網頁，將演算法認為與使用者的查詢內容最相關且品質最佳的結果呈現出來。
 
 接下來我們可以開始討論 SEO 優化的方法：
+
+### 技術層面：讓網頁符合 SEO 規範
+如上述所提，我們可以透過一些網頁建立的技術，讓網路爬蟲有效率的完成網站檢索：
+
+- SEO 網址：建立簡短且具描述性的網址是 SEO 優化的好方法，除了方便記憶，也讓使用者看一眼就知道網站的大致內容。對網頁的相關性提升有正面影響。
+- 麵包屑(Breadcrumb)：是一種常見的網頁導覽列，除了協助訪客了解網站架構，也讓 Google 能在最短的時間內完成網站檢索。
+- 網站地圖([Sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=zh-tw))：收錄整個網站的頁面站點和檔案間的關聯性，主動提供給 Google 搜尋引擎來爬取頁面內容。針對規模較大的網站可以縮短 Google 的檢索時間。
+- 裝置兼容性：使用 RWD 或 AWD 網頁設計技術來優化使用者體驗，有助於 SEO 排名提升。
+
+### 內容層面：做出符合使用者需求的網頁內容
+從使用者體驗的角度切入，提供真正符合需求的優質內容：
+
+- 關鍵字分析：需要思考使用者會透過哪些關鍵字搜尋到網站，其目的又是什麼。針對特定關鍵字來經營，可以帶來更多目標客群。
+- Meta Tag：是 HTML 的語法，透過 Meta Title & Meta Description 來描述網頁的概括資訊，吸引使用者點擊瀏覽。但是注意不要寫過多不相干的內容，否則使用者觀感不佳，搜尋引擎也會判定是無效內容而降低排名。
+```
+//範例來源：https://clinic.careonline.com.tw/
+<meta content="登錄診所｜照護線上" property="og:title">
+<meta content="即刻登錄就可使用網路掛號、看診進度、回診提醒等多項便利實用的功能，讓您的診所脫穎而出！" property="og:description">
+```
+- img alt：當圖片因各種情況無法顯示時，alt 屬性就會代替圖片顯示。由於爬蟲對於圖片檔的解讀能力還不夠透徹，所以撰寫替代文字可以幫助爬蟲了解圖片內容，進而提高排名。
+```
+<img src="de_sterrennacht.png" alt="一幅描繪著黃色月亮、漩渦狀的星雲與藍色夜空的畫作">
+```
+- 連結優化：將網站內部的所有頁面都用連結串聯起來，避免孤兒網頁(Orphan Page)產生，對 SEO 造成不良影響。一個簡單的解法就是製作 Sitemap ，讓使用者和搜尋引擎都能更清楚網站的架構，也能延長使用者停留在站內的時間。
 
 ### SEO 工具 
 Google 有提供一個免費的 SEO 工具，也就是 [Google Search Console](https://search.google.com/search-console/about?hl=zh-tw)，從這裡可以查看 Google 供的官方數據，包括曝光和點擊次數、網頁索引狀態等，還有提供分析報表可以下載，讓網站維護者迅速掌握網站現況與改善方向，是非常實用的工具。
@@ -44,4 +68,4 @@ Google 有提供一個免費的 SEO 工具，也就是 [Google Search Console](h
 - [初學者 SEO 終極指南](https://www.shopjkl.com/pages/seo)
 - [301/302轉址如何影響網站SEO](https://www.awoo.ai/zh-hant/blog/301-302-redirect/)
 - [Google 搜尋指南](https://developers.google.com/search/docs?hl=zh-tw)
-- [Google Search Console 教學](https://www.yesharris.com/search-console/search-console-intro/)https://www.yesharris.com/search-console/search-console-intro/
+- [Google Search Console 教學](https://www.yesharris.com/search-console/search-console-intro/)
