@@ -158,9 +158,9 @@ emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+
 ```
 
 ## 參考來源
-- https://zh.wikipedia.org/zh-tw/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F
-- https://5xruby.tw/posts/15min-regular-expression
-- https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
-- https://www.minwt.com/webdesign-dev/html/20352.html
-- https://moojing.medium.com/javascript-%E5%88%9D%E6%8E%A2regex-%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-1da2f4d94795
-- https://ithelp.ithome.com.tw/articles/10094951
+- [維基百科](https://zh.wikipedia.org/zh-tw/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+- [十五分鐘認識正規表達式](https://5xruby.tw/posts/15min-regular-expression)
+- [MDN Web Docs](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [RegEx101正規表示法線上產生器，有沒有選到立馬告訴你](https://www.minwt.com/webdesign-dev/html/20352.html)
+- [初探Regex 正規表達式](https://moojing.medium.com/javascript-%E5%88%9D%E6%8E%A2regex-%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-1da2f4d94795)
+- [Email 表單驗證](https://ithelp.ithome.com.tw/articles/10094951)
