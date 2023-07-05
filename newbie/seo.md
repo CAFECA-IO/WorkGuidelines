@@ -30,6 +30,104 @@ SEO 的核心目的是讓網站更容易被搜尋引擎接受。搜尋引擎會�
 - 網站地圖([Sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=zh-tw))：收錄整個網站的頁面站點和檔案間的關聯性，主動提供給 Google 搜尋引擎來爬取頁面內容。針對規模較大的網站可以縮短 Google 的檢索時間。
 - 裝置兼容性：使用 RWD 或 AWD 網頁設計技術來優化使用者體驗，有助於 SEO 排名提升。
 - 連結優化：將網站內部的所有頁面都用連結串聯起來，避免孤兒網頁(Orphan Page)產生，對 SEO 造成不良影響。一個簡單的解法就是製作 Sitemap ，讓使用者和搜尋引擎都能更清楚網站的架構，也能延長使用者停留在站內的時間。
+- 結構化資料(Structured Data)：以標準化格式書寫網站內容讓爬蟲爬取，並呈現「複合式搜尋結果」給使用者。
+
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/b2c25cc3-c207-4118-b587-6bff0ee4fafd)
+
+如上圖所示，這些資料都有助於 SEO 的優化。以下貼出幾個結構化資料標記的範例程式碼：
+
+* BreadcrumbList
+```html
+<html>
+  <head>
+    <title>網站標題</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "階層 1",
+        "item": "https://example.com/layer1"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "階層 2",
+        "item": "https://example.com/layer1/layer2"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "階層 3"
+      }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+* Product
+
+```html
+ <html>
+  <head>
+    <title>網站標題</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "產品 1 名稱",
+      "description": "產品 1 簡介",
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          // 評分
+          "ratingValue": 4,
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "作者名稱"
+        }
+      },
+      // 總計評分和評價
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.4,
+        "reviewCount": 89
+      }
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+* Organization
+
+```html
+<html>
+  <head>
+    <title>About Us</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.example.com",
+      "logo": "https://www.example.com/images/logo.png"
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+更多的結構化資料用法可以參閱 [Google 結構化資料標記指南](https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=zh-tw)，裡面有詳細的步驟說明和可以直接改用的範例。也可以使用[協助工具](https://www.google.com/webmasters/markup-helper/u/0/)或[複合式搜尋結果測試](https://search.google.com/test/rich-results?utm_campaign=devsite&utm_medium=jsonld&utm_source=product)，幫助你新增或驗證各種類型的結構化資料。
 
 ### 內容層面：做出符合使用者需求的網頁內容
 從使用者體驗的角度切入，提供真正符合需求的優質內容：
@@ -75,3 +173,4 @@ Google 有提供一個免費的 SEO 工具，也就是 [Google Search Console](h
 - [301/302轉址如何影響網站SEO](https://www.awoo.ai/zh-hant/blog/301-302-redirect/)
 - [Google 搜尋指南](https://developers.google.com/search/docs?hl=zh-tw)
 - [Google Search Console 教學](https://www.yesharris.com/search-console/search-console-intro/)
+- [結構化資料標記是什麼？會影響 SEO 排名嗎？](https://www.seo-panda.tw/structured-data-202112/)
