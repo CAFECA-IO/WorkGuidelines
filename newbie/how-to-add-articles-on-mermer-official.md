@@ -21,7 +21,7 @@
 // src/locales/en/commom.json
 <img width="867" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/7eadbee5-094a-40c5-8a35-6ea18d635687">
 
-- 格式範例：
+- Author 格式範例：
 ```js
   {
     id: 'julian',
@@ -46,6 +46,15 @@
   - 2024 年 8 月 17 號的第五則 KM ，檔案名稱應為 `km-20240817005.md`
 
 ## KM 檔案格式
+- 需要填入的內容有以下幾項：
+  - `date`：日期的格式為 10 位的 timestamp ，如 `1689696000`，可使用[線上轉換工具](https://youtils.cc/timestamp/zh-hants)
+  - `title`：文章標題
+  - `description`：文章簡介，也是分享畫面的 description 內容
+  - `picture`：圖片位置，下面有詳細說明
+  - `category`：文章的分類(tag)，可以填入多種標籤，記得也要串上翻譯檔
+  - `authorId`: 上述提到的 IAuthor 的 id ，注意填入是 **id** 不是 name
+
+- 範例如下：
 ```md
 ---
 date: 1689696000
@@ -61,15 +70,11 @@ authorId: 'julian'
 {以下為 markdown 內容}
 ```
 
-## 日期格式
+### 內文字體大小參考
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/0dfe3fef-61e6-4141-a7fd-7f8b5b7a644d)
 
-- 日期的格式為 10 位的 timestamp ，如 `1689696000`
-- [線上轉換工具](https://youtils.cc/timestamp/zh-hants)
+- `<p>` 在小畫面時會調整成 16px
 
-## 文章分類(tag)
-
-- category 中可以填入多種標籤，記得也要串上翻譯檔，如：`category: ['KM_CATEGORY.TAG1','KM_CATEGORY.TAG2']`
-  
 ## 圖片位置
 
 <img width="255" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/eb60428b-4f10-4705-a820-d913e5f911f1">
