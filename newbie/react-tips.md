@@ -4,7 +4,7 @@
   - [useState](#usestate)
     - [使用範例:](#使用範例)
     - [基於前一個值更新 state:](#基於前一個值更新-state)
-    - [當 state 為 objects，如何更新:](#當-state-為-objects如何更新)
+    - [當 state 為 objects 或 array，如何更新:](#當-state-為-objects-或-array如何更新)
   - [useRef](#useref)
   - [useEffect](#useeffect)
   - [useContext](#usecontext)
@@ -33,7 +33,7 @@ export default Counter;
 
 ### 基於前一個值更新 state:
 
-### 當 state 為 objects，如何更新:
+### 當 state 為 objects 或 array，如何更新:
 
 ## useRef
 
