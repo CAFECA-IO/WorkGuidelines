@@ -1,3 +1,5 @@
+文章目的：幫助 React 新手在實際開發中更有效地使用 Hooks，提升開發網站的效率。
+
 Table of Contents
 
 - [useState](#usestate)
@@ -133,6 +135,10 @@ function handleStartClick() {
 ```jsx
 useEffect(() => {
   // side effect
+
+  return () => {
+    // clear function
+  };
 }, [dependencies]);
 ```
 
@@ -145,7 +151,12 @@ function Example() {
   useEffect(() => {
     // 使用瀏覽器的 API 更新文件標題
     document.title = `You clicked ${count} times`;
-  }, []);
+
+    // 返回的函數將在組件卸載或重新渲染前被調用，進行清理工作
+    return () => {
+      document.title = `React App`;
+    };
+  }, [count]); // 依賴於 count 變數，當 count 變化時，執行此副作用
 
   return (
     <div>
