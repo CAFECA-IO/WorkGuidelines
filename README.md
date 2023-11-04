@@ -2,7 +2,7 @@
 CAFECA Standard Operation Procedure
 
 ## 人事制度
-- [Employment Policy](code-of-conduct/employ_policy.pdf)
+- [Employment Policy](code-of-conduct/employment_policy.pdf)
 
 ## 工作規範
 - [On Board](code-of-conduct/on-board.md)
