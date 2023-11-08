@@ -3,7 +3,7 @@ v1.0.0 2022.12.29
 
 ## 出席
 - 出席以辦公室刷卡門禁記錄作為簽到與離開記錄
-- 遠端工作需使用 [Swingvy](https://www.swingvy.com/tw/home) 打卡
+- 遠端工作需使用 [公司指定應用程式](https://marketing.pro.104.com.tw/guide/app/Download) 打卡
 
 ## 工作日
 工作日依據臺灣[行政院人事行政總處](https://www.dgpa.gov.tw/)公告資訊排定
@@ -32,7 +32,7 @@ v1.0.0 2022.12.29
 |18|30|
 
 ## 請假
-請假需根據規範於期間內使用 [Swingvy](https://www.swingvy.com/tw/home) 提出申請，應附上請假事由
+請假需根據規範於期間內使用 [公司指定應用程式](https://marketing.pro.104.com.tw/guide/app/Download) 提出申請，應附上請假事由
 
 ### 病假
 不須提前申請，但 24 小時內需提供診斷證明書
