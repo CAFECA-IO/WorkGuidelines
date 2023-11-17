@@ -83,13 +83,13 @@ WHERE
 ### 針對 order 重複取消的處理:
 ```sql
 INSERT INTO account_versions (id, member_id, account_id, reason, balance, locked, fee, amount, modifiable_id, modifiable_type, created_at, updated_at, currency, fun)
-		VALUES(DEFAULT, <member_id>, <account_id>, 1, <balance>, 0.44845, 0, 0.2455674, 37091, 'Audit', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), 3, 2);
+		VALUES(DEFAULT, <member_id>, <account_id>, 1, <balance>, <locked>, 0, <amount>, 37091, 'Audit', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), <currency>, 2);
 ```
-### 針對 order(id: 419293835) 取消的處理:
+### 針對 order 取消的處理:
 新增 account_version
 ```sql
 INSERT INTO account_versions (id, member_id, account_id, reason, balance, locked, fee, amount, modifiable_id, modifiable_type, created_at, updated_at, currency, fun)
-		VALUES(DEFAULT, 669, 2956, 610, 0.694017, -0.694017, 0, 0.2455674, 420283053, 'Order', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), 3, 1);
+		VALUES(DEFAULT, <member_id>, <account_id>, 610, <balance>, <locked>, 0, <amount>, <order_id>, 'Order', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), <currency>, 1);
 ```
 order 更新
 ```sql
@@ -99,22 +99,22 @@ SET
 	state = 0,
 	updated_at = CURRENT_TIMESTAMP()
 WHERE
-	id = 420283053;
+	id = <order_id>;
 ```
 account 更新
 ```sql
 UPDATE
 	accounts
 SET
-        balance = 0.2455674,
+        balance = <balance>,
 	locked = 0,
 	updated_at = CURRENT_TIMESTAMP()
 WHERE
-	id = 2956
+	id = <account_id>
 LIMIT 1;
 ```
 
-### 系統損失
-- 相當於我們自行吸收用 1989.31 USDT per ETH 賣 0.694017 eth，得到 1380.61495827 usdt。
+### 紀錄系統損失
+- 如果用戶取消的這張訂單在 OKX 已經撮合或是部份撮合，相當於我們自行吸收用 <用戶報價> USDT per <Curreny> 的買賣。
 
 
