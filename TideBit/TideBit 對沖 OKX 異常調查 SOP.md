@@ -78,14 +78,15 @@ WHERE
 
 ## 異常處理
 
-## 用戶因重複取消導致要取消的訂單所對應的帳號中locked餘額不足
+### 用戶因重複取消導致要取消的訂單所對應的帳號中locked餘額不足
 
-### 針對 order 重複取消的處理:
+#### 這張訂單在 OKX 已經撮合或是未撮合
+##### 針對 order 重複取消的處理:
 ```sql
 INSERT INTO account_versions (id, member_id, account_id, reason, balance, locked, fee, amount, modifiable_id, modifiable_type, created_at, updated_at, currency, fun)
 		VALUES(DEFAULT, <member_id>, <account_id>, 1, <balance>, <locked>, 0, <amount>, 37091, 'Audit', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), <currency>, 2);
 ```
-### 針對 order 取消的處理:
+##### 針對 order 取消的處理:
 新增 account_version
 ```sql
 INSERT INTO account_versions (id, member_id, account_id, reason, balance, locked, fee, amount, modifiable_id, modifiable_type, created_at, updated_at, currency, fun)
@@ -114,7 +115,10 @@ WHERE
 LIMIT 1;
 ```
 
-### 紀錄系統損失
-- 如果用戶取消的這張訂單在 OKX 已經撮合或是部份撮合，相當於我們自行吸收用 <用戶報價> USDT per <Curreny> 的買賣。
+##### 紀錄系統損失
+- 如果用戶取消的這張訂單在 OKX 已經撮合，相當於我們自行吸收用 <用戶報價> USDT per <Curreny> 的買賣。
+
+#### 這張訂單在 OKX 部份撮合
+- 需要計算已經給用戶的金額在 account_version 新增紀錄，後更新用戶餘額。
 
 
