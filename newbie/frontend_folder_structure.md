@@ -1,6 +1,7 @@
 # Frontend Folder Structure
 
 前端資料夾結構會因應專案的大小和需求而有所不同，但有一些元素是所有專案共通的。本文將針對這些通用的資料夾進行整理，說明各個資料夾的層級和內容，幫助讀者了解前端專案的開發流程。
+
 歡迎隨時更新或補充內容。 
 
 ※ 資料夾及檔案的命名須遵循 [Naming Convention](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/coding-convention/naming-convention.md)，使用 `lower_snake_case`。
