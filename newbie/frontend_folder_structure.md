@@ -100,6 +100,29 @@ export const A4_SIZE = {
 
 **※ 檔案命名須使用 `lower_snake_case` ，並以 `_context` 結尾**
 
+## /stores
+
+在大型的前端專案中，管理全局狀態 (Global State) 並且避免影響其他元件不必要的重新渲染是一項挑戰。為此，我們可以使用 [Zustand](https://github.com/pmndrs/zustand) 來創建和管理應用程式的全局狀態。Zustand 是一個輕量級的狀態管理庫，它提供了一種簡單、可讀性強的方式來創建 store。
+
+使用 Zustand 的 **`create()`** 方法，我們可以定義一個全局 store，這個 store 是一個自包含的狀態和邏輯的集合。每個 store 都是一個獨立的模塊，可以包含其自身的狀態、邏輯和異步操作。創造的 store 需要以 `use + A + Store` 的形式命名
+
+```jsx
+// stores/fish_store.ts
+import { create } from 'zustand'
+import omit from 'lodash-es/omit'
+
+const useFishStore = create((set) => ({
+  salmon: 1,
+  tuna: 2,
+  deleteEverything: () => set({}, true), // clears the entire store, actions included
+  deleteTuna: () => set((state) => omit(state, ['tuna']), true),
+}))
+
+export default useFishStore
+```
+
+**※ 檔案命名須使用 `lower_snake_case` ，並以 `_store` 結尾**
+
 ## /interfaces
 
 存放 TypeScript 定義的介面，以加強類型的安全性。開發過程中如果需要用到 dummyData ，也是在此定義。
