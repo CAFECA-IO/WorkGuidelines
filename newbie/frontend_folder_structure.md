@@ -107,18 +107,14 @@ export const A4_SIZE = {
 使用 Zustand 的 **`create()`** 方法，我們可以定義一個全局 store，這個 store 是一個自包含的狀態和邏輯的集合。每個 store 都是一個獨立的模塊，可以包含其自身的狀態、邏輯和異步操作。創造的 store 需要以 `use + A + Store` 的形式命名
 
 ```jsx
-// stores/fish_store.ts
+// stores/bear_store.ts
 import { create } from 'zustand'
-import omit from 'lodash-es/omit'
 
-const useFishStore = create((set) => ({
-  salmon: 1,
-  tuna: 2,
-  deleteEverything: () => set({}, true), // clears the entire store, actions included
-  deleteTuna: () => set((state) => omit(state, ['tuna']), true),
+const useBearStore = create((set) => ({
+  bears: 0,
+  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
+  removeAllBears: () => set({ bears: 0 }),
 }))
-
-export default useFishStore
 ```
 
 **※ 檔案命名須使用 `lower_snake_case` ，並以 `_store` 結尾**
