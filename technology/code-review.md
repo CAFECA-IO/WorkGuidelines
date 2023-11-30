@@ -50,3 +50,7 @@ src/components/crypto_news_section/crypto_news_section.tsx (17)
 - [Sequence Diagram (interaction between frontend and backend)](https://github.com/CAFECA-IO/Documents/blob/main/TBD/TBDSD00001.md)
 - [Component Diagram](https://github.com/CAFECA-IO/Documents/blob/main/TBD/TBDCP00001.md)
 ```
+
+### RULES
+1. No logic and function call in return
+2. No logic and function call in function parameters
