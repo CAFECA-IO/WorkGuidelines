@@ -56,3 +56,4 @@ src/components/crypto_news_section/crypto_news_section.tsx (17)
 2. No logic and function call in function parameters
 3. No SQL execution in for loop
 4. No API call in for loop
+5. Functions need explanatory comments
