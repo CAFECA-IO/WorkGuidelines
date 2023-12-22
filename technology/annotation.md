@@ -35,6 +35,7 @@
 ```
 ```typescript
 // Deprecated: say something (20230407 - Luphia)
+// eslint-disable-next-line no-console
 ```
 
 - Multi-Line
