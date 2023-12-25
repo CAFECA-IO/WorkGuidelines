@@ -36,4 +36,8 @@
    - 使用表格或專案管理工具明確地列出每個任務和相對應的時間。
    - 確保時程表具有彈性以應對變動。
 
+![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/27436ced-32de-4552-96c6-41b4dc1c4cdb)
+
+
+
 ## 三**、開票**
