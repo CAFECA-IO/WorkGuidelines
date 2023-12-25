@@ -38,6 +38,7 @@
 
 ![image](https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/27436ced-32de-4552-96c6-41b4dc1c4cdb)
 
+<img width="1014" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/4f08b6b8-868b-4bdb-9d19-ca5d9ea01733">
 
 
 ## 三**、開票**
