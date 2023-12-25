@@ -76,6 +76,6 @@
 
 ## **開票**
 
-開票可以依照規劃時程表的項目跟步驟去開，呈上圖，可以開出 `init worker context - 8 pt` 的票，以此類推開下去，並且可以在該步驟的右邊開出一欄 GitHub issue 紀錄對應的票
+開票可以依照規劃時程表的項目跟步驟去開，呈上圖，可以開出 `初始化 worker context - 8 pt` 的票，以此類推開下去，並且可以在該步驟的右邊開出一欄 GitHub issue 紀錄對應的票
 
 <img width="1014" alt="image" src="https://github.com/CAFECA-IO/WorkGuidelines/assets/20677913/4f08b6b8-868b-4bdb-9d19-ca5d9ea01733">
