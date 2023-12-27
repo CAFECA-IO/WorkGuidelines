@@ -1,7 +1,7 @@
 - [**前端開發時程規劃與開票的標準作業程序（SOP）**](#前端開發時程規劃與開票的標準作業程序sop)
   - [**估算時程所需資料**](#估算時程所需資料)
     - [Must have](#must-have)
-    - [Better have](#better-have)
+    - [Better to have](#better-to-have)
   - [前端開發步驟分法](#前端開發步驟分法)
     - [先刻畫面再串接資料的步驟規劃](#先刻畫面再串接資料的步驟規劃)
   - [**估算時程的步驟**](#估算時程的步驟)
@@ -21,7 +21,7 @@
 4. **Component Diagram**: 顯示前端組件間跟 Context 的關聯和互動。
 5. **Sequence Diagram**: 描述功能流程和組件間的交互順序。
 
-### Better have
+### Better to have
 
 1. **Mockup**: 了解詳細的頁面細節，可以在刻畫面的時程上有更精準的規劃。
 
