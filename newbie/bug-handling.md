@@ -19,14 +19,14 @@
    - vi. userCtx.signServiceTerm()
    
 4. Code Review：回顧剛剛整理的關鍵步驟，找出有瑕疵的流程
-```
+```ts
 if (!lock()) {
   // 我們真的不打算讓使用者點擊嗎？
   return; // 沒有成功上鎖，所以不執行接下來的程式碼
 }
 ```
 5. 設立檢查點：在程式中設立檢查點，縮小 review 範圍直到找到錯誤原因
-```
+```ts
 if (!lock()) {
   // 我們真的不打算讓使用者點擊嗎？
   console.log('check point 1');
