@@ -1,4 +1,4 @@
-# git flow
+# Git Flow
 # 前言
 
 此篇文目標是簡單講述 Git Flow 和 GitHub Flow 的流程，以及相關名詞解說，並且附上目前開發團隊的流程慣例。
