@@ -17,8 +17,6 @@ CAFECA Standard Operation Procedure
 - [Daily](meeting/daily)
 - [Weekly](meeting/daily)
 - [Monthly](meeting/daily)
-- [Seasonal](meeting/daily)
-- [Yearly](meeting/daily)
 
 ### Technology
 - [Research](technology/research.md)
