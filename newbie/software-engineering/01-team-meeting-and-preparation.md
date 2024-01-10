@@ -21,21 +21,19 @@
 初始日的報告是寫任務計畫、最後一天的報告為任務進度結算。以下的「報告」為月報和週報的通稱。
 
 ### 報告的存放與命名
-報告的存放目錄：https://github.com/CAFECA-IO/EventReport/tree/main
-
-報告的檔案命名方式：`名字(首字大寫).md`
-
-範例：
-```
-2024年1月份月報存放於:
-https://github.com/CAFECA-IO/EventReport/tree/main/2024/m01
-
-2024年第1週週報存放於:
-https://github.com/CAFECA-IO/EventReport/tree/main/2024/w01
-
-Liz 這位員工的2024年1月月報目錄:
-https://github.com/CAFECA-IO/EventReport/blob/main/2024/m01/Liz.md
-```
+- 報告的存放目錄：https://github.com/CAFECA-IO/EventReport/tree/main
+- 報告的檔案命名方式：`名字(首字大寫).md`
+- 範例：
+    ```
+    2024年1月份月報存放於:
+    https://github.com/CAFECA-IO/EventReport/tree/main/2024/m01
+    
+    2024年第1週週報存放於:
+    https://github.com/CAFECA-IO/EventReport/tree/main/2024/w01
+    
+    Liz 這位員工的2024年1月月報目錄:
+    https://github.com/CAFECA-IO/EventReport/blob/main/2024/m01/Liz.md
+    ```
 
 ### 報告撰寫內容
 
