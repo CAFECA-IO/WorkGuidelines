@@ -111,6 +111,12 @@
 
 在[敏捷測試流程](https://blog.kms-solutions.asia/agile-testing-for-digital-team)中，測試任務被拆分成短暫的開發週期，通常由開發者和測試人員共同執行。即使在敏捷流程中，測試人員仍然發揮著至關重要的作用。自動化測試仍然是敏捷開發的核心，因為一個一致且迭代的測試流程對於建立無錯誤軟體來說是最確保的方法。
 
+## 結論
+
+本篇文章主要在蒐集 SQM 流程的相關資訊，包含流程以及名詞解釋。
+
+在蒐集資料並且一邊試圖理解的同時，筆者產生了新的問題就是：「測試」是否被包含於「品質管理」的流程？又或者，「品質管理」除了「測試」以外，是否還有別的內容？如果是的話，也許之後可以再寫一篇新的技術文章，蒐集並詳細介紹「測試」相關的資料。
+
 ## 資料來源
 
 [Software Quality Management: How does It Work and Best Practices](https://blog.kms-solutions.asia/software-quality-management)
