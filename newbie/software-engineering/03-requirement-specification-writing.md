@@ -1,4 +1,4 @@
-# 需求規格書｜Requirement Specification Writing
+# 需求規格書撰寫｜Requirement Specification Writing
 
 建立方式：Google 文件
 
