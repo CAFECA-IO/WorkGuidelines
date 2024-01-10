@@ -18,9 +18,11 @@
 
 ### 分支規劃
 Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出分支 Develop，再從 Develop 拉功能分支進行開發。
-所有程式碼不可以直接提交至 main，包含 README.md。
 
-此部份可參考 [Git Flow](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/git-flow.md) : 
+> [!CAUTION]
+> 所有程式碼不可以直接提交至 main，包含 README.md。
+
+關於分支規劃的部份可參考此篇文章 [Git Flow](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/git-flow.md)，以下為節錄： 
 
 >在 GitHub 的 Repository，由 main 拉出一個 branch 叫做 develop。
 接著就跟隨 Git Flow 的規則，從 develop 拉出開發者自己的 branch。
