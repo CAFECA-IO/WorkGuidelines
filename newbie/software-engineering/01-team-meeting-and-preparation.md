@@ -22,7 +22,9 @@
 
 ### 報告的存放與命名
 報告的存放目錄：https://github.com/CAFECA-IO/EventReport/tree/main
+
 報告的檔案命名方式：`名字(首字大寫).md`
+
 範例：
 ```
 2024年1月份月報存放於:
