@@ -88,9 +88,10 @@ Figma 提供建立多個 page 的功能，可以在這裡切換不同頁面進�
 - 根據功能分類：功能一致的物件就切在同一個層級（div），不同的則分開
 - 根據物件排列方向：當遇到方向不同的物件，就細分一層。
 
-![BAIFA_EXP1](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/96d44acb-d326-4990-8834-39f667a8d9e7)
-
-![BAIFA_EXP2](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/ee62a384-d96e-4d74-8fb4-b229bb2105d4)
+<div style="display:flex;gap:5px;">
+ <img alt="BAIFA_EXP1" src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/96d44acb-d326-4990-8834-39f667a8d9e7") width="50%" height="50%" />
+  <img alt="BAIFA_EXP2" src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/ee62a384-d96e-4d74-8fb4-b229bb2105d4") width="50%" height="50%" />
+</div>
 
 以上圖的 BAIFA 官網為例，頁面上的物件大致都是沿著紅色箭頭方向排列，因此最外層應該會有一個以 Y 軸為主軸的大 div。
 
