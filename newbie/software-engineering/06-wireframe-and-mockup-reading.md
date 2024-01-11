@@ -16,7 +16,7 @@ Wireframe（線框圖）是簡單的草稿圖，目的在於確認目標功能�
 
 以 ASICEX 的 Wireframe 為例，先查看系統架構書：
 
-![架構書截圖](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/c335ddd0-1027-4ce8-b68b-b1d18034550a)
+<img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/c335ddd0-1027-4ce8-b68b-b1d18034550a" alt="架構書截圖" width="60%" height="60%" />
 
 根據架構書找出對應的頁面，這裡以註冊（AEXWF-000002）和登入（AEXWF-000022）為例，確認需求功能和互動關係：
 
