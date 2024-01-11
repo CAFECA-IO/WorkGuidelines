@@ -70,18 +70,6 @@ Figma 提供建立多個 page 的功能，可以在這裡切換不同頁面進�
 
  請記得注意其他人在 Comment 留下的訊息！
 
-<style>
-comment {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-}
-</style>
-<div class="comment">
-  <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/e2f7687c-dd96-4833-b5e3-6090dda1cb10" alt="comment2" />
-  <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/1ed7d547-c441-4dfd-99fa-7cc9b0b993a3" alt="comment3" />
-</div>
-
 ![comment2](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/e2f7687c-dd96-4833-b5e3-6090dda1cb10)
 
 ![comment3](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/1ed7d547-c441-4dfd-99fa-7cc9b0b993a3)
