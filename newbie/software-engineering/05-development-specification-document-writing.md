@@ -2,14 +2,14 @@
 💡2024/1/9：團隊統一使用 Figma 作為畫圖工具
 
 - [Persona（人物誌）](#persona人物誌)
-- [User Story（使用者故事）](#user-story（使用者故事）)
-- [User Journey Map（使用者旅程地圖）](#user-journey-map（使用者旅程地圖）)
-- [Wireframe & Mockup（線框圖 & 視覺稿）](#wireframe-&-mockup（線框圖-&-視覺稿）)
-- [UML](#UML)
-  - [Class Diagram（類別圖）](#class-diagram（類別圖）)
-  - [Component Diagram（元件圖）](#component-diagram（元件圖）)
-  - [Sequence Diagram（循序圖）](#sequence-diagram（循序圖）)
-- [DB schema (ER-D)](#db-schema (er-d))
+- [User Story（使用者故事）](#user-story使用者故事)
+- [User Journey Map（使用者旅程地圖）](#user-journey-map使用者旅程地圖)
+- [Wireframe & Mockup（線框圖 & 視覺稿）](#wireframe--mockup線框圖--視覺稿)
+- [UML](#uml)
+  - [Class Diagram（類別圖）](#class-diagram類別圖)
+  - [Component Diagram（元件圖）](#component-diagram元件圖)
+  - [Sequence Diagram（循序圖）](#sequence-diagram循序圖)
+- [DB schema (ER-D)](#db-schema-er-d)
 
 ## Persona（人物誌）
 
