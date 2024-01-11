@@ -25,7 +25,7 @@
 
 以圖形表示系統中各主要組件的互動關係，包括組件間的通訊、資料流動，以及軟硬體的配置等。
 
-![系統架構](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/9b51aee1-dd38-48a9-8779-51a6af22cc5d=50%x)
+<img src="https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/9b51aee1-dd38-48a9-8779-51a6af22cc5d" alt="系統架構" width='50%' height='50%'/>
 
 圖 1.1 「IPFS 網頁生成引擎」系統架構
 
