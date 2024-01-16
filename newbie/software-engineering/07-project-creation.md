@@ -32,3 +32,6 @@ PR 由團隊主管審核後就會自動被併入 develop，開發者再將自己
 
 ### 開發環境
 參考此篇 KM : [development environment](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/development-environment.md)
+
+### 撰寫 README.md
+參考此篇 KM : [README Writing](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/tips/readme-writing.md)https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/tips/readme-writing.md
