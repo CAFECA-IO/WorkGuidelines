@@ -103,13 +103,15 @@ GitHub flow 下只有兩種分支，第一個是 master，其餘的都是 branch
 
 # 目前我們團隊的開發流程
 
-在 GitHub 的 Repository，由 main 拉出一個 branch 叫做 develop。接著就跟隨 Git Flow 的規則，從 develop 拉出開發者自己的 branch。
+在 GitHub 的 Repository，由 main 拉出一個 branch 命名為 `develop`。
 
-開發者開發完成該 branch 後，就建立 PR。
+接著就跟隨 Git Flow 的規則，每一次開發都是從 `develop` 拉出開發者自己的功能分支，分支命名須為`feature/`開頭，例如：`feature/add_audit_report_formate`。
 
-PR 由團隊主管審核後就會自動被併入 develop，開發者再將自己的 branch 刪除。
+開發者開發完成該功能分支後，就建立 PR，依照團隊的 [Pull Request Document Rule](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/code-review.md) 規則撰寫 PR 的內文描述。
 
-只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。
+PR 由團隊主管審核後該功能分支就會自動被併入(merge) develop，開發者再將自己的分支刪除（遠端分支會由主管刪除，開發者自行刪除本地端分支即可）。
+
+總之，只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。
 
 # References
 
