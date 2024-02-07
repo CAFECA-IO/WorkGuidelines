@@ -115,6 +115,27 @@ WHERE
 LIMIT 1;
 ```
 
+##### 新增 account_versions 並更新餘額後需要檢查 account_versions 的 sum(balance), sum(locked) 是否與更新後的 accounts 一致
+```sql
+SELECT
+	SUM(balance) AS balance,
+	SUM(LOCKED) AS LOCKED
+FROM
+	account_versions
+WHERE
+	member_id = <member_id>
+	AND currency = <currency>;
+
+SELECT
+	balance,
+	LOCKED
+FROM
+	accounts
+WHERE
+	member_id = <member_id>
+	AND currency = <currency>;
+```
+
 ##### 紀錄系統損失
 - 如果用戶取消的這張訂單在 OKX 已經撮合，相當於我們自行吸收用 <用戶報價> USDT per <Curreny> 的買賣。
 
