@@ -59,6 +59,7 @@ Proposal
 5. 完成後將 `Daily Plan` 改為 `Daily Review`，表示此工作單要在本日例會中回顧。
 6. 工作單於本日例會中回顧後，請點擊工作單下方按鈕【Close with comment】關閉工作單，系統會自動將單子狀態改成 `Weekly Review`，表示此工作單要在例會的週報時間回顧，並且要記錄於週報內。
 7. 點擊 Close 按鈕關閉工作單後，我們同時需要在 **Close date 欄位** 點選 _今日日期_。
+  ![截圖 2024-03-06 下午4 03 33](https://github.com/CAFECA-IO/WorkGuidelines/assets/105651918/9abefeb1-8634-4cac-a070-b67775373b33)
 
 
 
