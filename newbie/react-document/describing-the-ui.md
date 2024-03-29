@@ -439,6 +439,7 @@ export default function TeaSet() {
 React 使用樹狀結構來模擬(model)元件和模組之間的關係。一個 React 渲染樹(React render tree)是對元件之間父子關係的表示。
 
 An example React render tree:
+
 ![generic_render_tree](https://github.com/CAFECA-IO/cafeca/assets/105651918/f6e2faa0-a72f-45cf-9c3a-c3967d7498ee)
 
 靠近樹的頂部、根元件附近的元件被認為是頂級元件(top-level components)。
@@ -452,6 +453,7 @@ An example React render tree:
 > model: 表示建模或模擬的行為。
 
 An example module dependency tree:
+
 ![generic_dependency_tree](https://github.com/CAFECA-IO/cafeca/assets/105651918/35609468-4b48-403b-a130-3b168793bb8a)
 
 依賴樹通常被建構工具(build tools)用來將所有相關的 JavaScript 程式碼打包(bundle)，供客戶端下載和渲染(download and render)。
