@@ -15,6 +15,9 @@
 - No file IO in for loop
 - Use static parameter for specific string or number
 
-## Pull Request
-- must update version number, e.g. 0.8.7 -> 0.8.7+1 -> 0.8.7+2
-- follow [description format](/technology/code-review.md)
+## Version Control
+- follow [git flow](/newbie/git-flow.md)
+- commit your code every day
+- merge develop branch into your branch before coding every day
+- must update version number before creating a pull request, e.g. 0.8.7 -> 0.8.7+1 -> 0.8.7+2
+- creating pull request with [description format](/technology/code-review.md) 
