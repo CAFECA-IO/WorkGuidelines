@@ -438,9 +438,13 @@ export default function TeaSet() {
 
 React 使用樹狀結構來模擬(model)元件和模組之間的關係。
 
+> model: 表示建模或模擬的行為。
+
+### React render tree
+
 一個 React 渲染樹(React render tree)是對元件之間父子關係的表示。
 
-> model: 表示建模或模擬的行為。
+<!-- 範例圖 01 :  React 渲染樹 -->
 
 An example React render tree:
 
@@ -452,8 +456,11 @@ An example React render tree:
 
 這種元件的分類對於理解資料流(data flow)和渲染效能(rendering performance)非常有用。
 
-<br/>
-對於理解你的應用程式，模擬(model) JavaScript 模組之間的關係是另一種有用的方式。我們稱之為模組依賴樹(module dependency tree)。
+### module dependency tree
+
+對於理解你的應用程式，模擬 JavaScript 模組之間的關係是另一種有用的方式。我們稱之為模組依賴樹(module dependency tree)。
+
+<!-- 範例圖 02 : 模組依賴樹 -->
 
 An example module dependency tree:
 
