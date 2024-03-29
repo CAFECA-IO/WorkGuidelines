@@ -26,7 +26,7 @@ React 讓你將它們結合成可重複使用、可嵌套的*元件*。從網站
 
 - [Your first component (你的第一個元件)](#your-first-component-你的第一個元件)
 - [Importing and exporting components (匯入與匯出元件)](#importing-and-exporting-components-匯入與匯出元件)
-- [Writing markup with JSX (使用 JSX 撰寫標籤)](#writing-markup-with-jsx-使用-jsx-撰寫標籤)
+- [Writing markup with JSX (使用 JSX 撰寫標記文本)](#writing-markup-with-jsx-使用-jsx-撰寫標記文本)
 - [JavaScript in JSX with curly braces (JSX 中使用花括號表示 JavaScript)](#javascript-in-jsx-with-curly-braces-jsx-中使用花括號表示-javascript)
 - [Passing props to a component (將 props 傳遞給元件)](#passing-props-to-a-component-將-props-傳遞給元件)
 - [Conditional rendering (條件渲染)](#conditional-rendering-條件渲染)
@@ -38,7 +38,7 @@ React 讓你將它們結合成可重複使用、可嵌套的*元件*。從網站
 
 React 應用程式由稱為*元件*的獨立 UI 塊組成。
 
-一個 React 元件是一個你可以在其中加入標籤的 JavaScript 函式。
+一個 React 元件是一個你可以在其中加入標記文本的 JavaScript 函式。
 
 元件可以小至一個按鈕，大至整個頁面。
 
@@ -102,18 +102,18 @@ export default function Profile() {
 
 閱讀 **[匯入與匯出元件](https://react.dev/learn/importing-and-exporting-components)** 以學習如何將元件分割為它們自己的檔案。
 
-## Writing markup with JSX (使用 JSX 撰寫標籤)
+## Writing markup with JSX (使用 JSX 撰寫標記文本)
 
-每個 React 元件都是一個 JavaScript 函式，其中可能包含一些標籤(markup)，React 會將其呈現到瀏覽器中。
+每個 React 元件都是一個 JavaScript 函式，其中可能包含一些標記文本(markup)，React 會將其呈現到瀏覽器中。
 
 > markup: <br/>
-> 指的是標記語言中的標記或標籤，用於定義文檔的結構和格式。 <br/>
-> 在 HTML 中，例如，`<div>`、`<p>` 和 `<span>` 就是標籤，它們用於將文本和內容組織成可理解的格式。 <br/>
-> 在 React 中，JSX 也是一種類似標籤的語法，用於定義 UI 元素的結構。
+> 指的是標記語言中的標記文本，用於定義文檔的結構和格式。 <br/>
+> HTML 是由標籤組合而成的標記文本，其中的 `<div>`、`<p>` 和 `<span>` 就是標籤。 <br/>
+> 在 React 中，JSX 也是一種類似標記文本的語法，用於定義 UI 元素的結構。
 
-React 元件使用一種語法擴展叫做 JSX 來表示該標籤。JSX 看起來很像 HTML，但它更嚴格，並且可以顯示動態資訊。
+React 元件使用一種語法擴展叫做 JSX 來表示該標記文本。JSX 看起來很像 HTML，但它更嚴格，並且可以顯示動態資訊。
 
-如果我們將現有的 HTML 標籤(HTML markup)貼到 React 元件中，它不一定會正常運作：
+如果我們將現有的 HTML 標記文本(HTML markup)貼到 React 元件中，它不一定會正常運作：
 
 App.js :
 
@@ -170,13 +170,13 @@ export default function TodoList() {
 
 ### 延伸閱讀
 
-閱讀 **[使用 JSX 撰寫標籤](https://react.dev/learn/writing-markup-with-jsx)** 以學習如何撰寫有效的 JSX。
+閱讀 **[使用 JSX 撰寫標記文本](https://react.dev/learn/writing-markup-with-jsx)** 以學習如何撰寫有效的 JSX。
 
 ## JavaScript in JSX with curly braces (JSX 中使用花括號表示 JavaScript)
 
-JSX 允許你在 JavaScript 檔案中寫入類似 HTML 的標籤，將渲染邏輯和內容放在同一個地方。
+JSX 允許你在 JavaScript 檔案中寫入類似 HTML 的標記文本，將渲染邏輯和內容放在同一個地方。
 
-有時你會希望在該標籤中添加一些 JavaScript 邏輯或引用動態屬性。
+有時你會希望在該標記文本中添加一些 JavaScript 邏輯或引用動態屬性。
 
 在這種情況下，你可以在 JSX 中使用花括號來“打開一個窗口”到 JavaScript：
 
