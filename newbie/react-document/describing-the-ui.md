@@ -108,8 +108,14 @@ export default function Profile() {
 
 > markup: <br/>
 > 指的是標記語言中的標記文本，用於定義文檔的結構和格式。 <br/>
-> HTML 是由標籤組合而成的標記文本，其中的 `<div>`、`<p>` 和 `<span>` 就是標籤。 <br/>
+> HTML 是由標籤(tag)組合而成的標記文本，其中的 `<div>`、`<p>` 和 `<span>` 就是標籤(tag)。 <br/>
 > 在 React 中，JSX 也是一種類似標記文本的語法，用於定義 UI 元素的結構。
+
+> tag VS markup : <br/>
+> 我們常常看到 tag 與 markup 都被翻譯為「標籤」，筆者認為他們的差異在於：tag 指的是 HTML 的標籤，而 markup 指的是標記語言的標記。 <br/>
+> 像是 `<h1>` 是一個 tag，而 `<h1>標題</h1>` 則是一個 markup。 <br/>
+> 實際上，HTML 就是 HyperText Markup Language (超文本標記語言) 的縮寫。 <br/>
+> 接下來，筆者會將 tag 譯為「標籤」，而 markup 譯為「標記文本」，以此區別兩者。
 
 React 元件使用一種語法擴展叫做 JSX 來表示該標記文本。JSX 看起來很像 HTML，但它更嚴格，並且可以顯示動態資訊。
 
