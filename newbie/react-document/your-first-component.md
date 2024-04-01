@@ -215,7 +215,7 @@ And `Profile` contains even more HTML: `<img />`. In the end, this is what the b
 
 ## 試著挑戰看看
 
-這部分是一個挑戰題，這裡就不爆雷，趕緊去[原文](https://react.dev/learn/your-first-component)照著步驟挑戰看看吧！
+這部分是一個挑戰題，這裡就不爆雷，趕緊去[原文](https://react.dev/learn/your-first-component#challenges)照著步驟挑戰看看吧！
 
 # 結語
 
