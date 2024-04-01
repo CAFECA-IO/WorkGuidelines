@@ -4,7 +4,7 @@
 
 這一系列文章是筆者在學習 React 時，閱讀 [React 官方文件](https://react.dev/learn) 所做的翻譯筆記，希望能幫助更多的人學習 React。
 
-本篇文章沒有節錄原文範例的輸出結果，如有需要請至原文對照參考。
+本篇文章沒有節錄原文範例的輸出結果，如有需要請至原文對照參考。最後原文有提供一個實作的挑戰，這裡筆者就不放上來了，這部分請至原文按照步驟試試看。
 
 # React | Your First Component
 
@@ -213,9 +213,9 @@ And `Profile` contains even more HTML: `<img />`. In the end, this is what the b
   1. 它們的名稱始終以大寫字母開頭。
   2. 它們回傳 JSX 標記文本(markup)。
 
-## Try out some challenges
+## 試著挑戰看看
 
-去原文挑戰看看吧！
+這部分是一個挑戰題，這裡就不爆雷，趕緊去[原文](https://react.dev/learn/your-first-component)照著步驟挑戰看看吧！
 
 # 結語
 
