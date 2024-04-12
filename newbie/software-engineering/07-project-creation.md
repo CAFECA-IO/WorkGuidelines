@@ -21,7 +21,7 @@
 ### 專案設定
 
 Repository settings : **Branch protection rule** (for `main` and `develop` branches) <br/>
-Select these options (Default is checked, but please confirm) :
+勾選以下選項（通常預設是已經勾選，但請再次確認）：
 
 ✅ Require a pull request before merging <br/>
 When enabled, all commits must be made to a non-protected branch and submitted via a pull request before they can be merged into a branch that matches this rule.
