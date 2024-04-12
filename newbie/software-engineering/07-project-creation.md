@@ -12,7 +12,7 @@
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/5e88ec31-30bd-42ba-8df1-4b9685be6fe0" alt="截圖2/5" width="60%">
 
 1. Create a new repository
-2. 輸入 Repository name，命名方式為 kebab-case
+2. 輸入 Repository name，命名方式為 UpperCamelCase 
 3. 選擇 Public
 4. add a README file
 5. add .gitignore : `Node`
