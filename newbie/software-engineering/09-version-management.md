@@ -70,6 +70,21 @@ GitHub提供了協作工具，例如對程式碼進行評論 (commenting on code
 
 而我們團隊也是使用 GitHub 來進行版本管理與控制，關於詳細流程的部分可以參考延伸閱讀 [Git Flow](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/git-flow.md)。
 
+### 補充：目前我們團隊的開發流程
+
+在 GitHub 的 Repository，由 main 拉出一個 branch 命名為 `develop`。
+
+接著就跟隨 Git Flow 的規則，每一次開發都是從 `develop` 拉出開發者自己的功能分支，分支命名須為`feature/`開頭，例如：`feature/add_audit_report_formate`。
+
+開發者開發完成該功能分支後，就建立 PR，依照團隊的 [Pull Request Document Rule](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/code-review.md) 規則撰寫 PR 的內文描述。
+
+並且在建立 PR 前先調整自己分支的版本號碼，假設目前開發的版本為 `1.0.0+1`，要發 PR 前就需要先調整為 `1.0.0+2`。
+
+PR 由團隊主管審核後該功能分支就會自動被併入(merge) develop，開發者再將自己的分支刪除（遠端分支會由主管刪除，開發者自行刪除本地端分支即可）。
+
+總之，只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。
+
+
 ## 資料來源
 [【工程師必懂的版本控制技術】什麼是GitHub?](https://medium.com/@makerincollege2018/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%BF%85%E6%87%82%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%8A%80%E8%A1%93-%E4%BB%80%E9%BA%BC%E6%98%AFgithub-376421fd871d)
 [關於版本控制](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E9%97%9C%E6%96%BC%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
