@@ -28,16 +28,16 @@
 - 報告的檔案命名方式：`名字(首字大寫).md`
 - 範例：
 
-  ```
-  2024年1月份月報存放於:
-  https://github.com/CAFECA-IO/EventReport/tree/main/2024/m01
+```
+2024 年 1 月份月報存放於:
+https://github.com/CAFECA-IO/EventReport/tree/main/2024/m01
 
-  2024年第1週週報存放於:
-  https://github.com/CAFECA-IO/EventReport/tree/main/2024/w01
+2024 年第 1 週週報存放於:
+https://github.com/CAFECA-IO/EventReport/tree/main/2024/w01
 
-  Liz 這位員工的2024年1月月報目錄:
-  https://github.com/CAFECA-IO/EventReport/blob/main/2024/m01/Liz.md
-  ```
+Liz 這位員工的2024年1月月報目錄:
+https://github.com/CAFECA-IO/EventReport/blob/main/2024/m01/Liz.md
+```
 
 ### 報告撰寫內容
 
