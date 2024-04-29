@@ -108,7 +108,7 @@ export default function Gallery() {
 
 到目前為止，我們的例子只使用了預設導出。但你可以在同一個文件中使用其中一個或兩個都使用。**一個文件最多只能有一個 _預設_ 導出，但可以有任意多個 _具名_ 導出。**
 
-<!-- img here -->
+![i_import-export](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/9018af06-0065-40ff-8945-555d6ab9c0af)
 
 你導出元件的方式將決定你必須如何導入它。如果你嘗試以與具名導出相同的方式導入預設導出，則會收到錯誤！以下圖表可以幫助你追蹤：
 
