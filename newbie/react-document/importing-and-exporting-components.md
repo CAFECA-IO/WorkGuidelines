@@ -43,11 +43,11 @@ export default function Gallery() {
 
 這些目前位於**根元件檔案**中，在此範例中名為 `App.js`。不過，根據你的設定，你的根元件可能位於另一個檔案中。
 
-如果你使用**基於檔案路由的框架**（framework with file-based routing），例如 Next.js，每個頁面的根元件都會不同。
+如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，每個頁面的根元件都會不同。
 
 ## Exporting and importing a component - 導出和導入元件
 
-如果你未來想要更改登陸畫面(landing screen)並放置一個科學書籍清單？或者將所有個人檔案放在其他地方？將 `Gallery` 和 `Profile` 從根元件檔案中移出是合理的。這將使它們更模組化並可在其他文件中重複使用。你可以通過三個步驟移動一個元件：
+如果你未來想要更改登陸畫面 (landing screen) 並放置一個科學書籍清單？或者將所有個人檔案放在其他地方？將 `Gallery` 和 `Profile` 從根元件檔案中移出是合理的。這將使它們更模組化並可在其他文件中重複使用。你可以通過三個步驟移動一個元件：
 
 1. **建立**一個新的 JS 檔案以放置元件。
 2. 從該文件中**導出**你的函數元件（使用 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) 導出）。
@@ -88,9 +88,9 @@ export default function Gallery() {
 
 1. `Gallery.js`：
    - 定義了 `Profile` 元件，該元件僅在同一文件中使用，並未導出。
-   - 將 `Gallery` 元件作為 **預設導出(default export)** 導出。
+   - 將 `Gallery` 元件作為 **預設導出 (default export)** 導出。
 2. `App.js`：
-   - 從 `Gallery.js` 中導入 `Gallery` 為 **預設導入(default import)**。
+   - 從 `Gallery.js` 中導入 `Gallery` 為 **預設導入 (default import)**。
    - 將根 `App` 元件作為 **default export** 導出。
 
 > 筆記 : <br/>
@@ -123,7 +123,9 @@ export default function Gallery() {
 
 ## Exporting and importing multiple components from the same file - 從同一個文件導出和導入多個元件
 
-如果你只想顯示一個 `Profile` 而不是一個 gallery 呢？你也可以導出 `Profile` 元件。但是 `Gallery.js` 已經有一個 _預設_ 導出，你不能有 _兩個_ 預設導出。你可以建立一個具有預設導出的新文件，或者為 `Profile` 添加一個 _具名_ 導出。**一個文件只能有一個預設導出，但可以有許多具名導出！**
+如果你只想顯示一個 `Profile` 而不是一個 gallery 呢？你也可以導出 `Profile` 元件。但是 `Gallery.js` 已經有一個 _預設_ 導出，你不能有 _兩個_ 預設導出。你可以建立一個具有預設導出的新文件，或者為 `Profile` 添加一個 _具名_ 導出。
+
+**一個文件只能有一個預設導出，但可以有許多具名導出！**
 
 > 筆記 : <br/>
 > 為了減少預設導出和具名導出之間的潛在混淆，有一些團隊會選擇只使用一種風格（預設或具名），或者避免在單個文件中混合它們。請按照最適合你的方式操作！
