@@ -199,7 +199,20 @@ export default function Gallery() {
 
 ## 試著挑戰看看
 
-這部分是一個挑戰題，這裡就不爆雷，趕緊去[原文](https://react.dev/learn/importing-and-exporting-components#challenges)照著步驟挑戰看看吧！
+這部分是一個挑戰題，這裡僅翻譯題目，剩下答題的部分就去[原文](https://react.dev/learn/importing-and-exporting-components#challenges)照著步驟挑戰看看吧！
+
+### 題目 - 挑戰 1/1: 進一步拆分元件
+
+目前，`Gallery.js` 同時導出了 `Profile` 和 `Gallery`，這讓人有點混亂。
+
+請將 `Profile` 元件移動到自己的 `Profile.js` 中，然後更改 `App` 元件以依次渲染 `<Profile />` 和 `<Gallery />`。
+
+你可以為 `Profile` 使用預設導出或具名導出，但請確保在 `App.js` 和 `Gallery.js` 中使用相應的導入語法！你可以參考上面深入探討中的表格：
+
+| Syntax  | Export statement                      | Import statement                        |
+| ------- | ------------------------------------- | --------------------------------------- |
+| Default | `export default function Button() {}` | `import Button from './Button.js';`     |
+| Named   | `export function Button() {}`         | `import { Button } from './Button.js';` |
 
 # 結語
 
