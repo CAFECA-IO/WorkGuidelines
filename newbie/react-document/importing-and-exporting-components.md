@@ -112,7 +112,7 @@ export default function Gallery() {
 
 ![i_import-export](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/9018af06-0065-40ff-8945-555d6ab9c0af)
 
-你導出元件的方式將決定你必須如何導入它。如果你嘗試以與具名導出相同的方式導入預設導出，則會收到錯誤！以下圖表可以幫助你追蹤：
+你導出元件的方式將決定你必須如何導入它。如果你嘗試以與具名導出相同的方式導入預設導出，則會收到錯誤！以下表格可以幫助你對照：
 
 | Syntax  | Export statement                      | Import statement                        |
 | ------- | ------------------------------------- | --------------------------------------- |
