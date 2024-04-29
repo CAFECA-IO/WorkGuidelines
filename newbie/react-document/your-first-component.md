@@ -1,6 +1,6 @@
 # 前言
 
-此為 [Describing the UI: Unveiling the Power of React Components](https://github.com/CAFECA-IO/WorkGuidelines/blob/e8a44b7baec5953891f747c47f0cf64799c3e30c/newbie/react-document/describing-the-ui.md#your-ui-as-a-tree-%E5%B0%87%E4%BD%A0%E7%9A%84-ui-%E8%A6%96%E7%82%BA%E6%A8%B9%E7%8B%80%E7%B5%90%E6%A7%8B) 此篇文章的延伸內容之一。
+此為 [Describing the UI: Unveiling the Power of React Components](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/describing-the-ui.md) 此篇文章的延伸內容之一。
 
 這一系列文章是筆者在學習 React 時，閱讀 [React 官方文件](https://react.dev/learn) 所做的翻譯筆記，希望能幫助更多的人學習 React。
 
