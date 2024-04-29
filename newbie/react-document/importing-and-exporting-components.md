@@ -6,7 +6,7 @@
 
 本篇文章沒有節錄原文範例的輸出結果，如有需要請至原文對照參考。最後原文有提供一個實作的挑戰，這裡筆者就不放上來了，這部分請至原文按照步驟試試看。
 
-# React | Importing and Exporting Components - 導入與導出元件
+# React | Importing and Exporting Components
 
 元件的魔力在於它們的可重複使用性：你可以建立由其他元件組成的元件。但隨著你越來越多地嵌套元件，將它們拆分為不同的文件通常是有意義的。這讓你可以保持文件易於瀏覽，並在更多地方重複使用元件。
 
@@ -117,7 +117,7 @@ export default function Gallery() {
 
 **如果檔案只導出一個元件，人們通常會使用預設導出，如果它導出多個元件和值，則會使用具名導出。** 無論你偏好哪種程式碼風格，都請始終給你的元件函數和包含它們的檔案命名有意義的名稱。沒有名稱的元件，例如 `export default () => {}`，是不建議的，因為它們使得除錯變得更加困難。
 
-## 從同一個文件導出和導入多個元件
+## Exporting and importing multiple components from the same file - 從同一個文件導出和導入多個元件
 
 如果你只想顯示一個 `Profile` 而不是一個 gallery 呢？你也可以導出 `Profile` 元件。但是 `Gallery.js` 已經有一個 _預設_ 導出，你不能有 _兩個_ 預設導出。你可以建立一個具有預設導出的新文件，或者為 `Profile` 添加一個 _具名_ 導出。**一個文件只能有一個預設導出，但可以有許多具名導出！**
 
@@ -188,7 +188,7 @@ export default function Gallery() {
   - 從 `Gallery.js` 中作為 **預設導入** 導入 `Gallery`。
   - 將根 `App` 元件作為 **預設導出** 導出。
 
-## 總結
+## 回顧
 
 在本章你學到了：
 
@@ -196,3 +196,15 @@ export default function Gallery() {
 - 如何導入和導出元件
 - 何時以及如何使用預設和具名導入和導出
 - 如何從同一個文件導出多個元件
+
+## 試著挑戰看看
+
+這部分是一個挑戰題，這裡就不爆雷，趕緊去[原文](https://react.dev/learn/importing-and-exporting-components#challenges)照著步驟挑戰看看吧！
+
+# 結語
+
+這篇文章帶我們了解了如何將元件拆分為不同的文件，並在不同文件之間導入和導出它們。這是一個重要的技巧，可以幫助我們保持程式碼整潔並提高可重用性。
+
+# 本文參考來源
+
+[Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
