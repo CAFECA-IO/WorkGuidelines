@@ -41,7 +41,9 @@ export default function Gallery() {
 }
 ```
 
-這些目前位於**根元件檔案**中，在此範例中名為 `App.js`。不過，根據你的設定，你的根元件可能位於另一個檔案中。如果你使用**基於檔案路由的框架**（framework with file-based routing），例如 Next.js，每個頁面的根元件都會不同。
+這些目前位於**根元件檔案**中，在此範例中名為 `App.js`。不過，根據你的設定，你的根元件可能位於另一個檔案中。
+
+如果你使用**基於檔案路由的框架**（framework with file-based routing），例如 Next.js，每個頁面的根元件都會不同。
 
 ## Exporting and importing a component - 導出和導入元件
 
