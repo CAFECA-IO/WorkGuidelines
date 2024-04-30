@@ -135,11 +135,13 @@ export default function Gallery() {
 
 **如果檔案只導出一個元件，人們通常會使用預設導出，如果檔案會導出多個元件和值，則會使用具名導出。**
 
-無論你偏好哪種程式碼風格，都請將你的元件函式(component functions)以及包含元件的檔案，賦予有意義的命名。有意義的命名可以幫助你和其他人更容易理解你的程式碼。舉一個較好命名方式：像是一個元件函式用來呈現按鈕的話，我們會命名為 `Button`，而包含此元件函式的檔案我們就會命名為 `Button.js`。
+無論你偏好哪種程式碼風格都可以。比較需要注意的是，請將你的元件函式(component functions)以及包含元件的檔案，賦予有意義的命名。有意義的命名可以幫助你和其他人更容易理解你的程式碼。
+
+這裡舉例一個有意義的命名方式：像是一個元件函式用來呈現按鈕的話，我們會命名為 `Button`，而包含此元件函式的檔案我們就會命名為 `Button.js`。
 
 注意，我們不建議你這樣寫這種沒有名稱的元件，例如 `export default () => {}`，因為它們會使除錯變得困難。
 
-## 從同一個文件導出和導入多個元件(Exporting and importing multiple components from the same file)
+## 從同一個文件導出和導入多個元件 (Exporting and importing multiple components from the same file)
 
 如果我們要顯示 `Profile` 呢？
 
