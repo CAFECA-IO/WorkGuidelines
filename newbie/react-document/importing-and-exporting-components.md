@@ -8,13 +8,15 @@
 
 # React | Importing and Exporting Components - 導入與導出元件
 
-元件的魔力在於它們的可重複使用性：你可以建立由其他元件組成的元件。但隨著你越來越多地嵌套元件，將它們拆分為不同的文件通常是有意義的。這讓你可以保持文件易於瀏覽，並在更多地方重複使用元件。
+元件(Component)的魔力在於它們的可重複使用性：你可以建立由其他元件組成的元件，也就是多個元件組成一個元件。也就是說，一個元件中可以包含多個元件，一層又一層的嵌套下去。
+
+但隨著嵌套元件越來越多，我們就越需要將它們拆分為不同的檔案、文件(File)。如此一來，我們的檔案會變得更方便瀏覽，並且可以在更多地方重複使用這些元件。
 
 ### 你將會學到
 
 - 什麼是根元件檔案
 - 如何導入和導出一個元件
-- 何時使用預設和具名導入和導出
+- 何時使用預設和具名的導入和導出
 - 如何從一個文件中導入和導出多個元件
 - 如何將元件拆分為多個文件
 
@@ -41,19 +43,25 @@ export default function Gallery() {
 }
 ```
 
-這些目前位於**根元件檔案**中，在此範例中名為 `App.js`。不過，根據你的設定，你的根元件可能位於另一個檔案中。
+這兩個元件目前位於**根元件檔案**中，在此範例中的根元件檔案名稱為 `App.js`。
 
-如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，每個頁面的根元件都會不同。
+根據每個人自己的設定，根元件名稱不一定要是 `App.js`，而可能是 `index.js` 或 `Main.js` 等。總之，根元件檔案是你應用程式的入口點，通常包含應用程式的主要元件。
+
+而如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，則每個頁面的根元件都會不同。
 
 ## Exporting and importing a component - 導出和導入元件
 
-如果你未來想要更改登陸畫面 (landing screen) 並放置一個科學書籍清單？或者將所有個人檔案放在其他地方？將 `Gallery` 和 `Profile` 從根元件檔案中移出是合理的。這將使它們更模組化並可在其他文件中重複使用。你可以通過三個步驟移動一個元件：
+現在我們將要前面範例中的 `Gallery` 和 `Profile` 從根元件檔案 (`App.js`) 中移出，因為我們可能會在其他地方重複使用它們。盡量將元件拆分為更小的部分，這樣可以更容易維護和重複使用。
 
-1. **建立**一個新的 JS 檔案以放置元件。
-2. 從該文件中**導出**你的函數元件（使用 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) 導出）。
-3. 在你將使用元件的文件中**導入**它（使用相應的技術進行導入 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#importing_defaults) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#import_a_single_export_from_a_module) 導出）。
+我們可以通過三個步驟移動這個元件：
 
-現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新文件中。現在你可以更改 `App.js`，從 `Gallery.js` 中導入 `Gallery`：
+1. 首先先**建立**一個新的 JS 檔案以放置此元件。
+2. 從新的檔案中**導出**此函數元件（使用 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) 導出）。
+3. 在要使用此元件的檔案中**導入**它（使用相應的技術進行導入 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#importing_defaults) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#import_a_single_export_from_a_module) 導出）。
+
+現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新文件中。
+
+現在我們在 `App.js` 中設定，從 `Gallery.js` 導入 `Gallery` 元件：
 
 App.js:
 
@@ -87,11 +95,11 @@ export default function Gallery() {
 請注意，此範例現在分為兩個元件文件：
 
 1. `Gallery.js`：
-   - 定義了 `Profile` 元件，該元件僅在同一文件中使用，並未導出。
+   - 定義 `Profile` 元件，該元件僅在同一文件中使用，並未導出。
    - 將 `Gallery` 元件作為 **預設導出 (default export)** 導出。
 2. `App.js`：
    - 從 `Gallery.js` 中導入 `Gallery` 為 **預設導入 (default import)**。
-   - 將根 `App` 元件作為 **default export** 導出。
+   - 將根元件 `App` 作為 **default export** 導出。
 
 > 筆記 : <br/>
 > 你可能會遇到省略 `.js` 檔案副檔名的檔案，像這樣：
@@ -106,22 +114,30 @@ export default function Gallery() {
 
 在 JavaScript 中，有兩種主要的導出值的方式：預設導出和具名導出。
 
-到目前為止，我們的例子只使用了預設導出。但你可以在同一個文件中使用其中一個或兩個都使用。
+到目前為止，我們的例子只使用了預設導出。但其實我們可以在同一個文件中使用其中一個，或者兩個都同時使用。
 
-**一個文件最多只能有一個 _預設_ 導出，但可以有任意多個 _具名_ 導出。**
+**特別注意：一個文件最多只能有一個 _預設_ 導出，但可以有任意多個 _具名_ 導出。**
 
 ![i_import-export](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/9018af06-0065-40ff-8945-555d6ab9c0af)
 
-你導出元件的方式將決定你必須如何導入它。如果你嘗試以與具名導出相同的方式導入預設導出，則會收到錯誤！以下表格可以幫助你對照：
+你導出元件的方式會決定你必須如何導入它。也就是說，如果你嘗試以與具名導出相同的方式導入預設導出，就會收到錯誤！
+
+以下表格可以幫助你對照：
 
 | Syntax  | Export statement                      | Import statement                        |
 | ------- | ------------------------------------- | --------------------------------------- |
 | Default | `export default function Button() {}` | `import Button from './Button.js';`     |
 | Named   | `export function Button() {}`         | `import { Button } from './Button.js';` |
 
-當你撰寫預設導入時，你可以在 `import` 後面放置任何你想要的名稱。例如，你可以寫成 `import Banana from './Button.js'`，它仍然會提供你相同的預設導出。相比之下，對於具名導入，名稱必須在兩側匹配。這就是為什麼它們被稱為 _具名_ 導入的原因！
+當你撰寫預設導入時，你可以在 `import` 後面放置任何你想要的名稱。例如，你可以寫成 `import Banana from './Button.js'`，它仍然會提供你相同的預設導出。
 
-**如果檔案只導出一個元件，人們通常會使用預設導出，如果它導出多個元件和值，則會使用具名導出。** 無論你偏好哪種程式碼風格，都請始終給你的元件函數和包含它們的檔案命名有意義的名稱。沒有名稱的元件，例如 `export default () => {}`，我們不建議你這樣寫，因為它們使得除錯變得更加困難。
+相比之下，對於具名導入，名稱必須在兩側匹配。這就是為什麼它們被稱為 _具名_ 導入的原因！
+
+**如果檔案只導出一個元件，人們通常會使用預設導出，如果檔案會導出多個元件和值，則會使用具名導出。**
+
+無論你偏好哪種程式碼風格，都請將你的元件函式(component functions)以及包含元件的檔案，賦予有意義的命名。有意義的命名可以幫助你和其他人更容易理解你的程式碼。舉一個較好命名方式：像是一個元件函式用來呈現按鈕的話，我們會命名為 `Button`，而包含此元件函式的檔案我們就會命名為 `Button.js`。
+
+注意，我們不建議你這樣寫這種沒有名稱的元件，例如 `export default () => {}`，因為它們會使除錯變得困難。
 
 ## Exporting and importing multiple components from the same file - 從同一個文件導出和導入多個元件
 
@@ -131,12 +147,12 @@ export default function Gallery() {
 
 或者另一種方式是，我們可以將 `Profile` 元件移動到一個新的檔案中，例如 `Profile.js`，然後在 `Gallery.js` 中導入它。
 
-**注意：一個文件只能有一個預設導出，但可以有許多具名導出！**
-
 > 筆記 : <br/>
 > 為了減少預設導出和具名導出之間的潛在混淆，有一些團隊會選擇只使用一種風格（預設或具名），或者避免在單個文件中混合它們。請按照最適合你的方式操作！
 
-首先，在 `Gallery.js` 中使用具名導出（不使用 `default` 關鍵字）**導出** `Profile`：
+這裡的範例是從 `Gallery.js` 導出 `Profile` 元件，並在 `App.js` 中導入它。
+
+首先，在 `Gallery.js` 中使用具名導出 `Profile`（不使用 `default`）：
 
 ```jsx
 export function Profile() {
@@ -144,7 +160,7 @@ export function Profile() {
 }
 ```
 
-然後，在 `App.js` 中使用具名導入（使用大括號）**導入** `Profile` 自 `Gallery.js`：
+然後，在 `App.js` 中使用具名導入 `Profile`（使用大括號`{}`）：
 
 ```jsx
 import { Profile } from "./Gallery.js";
@@ -158,7 +174,7 @@ export default function App() {
 }
 ```
 
-現在 `Gallery.js` 包含兩個導出：一個預設的 `Gallery` 導出，以及一個具名的 `Profile` 導出。`App.js` 導入了它們兩個。
+總之，現在 `Gallery.js` 檔案中包含兩個導出：一個是預設的 `Gallery` 導出，另一個是具名的 `Profile` 導出。並在 `App.js` 導入了它們兩個：
 
 App.js :
 
@@ -190,7 +206,7 @@ export default function Gallery() {
 }
 ```
 
-現在你正在混合使用預設導出和具名導出：
+這個範例混合使用了預設導出和具名導出，這裡再做一個統整：
 
 - `Gallery.js`：
   - 將 `Profile` 元件作為名為 `Profile` 的 **具名導出** 導出。
@@ -199,15 +215,6 @@ export default function Gallery() {
   - 從 `Gallery.js` 中作為名為 `Profile` 的 **具名導入** 導入 `Profile`。
   - 從 `Gallery.js` 中作為 **預設導入** 導入 `Gallery`。
   - 將根 `App` 元件作為 **預設導出** 導出。
-
-## 回顧
-
-在本章你學到了：
-
-- 什麼是根元件檔案
-- 如何導入和導出元件
-- 何時以及如何使用預設和具名導入和導出
-- 如何從同一個文件導出多個元件
 
 ## 試著挑戰看看
 
@@ -228,7 +235,17 @@ export default function Gallery() {
 
 # 結語
 
-這篇文章帶我們了解了如何將元件拆分為不同的文件，並在不同文件之間導入和導出它們。這是一個重要的技巧，可以幫助我們保持程式碼整潔並提高可重用性。
+這篇文章帶我們了解到如何將元件拆分為不同的檔案，並在不同檔案之間導入和導出它們。
+
+透過這樣拆分，把不同的元件放在不同的檔案中，可以讓我們更容易找到我們想要的元件，並且可以在需要的地方重複使用它們。
+
+例如將 Button、SearchBar、Pagination、Card 等元件放在不同的檔案中，當我們需要使用時，只需要導入即可，不需要重複寫一次，這就是共用元件的好處。
+
+重點回顧：
+
+1. 根元件檔案是一個包含多個元件的文件，通常是應用程式的入口點。（如果使用基於檔案路由的框架像是 Next.js，則每個頁面的根元件都會不同）
+2. 使用預設導出和具名導出來導出元件，並使用相應的導入語法來導入它們。
+3. 一個文件最多只能有一個預設導出，但可以有任意多個具名導出。
 
 # 本文參考來源
 
