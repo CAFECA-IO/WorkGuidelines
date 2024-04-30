@@ -61,7 +61,7 @@ export default function Gallery() {
 
 現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新文件中。
 
-現在我們在 `App.js` 中設定，從 `Gallery.js` 導入 `Gallery` 元件：
+並且在 `App.js` 中設定，從 `Gallery.js` 導入 `Gallery` 元件：
 
 App.js:
 
