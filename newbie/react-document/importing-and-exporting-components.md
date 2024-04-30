@@ -145,7 +145,7 @@ export default function Gallery() {
 
 如果我們要顯示 `Profile` 呢？
 
-我們可以從 `Gallery.js` 導出 `Profile` 元件，但是目前 `Gallery.js` 已經有一個 _預設_ 導出，並且一個檔案不能有 _兩個_ 預設導出，所以我們只能使用 _具名_ 導出 `Profile` 元件。
+我們可以從 `Gallery.js` 導出 `Profile` 元件，但是目前 `Gallery.js` 已經有一個**預設**導出，並且一個檔案不能有兩個預設導出，所以我們只能使用**具名**導出 `Profile` 元件。
 
 或者另一種方式是，我們可以將 `Profile` 元件移動到一個新的檔案中，例如 `Profile.js`，然後在 `Gallery.js` 中導入它。
 
