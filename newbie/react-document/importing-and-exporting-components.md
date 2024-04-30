@@ -98,7 +98,7 @@ export default function Gallery() {
    - 定義 `Profile` 元件，此元件僅在同一檔案中使用，並未導出。
    - 將 `Gallery` 元件作為 **預設導出 (default export)**。
 2. `App.js`：
-   - 從 `Gallery.js` 中，將 `Gallery` **預設導入 (default import)**。
+   - 從 `Gallery.js` 中，將 `Gallery` **預設導入 (default import)**。(意思就是 : 使用預設導入的方式導入)
    - 將根元件 `App` 作為 **預設導出**。
 
 > 筆記 : <br/>
