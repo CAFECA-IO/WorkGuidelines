@@ -56,8 +56,8 @@ export default function Gallery() {
 我們可以通過三個步驟移動這個元件：
 
 1. 首先先**建立**一個新的 JS 檔案以放置此元件。
-2. 從新的檔案中**導出**此函數元件（使用 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) 導出）。
-3. 在要使用此元件的檔案中**導入**它（使用對應的方式進行導入 [default](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#importing_defaults) 或 [named](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#import_a_single_export_from_a_module) 導出）。
+2. 從新的檔案中**導出**此函數元件（使用 [預設導出 (default export)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或 [具名導出 (named export)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) ）。
+3. 在要使用此元件的檔案中**導入**它
 
 現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新文件中。
 
