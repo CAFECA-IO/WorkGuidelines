@@ -22,7 +22,7 @@
 
 ## The root component file - 根元件檔案
 
-在 [Your First Component](https://react.dev/learn/your-first-component) 中，你建立了一個 `Profile` 元件和一個 `Gallery` 元件來渲染它：
+在 [Your First Component](https://react.dev/learn/your-first-component) 中，你建立了一個 `Profile` 元件和一個 `Gallery` 元件來渲染它，這章節會接續這個範例，繼續示範：
 
 App.js:
 
