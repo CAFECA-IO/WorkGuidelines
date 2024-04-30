@@ -47,7 +47,7 @@ export default function Gallery() {
 
 根據每個人自己的設定，根元件名稱不一定要是 `App.js`，而可能是 `index.js` 或 `Main.js` 等。總之，根元件檔案是你應用程式的入口點，通常包含應用程式的主要元件。
 
-而如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，則每個頁面的根元件都會不同。（這裡不會進一步說明關於 NextJS，有興趣的讀者可以自行查閱）
+而如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，則每個頁面的根元件都會不同。（這裡不會進一步說明有關 Next.js 的內容，有興趣的讀者可自行查閱 [Next.js 官方文件](https://nextjs.tw/)）
 
 ## 導出和導入元件 (Exporting and importing a component)
 
