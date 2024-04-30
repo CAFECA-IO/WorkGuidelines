@@ -125,7 +125,11 @@ export default function Gallery() {
 
 ## Exporting and importing multiple components from the same file - 從同一個文件導出和導入多個元件
 
-如果你只想顯示一個 `Profile` 而不是一個 gallery 呢？你也可以導出 `Profile` 元件。但是 `Gallery.js` 已經有一個 _預設_ 導出，你不能有 _兩個_ 預設導出。你可以建立一個具有預設導出的新文件，或者為 `Profile` 添加一個 _具名_ 導出。
+如果我們要顯示 `Profile` 呢？
+
+我們可以從 `Gallery.js` 導出 `Profile` 元件，但是目前 `Gallery.js` 已經有一個 _預設_ 導出，並且一個檔案不能有 _兩個_ 預設導出，所以我們只能使用 _具名_ 導出 `Profile` 元件。
+
+或者另一種方式是，我們可以將 `Profile` 元件移動到一個新的檔案中，例如 `Profile.js`，然後在 `Gallery.js` 中導入它。
 
 **一個文件只能有一個預設導出，但可以有許多具名導出！**
 
