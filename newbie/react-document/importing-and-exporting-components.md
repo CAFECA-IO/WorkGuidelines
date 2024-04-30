@@ -211,12 +211,12 @@ export default function Gallery() {
 這個範例混合使用了預設導出和具名導出，這裡再做一個統整：
 
 - `Gallery.js`：
-  - 將 `Profile` 元件作為名為 `Profile` 的 **具名導出** 導出。
-  - 將 `Gallery` 元件作為 **預設導出** 導出。
+  - 將 `Profile` 元件作為 **具名導出**。
+  - 將 `Gallery` 元件作為 **預設導出**。
 - `App.js`：
-  - 從 `Gallery.js` 中作為名為 `Profile` 的 **具名導入** 導入 `Profile`。
-  - 從 `Gallery.js` 中作為 **預設導入** 導入 `Gallery`。
-  - 將根 `App` 元件作為 **預設導出** 導出。
+  - 從 `Gallery.js` 中，將 `Profile` **具名導入**。
+  - 從 `Gallery.js` 中，將 `Gallery` **預設導入**。
+  - 將根元件 `App` 作為 **預設導出**。
 
 ## 試著挑戰看看 (Try out some challenges)
 
