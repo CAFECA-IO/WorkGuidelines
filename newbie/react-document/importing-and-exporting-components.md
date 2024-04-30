@@ -59,7 +59,7 @@ export default function Gallery() {
 2. 從新的檔案中**導出**此函數元件，可以使用 [預設導出 (default export)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) 或是 [具名導出 (named export)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports)。
 3. 在要使用此元件的檔案中**導入**它。
 
-現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新文件中。
+現在將 `Profile` 和 `Gallery` 兩者都從 `App.js` 移動到一個名為 `Gallery.js` 的新檔案中。
 
 並且在 `App.js` 中設定，從 `Gallery.js` 導入 `Gallery` 元件：
 
@@ -92,17 +92,17 @@ export default function Gallery() {
 }
 ```
 
-請注意，此範例現在分為兩個元件文件：
+請注意，此範例現在分為兩個元件檔案：
 
 1. `Gallery.js`：
-   - 定義 `Profile` 元件，該元件僅在同一文件中使用，並未導出。
+   - 定義 `Profile` 元件，此元件僅在同一檔案中使用，並未導出。
    - 將 `Gallery` 元件作為 **預設導出 (default export)** 導出。
 2. `App.js`：
    - 從 `Gallery.js` 中導入 `Gallery` 為 **預設導入 (default import)**。
    - 將根元件 `App` 作為 **default export** 導出。
 
 > 筆記 : <br/>
-> 你可能會遇到省略 `.js` 檔案副檔名的檔案，像這樣：
+> 你可能會遇到省略 `.js` 檔案副檔名的情況，像這樣：
 >
 > ```jsx
 > import Gallery from "./Gallery";
