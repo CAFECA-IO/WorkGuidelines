@@ -6,7 +6,7 @@
 
 本篇文章沒有節錄原文範例的輸出結果，如有需要請至原文對照參考。最後原文有提供一個實作的挑戰，這裡筆者就不放上來了，這部分請至原文按照步驟試試看。
 
-# React | Importing and Exporting Components - 導入與導出元件
+# 導入與導出元件 (Importing and Exporting Components)
 
 元件(Component)的魔力在於它們的可重複使用性：你可以建立由其他元件組成的元件。也就是說，一個元件中可以包含多個元件，一層又一層的嵌套下去。
 
@@ -20,7 +20,7 @@
 - 如何從一個文件中導入和導出多個元件
 - 如何將元件拆分為多個文件
 
-## The root component file - 根元件檔案
+## 根元件檔案 (The root component file)
 
 在 [Your First Component](https://react.dev/learn/your-first-component) 中，你建立了一個 `Profile` 元件和一個 `Gallery` 元件來渲染它，這章節會接續這個範例，繼續示範：
 
@@ -49,7 +49,7 @@ export default function Gallery() {
 
 而如果你使用**基於檔案路由的框架** (framework with file-based routing)，例如 Next.js，則每個頁面的根元件都會不同。（這裡不會進一步說明關於 NextJS，有興趣的讀者可以自行查閱）
 
-## Exporting and importing a component - 導出和導入元件
+## 導出和導入元件 (Exporting and importing a component)
 
 現在我們要將範例中的 `Gallery` 和 `Profile` 從根元件檔案 (`App.js`) 中移出，因為我們可能會在其他地方重複使用它們。我們要盡量將元件拆分為更小的部分，這樣可以更容易維護和重複使用。
 
@@ -139,7 +139,7 @@ export default function Gallery() {
 
 注意，我們不建議你這樣寫這種沒有名稱的元件，例如 `export default () => {}`，因為它們會使除錯變得困難。
 
-## Exporting and importing multiple components from the same file - 從同一個文件導出和導入多個元件
+## 從同一個文件導出和導入多個元件(Exporting and importing multiple components from the same file)
 
 如果我們要顯示 `Profile` 呢？
 
@@ -216,7 +216,7 @@ export default function Gallery() {
   - 從 `Gallery.js` 中作為 **預設導入** 導入 `Gallery`。
   - 將根 `App` 元件作為 **預設導出** 導出。
 
-## 試著挑戰看看
+## 試著挑戰看看 (Try out some challenges)
 
 這部分是一個挑戰題，這裡僅翻譯題目，剩下答題的部分就去[原文](https://react.dev/learn/importing-and-exporting-components#challenges)照著步驟挑戰看看吧！
 
