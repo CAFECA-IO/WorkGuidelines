@@ -154,7 +154,7 @@ export default function Gallery() {
 
 這裡的範例是從 `Gallery.js` 導出 `Profile` 元件，並在 `App.js` 中導入它。
 
-首先，在 `Gallery.js` 中使用具名導出 `Profile`（不使用 `default`）：
+首先，在 `Gallery.js` 中使用具名導出 `Profile`（不使用 `default` ）：
 
 ```jsx
 export function Profile() {
@@ -162,7 +162,7 @@ export function Profile() {
 }
 ```
 
-然後，在 `App.js` 中使用具名導入 `Profile`（使用大括號`{}`）：
+然後，在 `App.js` 中使用具名導入 `Profile`（使用大括號 `{}` ）：
 
 ```jsx
 import { Profile } from "./Gallery.js";
