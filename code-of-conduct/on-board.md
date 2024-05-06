@@ -12,5 +12,5 @@
 - 請領資產與簽署資產領收單
 
 ## 補充資訊
-1. 差勤系統使用 [Swingvy](https://www.swingvy.com/)
-2. 薪轉帳戶使用 [Richart](https://richart.tw/)
+1. 差勤系統使用 [104 企業大師](https://bsignin.104.com.tw/login))
+2. 薪轉帳戶使用 [合作金庫]((https://www.tcb-bank.com.tw/personal-banking))
