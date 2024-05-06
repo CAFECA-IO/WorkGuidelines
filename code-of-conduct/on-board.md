@@ -6,7 +6,7 @@
 - 申請 Email
 - 申請 [Slack](https://slack.com/intl/zh-tw)
 - 申請差勤系統帳號
-- 申請 [Github]((https://github.com/)
+- 申請 [Github](https://github.com/)
 - 申請薪轉帳戶並簽訂薪資給付辦法同意書
 - 簽署員工守則
 - 請領資產與簽署資產領收單
