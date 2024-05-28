@@ -27,10 +27,10 @@ _JSX_ 是 JavaScript 的語法擴展(syntax extension)，讓我們可以在 Java
 多年來，網頁開發者會將內容寫在 HTML 中，將設計寫在 CSS 中，將邏輯放在 JavaScript 中。也就是說我們會將內容、設計、邏輯放在不同的檔案裡。
 
 網站頁面的內容會在 HTML 中用標記文本撰寫，而頁面的邏輯則獨立存在於 JavaScript 中，如下圖：
-
 <br />
 <br />
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/c7a73bbd-2543-4160-9feb-0424b5bca5ea">
+<br />
 <br />
 <br />
 但隨著網頁變得越來越有互動性，由邏輯決定內容的部分越來越多。JavaScript 開始要負責 HTML 了！
