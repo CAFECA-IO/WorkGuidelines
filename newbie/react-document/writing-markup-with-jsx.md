@@ -36,7 +36,7 @@ _JSX_ 是 JavaScript 的語法擴展(syntax extension)，讓我們可以在 Java
 但隨著網頁變得越來越有互動性，由邏輯決定內容的部分越來越多。JavaScript 開始要負責 HTML 了！
 <br />
 <br />
-這就是為什麼在 React 中，渲染邏輯和標記被放在同一個地方，而這個地方就是「元件」。
+這就是為什麼在 React 中，渲染邏輯和標記被放在同一個地方，而這個地方就是「元件」：
 <br />
 <br />
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/8d606137-7242-4496-8bde-4e1970519903">
