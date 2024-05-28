@@ -113,7 +113,7 @@ export default function TodoList() {
 
 這是因為 JSX 比 HTML 更嚴格，並且有一些額外的規則！如果你閱讀上面的錯誤訊息，它們會指導你修正標記，或者你可以按照下面的指南進行。
 
-> 注意 <br />
+> 小技巧： <br />
 > 大多數情況下，React 在螢幕上顯示的錯誤訊息會幫助你找到問題所在。如果你遇到困難，請仔細閱讀它們！
 
 ## JSX 的規則 (The Rules of JSX)
@@ -206,7 +206,7 @@ JSX 會轉換成 JavaScript，而在 JSX 中編寫的屬性會變成 JavaScript 
 
 如果你寫錯了也不必擔心——React 會在[瀏覽器控制台](https://developer.mozilla.org/docs/Tools/Browser_Console)中打印一條訊息，提供可能的更正。
 
-> 注意 <br />
+> 備註： <br />
 > 由於歷史原因，[`aria-*`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) 和 [`data-*`](https://developer.mozilla.org/docs/Learn/HTML/Howto/Use_data_attributes) 屬性仍然像在 HTML 中一樣用連字符編寫。
 
 ### 專業提示：使用 JSX 轉換器 (Pro-tip: Use a JSX Converter)
