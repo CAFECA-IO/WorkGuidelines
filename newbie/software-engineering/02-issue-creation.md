@@ -83,7 +83,6 @@ Proposal
 參考 : [[MainTask] 機器人聊天室chat-bot-lizzz #356](https://github.com/CAFECA-IO/BAIFA/issues/356)
 
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/0cf32954-5cef-40c0-9541-c0d6286b6607" alt="#356截圖1/2" width="60%">
-<img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/6a2f8108-f687-4d18-9755-e0ce4ceaa2b8" alt="#356截圖2/2" width="60%">
 
 
 ## 工作票棄用
