@@ -13,7 +13,7 @@
 - 種類：工作票的種類。假設此張工作票會產出文件就選擇 documentation、會產出程式就選擇 enhancement。
 ### 5. 選擇專案 Projects，並指定狀態(Status)
 
-- 選擇該工作票隸屬的專案，狀態預設為 `To Do`，如果系統未自動填入，請自行人工選取`To Do`，總之狀態欄位的值不可以為空。
+- 選擇該工作票隸屬的專案，狀態預設為 `Todo`，如果系統未自動填入，請自行人工選取`Todo`，總之狀態欄位的值不可以為空。
 - 請依情況更新狀態，狀態定義與變化流程請見下方標題【Status & Close date 欄位說明】。
 
 ### 6. 此張工作票如果有產生 Branch 或 Pull Request，就在 Development 欄位綁定該分支和PR
@@ -24,7 +24,7 @@
 
 ## Status & Close date 欄位說明
 
-專案(Projects)中有兩個欄位:
+專案(Projects)中有兩個欄位需要填寫:
 1. Status: 顯示此工作單的狀態
 2. Close date: 顯示此工作單被關閉的日期
 
@@ -33,7 +33,7 @@
 
 **狀態欄位中各個狀態的意義:**
 1. Proposal: 提議，可能被執行或被棄用的任務
-2. To Do: 待辦
+2. Todo: 待辦
 3. Weekly Plan: 預計於本週執行
 4. Daily Plan: 預計於本日執行
 5. Daily Review: 準備於本日例會中回顧的工作票
@@ -44,7 +44,7 @@
 **狀態變化流程:**
 ```
 Proposal 
---> To Do 
+--> Todo 
 --> Weekly Plan 
 --> Daily Plan 
 --> Daily Review 
@@ -52,12 +52,12 @@ Proposal
 --> Done (PM only)
 ```
 
-1. 所有工作單的初始狀態為 `To Do`，表示為確定要執行的任務，但尚未確定何時執行。
+1. 所有工作單的初始狀態為 `Todo`，表示為確定要執行的任務，但尚未確定何時執行。
 2. 如果是不確定是否要執行的工作，可將狀態設定為 `Proposal`。
 3. 在週報中我們規劃要在本週執行的工作單，並且把單子狀態設定為 `Weekly Plan`。
-4. 每日上午在 slack 頻道，我們宣告今天要執行的工作單，並將單子狀態改為 `Daily Plan`，表示此工作單今天執行。
+4. 每日上午在 Slack 頻道，我們宣告今天要執行的工作單，並將單子狀態改為 `Daily Plan`，表示此工作單今天執行。
 5. 完成後將 `Daily Plan` 改為 `Daily Review`，表示此工作單要在本日例會中回顧。
-6. 工作單於本日例會中回顧後，請點擊工作單下方按鈕【Close with comment】關閉工作單，系統會自動將單子狀態改成 `Weekly Review`，表示此工作單要在例會的週報時間回顧，並且要記錄於週報內。
+6. 工作單於本日例會中回顧後，請點擊工作單下方按鈕【Close with comment】關閉工作單，系統機器人會自動將單子狀態改成 `Weekly Review`，表示此工作單要在例會的週報時間回顧，並且要記錄於週報內。
 7. 點擊 Close 按鈕關閉工作單後，我們同時需要在 **Close date 欄位** 點選 _今日日期_。
   ![截圖 2024-03-06 下午4 03 33](https://github.com/CAFECA-IO/WorkGuidelines/assets/105651918/9abefeb1-8634-4cac-a070-b67775373b33)
 
