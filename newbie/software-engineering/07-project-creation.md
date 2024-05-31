@@ -52,7 +52,7 @@ Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出
 > 接著就跟隨 Git Flow 的規則，從 develop 拉出開發者自己的 branch。 <br />
 > 開發者開發完成該 branch 後，就建立 PR。 <br />
 > PR 由團隊主管審核後就會自動被併入 develop，開發者再將自己的 branch 刪除。 <br />
-> 只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。 <br />
+> 只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。
 
 ### 開發環境
 
