@@ -44,7 +44,7 @@ When enabled, all conversations on code must be resolved before a pull request c
 Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出分支 Develop，再從 Develop 拉功能分支進行開發。
 
 > [!CAUTION]
-> 所有程式碼不可以直接提交至 main，包含 README.md。
+> 所有程式碼不可以直接提交至 main，包含 README.md 都不行。
 
 關於分支規劃的部份可參考此篇文章 [Git Flow](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/git-flow.md)，以下為節錄：
 
