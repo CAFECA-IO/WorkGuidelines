@@ -1,5 +1,5 @@
 # Naming Convention
-> v1.0.2 20221123
+> v1.0.3 20240603
 
 ## File and Folder
 - snake_case
@@ -20,7 +20,7 @@
 - lowerCamelCase
 
 ## Parameter (Private)
-- _lowerCamelCase
+- #lowerCamelCase
 
 ## Static Constant
 - UPPER_SNAKE_CASE
