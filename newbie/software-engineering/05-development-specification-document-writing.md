@@ -10,6 +10,7 @@
   - [Component Diagram（元件圖）](#component-diagram元件圖)
   - [Sequence Diagram（循序圖）](#sequence-diagram循序圖)
 - [DB schema (ER-D)](#db-schema-er-d)
+- [API Document](#api-document)
 
 ## Persona（人物誌）
 
@@ -144,3 +145,133 @@ DB 文件中需要定義屬性的名稱、類型、簡短的描述、是否必�
 - 範例：
 
 <img src="https://user-images.githubusercontent.com/17249354/232969238-b1646c7e-1f39-4698-b663-44bf5f55a758.png" alt="ERD" width="50%" height="50%" />
+
+## API D**ocument**
+
+API 文件是用來記錄 API 的詳細資訊(包括功能、參數、回傳值等)，幫助前端開發人員了解每支 API 的操作指南。它會記錄在每個專案的 wiki 中，讓開發人員可以快速查閱。以 iSunFA 的 API 文件作為範例：
+
+![截圖 2024-06-05 下午2 54 27](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/9a6b4ab9-b298-4d29-baf8-a67e3d088f09)
+
+![截圖 2024-06-05 下午2 56 12](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/ceac570d-c78e-4028-90a0-fcfbb5a77e5f)
+
+![截圖 2024-06-05 下午3 07 17](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/89600871-b074-4ea5-9b5a-fb97d90a1fa4)
+
+
+### 版本號
+
+用來區分不同版本的 API，讓前端開發人員知道應該使用哪個版本的 API。
+
+### 編號
+
+每個專案會有個別的編號規則，新增 API 前請先參閱目錄和編號規則，避免跳號或重複編號。
+
+### 目錄
+
+API 文件的開頭和側欄會有所有 API 的目錄，新增 API 時記得這兩處也要加上。標題有規定的格式：
+
+![截圖 2024-06-05 下午3 44 53](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/eec42ccb-ef8c-4d2c-9346-ca0ef842e666)
+
+- API 編號：如前述。
+- HTTP 方法和 URL：說明 API 的請求方法(GET, POST, PUT, DELETE)和 URL，其中也包含所需的請求參數。
+- 設計稿編號：需紀錄 API 功能對應的設計稿編號，可以在畫面的右上角找到：
+    
+![截圖 2024-06-05 下午3 53 08](https://github.com/CAFECA-IO/WorkGuidelines/assets/114177573/2f2d15b4-ee56-4586-99f7-d63a51f38ecc)
+
+### 內容
+
+API 的內容說明也有規定的格式，請參考以下：
+
+# API Example
+
+- description: some description
+
+## Request
+
+### Request URL
+
+```tsx
+GET /example
+```
+
+### Parameters
+
+| name | type | description | required | default |
+| --- | --- | --- | --- | --- |
+
+### **Query**
+
+| name | type | description | required | default |
+| --- | --- | --- | --- | --- |
+
+### **Headers**
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+
+### **Body**
+
+| Name | Type | Description |
+| --- | --- | --- |
+
+### Request Example
+
+```tsx
+GET /example
+```
+
+### **Body** Example
+
+```json
+{
+	"id":"example"
+}
+```
+
+## Response
+
+### Response Parameters
+
+| name | type | description |
+| --- | --- | --- |
+
+### Response Example
+
+- 成功的回傳
+
+```json
+{
+    "powerby": "ISunFa api 1.0.0",
+    "success": true,
+    "code":  "00000000",
+    "message": "example",
+    "payload": "example",
+}
+```
+
+- 失敗的回傳
+
+```json
+{
+    "powerby": "ISunFa api 1.0.0",
+    "success": false,
+    "code":  "09000000",
+    "message": "fail request",
+    "payload": null
+}
+```
+
+格式說明：
+
+- **Request URL**：API 的請求方法和 URL
+- **Parameters**：記錄每個請求參數的名稱、類型、描述、是否必填以及預設值
+- **Query**：記錄每個查詢參數的名稱、類型、描述、是否必填以及預設值
+- **Headers**：記錄 Headers 的名稱、類型、描述、是否必填
+- **Body**：記錄 Body 的接口格式，應和前端的 interface 保持一致
+- **Request Example**：一個可以成功回傳的請求示例
+- **Body Example**：一個可以成功回傳的 Body 示例
+- **Response Parameters**：記錄回傳的接口格式，應和前端的 interface 保持一致
+- **Response Example**：這裡應記錄成功和失敗的回傳示例
+
+```
+⚠️ 請注意：調整 API 文件前請先告知你的工作夥伴，以免多人同時操作導致編輯內容丟失！
+```
