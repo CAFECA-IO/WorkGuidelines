@@ -29,6 +29,8 @@ Persona 的建立沒有一個固定的數量，這取決於目標客群和專案
 
 ![persona02](https://github.com/CAFECA-IO/KnowledgeManagement/assets/114177573/3877cb2f-4c06-49d7-a4cc-82ff61399a83)
 
+更多介紹[請點我](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/UX/persona-and-empathy-map.md)
+
 ## User Story（使用者故事）
 
 **User Story** 是從**不同的**用戶視角描述對系統的功能需求，其內容須涵蓋三個重點：
@@ -80,7 +82,8 @@ As a 'government worker', I want to 'verify that the data I collects is accurate
 
 ## Wireframe & Mockup（線框圖 & 視覺稿）
 
-@Jodie_Wu
+- [Low-fidelity Wireframe](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/UX/low-fidelity-wireframe.md)
+- [High-fidelity Wireframe](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/UI/high-fidelity-wireframe.md)
 
 ## UML
 
@@ -223,7 +226,7 @@ GET /example
 
 ```json
 {
-	"id":"example"
+    "id":"example"
 }
 ```
 
