@@ -418,7 +418,7 @@ console.log("5: After async function call");
 
 當調用堆疊清空後，事件循環首先檢查微任務隊列，但這時沒有微任務執行。所以往下接著進入宏任務隊列執行任務。
 
-**進入宏任務隊列 (Task Queue) :**
+**進入宏任務隊列 (Task Queue, 又稱 Macrotask Queue) :**
 
 1000 毫秒後，`setTimeout` 回調函數被執行：
 
