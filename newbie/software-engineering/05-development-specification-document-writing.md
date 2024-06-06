@@ -10,7 +10,7 @@
   - [Component Diagram（元件圖）](#component-diagram元件圖)
   - [Sequence Diagram（循序圖）](#sequence-diagram循序圖)
 - [DB schema (ER-D)](#db-schema-er-d)
-- [API Document](#api-document)
+- [API Documentation](#api-documentation)
 - [Error Code Documentation](#error-code-documentation)
 
 ## Persona（人物誌）
@@ -150,7 +150,7 @@ DB 文件中需要定義屬性的名稱、類型、簡短的描述、是否必�
 
 <img src="https://user-images.githubusercontent.com/17249354/232969238-b1646c7e-1f39-4698-b663-44bf5f55a758.png" alt="ERD" width="50%" height="50%" />
 
-## API D**ocument**
+## API Documentation
 
 API 文件是用來記錄 API 的詳細資訊(包括功能、參數、回傳值等)，幫助前端開發人員了解每支 API 的操作指南。它會記錄在每個專案的 wiki 中，讓開發人員可以快速查閱。以 iSunFA 的 API 文件作為範例：
 
