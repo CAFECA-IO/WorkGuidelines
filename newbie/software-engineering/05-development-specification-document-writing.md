@@ -11,6 +11,7 @@
   - [Sequence Diagram（循序圖）](#sequence-diagram循序圖)
 - [DB schema (ER-D)](#db-schema-er-d)
 - [API Document](#api-document)
+- [Error Code Documentation](#error-code-documentation)
 
 ## Persona（人物誌）
 
@@ -278,3 +279,28 @@ GET /example
 ```
 ⚠️ 請注意：調整 API 文件前請先告知你的工作夥伴，以免多人同時操作導致編輯內容丟失！
 ```
+
+## Error Code Documentation
+
+Error Code 文件是 API 文件的一部分，用於記錄 API 在各種情況下返回的錯誤代碼，以及這些代碼的分類和簡短描述。讓前端開發人員知道捕捉到錯誤時，應該作何處理。
+
+範例格式如下：
+
+## Error Code Example
+
+### success
+
+| code | description |
+| --- | --- |
+| 00000000 | success |
+
+### API
+
+| code | description |
+| --- | --- |
+| 10000000 | server error |
+| 10000001 | invalid input |
+
+錯誤代碼的規則依據各個專案有所不同，不過一般情況下，前兩到三位代表錯誤的分類。以上述範例來說，開頭 `000` 是回傳成功、`100` 則是和 API 有關的錯誤。
+
+最後四位代表具體的編碼，將各個錯誤代碼從 0000~9999 依序編號。 所以 `10000000` 表示這是 API 的錯誤 ，編號為 0000。
