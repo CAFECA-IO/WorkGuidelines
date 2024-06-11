@@ -140,7 +140,7 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 ### Step 4
 
-我們回到 GitHub 專案中的 code 頁面，左邊有 Deployments 的區塊可以點選。
+我們回到 GitHub 專案中的 Code 頁面，左邊有 Deployments 的區塊可以點選。
 
 ![9](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/b0c348c3-e69d-4be4-9cbd-5c9dce92f11a)
 
