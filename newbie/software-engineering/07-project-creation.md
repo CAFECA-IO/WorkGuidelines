@@ -64,3 +64,77 @@ Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出
 ### 撰寫 README.md
 
 參考此篇 KM : [README Writing](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/tips/readme-writing.md)
+
+
+# 建立 Vercel 專案
+
+## 什麼是 Vercel？
+
+Vercel 是一個為開發者設計的平台，提供我們所需的工具、工作流程和基礎架構，讓我們能更快地構建和部署我們的 Web 應用程式，不需要太多額外配置。
+
+Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks)。並且它在全球分佈了可擴展且安全的基礎架構，並從靠近我們的使用者資料中心提供內容以獲得最佳速度。
+
+在開發過程中，Vercel 提供實時協作工具，如自動預覽和生產環境，並且可以在預覽部署上進行評論(comments)。
+
+## 認識 Vercel 的 Projects 和 Deployments
+
+要開始使用 Vercel 之前，我們可以先來了解專案和部署在 Vercel 上的概念。
+
+### Projects（專案）
+
+專案是指部署到 Vercel 的應用程式。你可以有多個專案連接到單一的儲存庫，並且每個專案可以有多個部署。你可以在儀表板上查看所有專案，並通過專案儀表板配置你的設定。
+
+### Deployments（部署）
+
+部署是你專案成功構建的結果。當你導入現有專案或模板，或者通過連接的整合推送 Git 提交或使用 CLI 中的 vercel deploy 時，會觸發部署。每次部署會自動生成一個 URL。
+
+## 使用 Vercel 部署 Next.js
+
+### 第一步驟
+
+建立 Vercel 帳號：[註冊](https://vercel.com/signup) 或 [登入](https://vercel.com/login)
+
+並且和你的 GitHub 帳號連接。
+
+連接之後，要在右上角切換成公司的團隊帳號。
+
+![1](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/14e2dd20-d631-4456-a44c-db45bcd65701)
+
+之後按下 `Add New...` 按鈕，選擇 `Project`。
+
+![2](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/03ab96fd-5394-448e-a6e1-42fc1ee51ee7)
+
+### 第二步驟
+
+通過導入你現有的前端專案，在 Vercel 上建立一個新專案。
+
+當你使用 Vercel 支援的框架時，Vercel 會自動檢測並設置最佳的構建和部署設定。
+（想要知道所有 Vercel 支援的框架請看[這裡](https://vercel.com/docs/frameworks/more-frameworks)。）
+
+你也可以在手動設定專案，包括構建和輸出設定、環境變數等。而這些設置也可以之後再設定，不必急著現在設定。
+
+這裡我們導入 Next.js 框架的專案。
+
+![3](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/b0f269f8-1dc3-4b31-94cd-d7482f218ae8)
+
+因為我們的專案是 Next.js，所以 Vercel 自動幫我們檢測並設定：
+
+![4](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/6f3f0d9a-aa73-4990-9c11-5ddc4dd4734e)
+
+構建和輸出設定、環境變數也可以之後再設定：
+
+![5](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/97e6a491-1ec1-452a-9e1d-3b8c9a424131)
+
+### 第三步驟
+
+按下部署按鈕。Vercel 將根據選擇的設定建立專案，並且部署。
+
+![6](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/04b046b5-9f70-4afc-b716-5adac733ab16)
+
+部署完成。
+
+![7](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/81951dbc-aad2-46e5-9577-af3c195683b6)
+
+要查看你的部署，就在儀表板中選擇專案，然後選擇域名(Domain)。現在起，任何擁有此 URL 的人都可以訪問此頁面。
+
+![8](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/c6ebad14-f62f-4fbc-bc43-cc38fcf9729b)
