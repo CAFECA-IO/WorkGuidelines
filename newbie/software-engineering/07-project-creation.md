@@ -12,7 +12,7 @@
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/5e88ec31-30bd-42ba-8df1-4b9685be6fe0" alt="截圖2/5" width="60%">
 
 1. Create a new repository
-2. 輸入 Repository name，命名方式為 UpperCamelCase 
+2. 輸入 Repository name，命名方式為 UpperCamelCase
 3. 選擇 Public
 4. add a README file
 5. add .gitignore : `Node`
@@ -57,14 +57,13 @@ Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出
 > PR 由團隊主管審核後就會自動被併入 develop，開發者再將自己的 branch 刪除。 <br />
 > 只有 main 和 develop 兩個分支會始終存在於 Repository，其餘功能分支開發完成後就要刪除。
 
-### 開發環境
+### 開發環境設定
 
 參考此篇 KM : [development environment](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/development-environment.md)
 
 ### 撰寫 README.md
 
 參考此篇 KM : [README Writing](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/tips/readme-writing.md)
-
 
 # 建立 Vercel 專案
 
@@ -80,7 +79,7 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 要開始使用 Vercel 之前，我們可以先來了解專案和部署在 Vercel 上的概念。
 
-#### Projects（專案）
+### Projects（專案）
 
 專案是指部署到 Vercel 的應用程式。你可以有多個專案連接到單一的儲存庫，並且每個專案可以有多個部署。你可以在儀表板上查看所有專案，並通過專案儀表板配置你的設定。
 
