@@ -61,7 +61,7 @@ Repository(a.k.a. Repo) 建立之後會產生預設主分支 main，接著拉出
 
 參考此篇 KM : [development environment](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/development-environment.md)
 
-### 撰寫 README.md
+### 撰寫 README
 
 參考此篇 KM : [README Writing](https://github.com/CAFECA-IO/KnowledgeManagement/blob/master/tips/readme-writing.md)
 
