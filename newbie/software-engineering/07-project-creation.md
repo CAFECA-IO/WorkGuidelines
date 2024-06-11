@@ -122,7 +122,7 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 > 注意： <br />
 > 如果我們在 main 中已經推了一個 Next 的專案在裡面，Vercel 會自動偵測到並且設定 Framework Preset 為 Next.js。 <br />
-> 但如果 main 沒有任何內容，就會自動設定為 Other，此時我們就要手動先去選擇 Next.js。
+> 但如果 main 沒有任何內容，就會自動設定為 Other，此時我們就要手動設定為 Next.js。
 
 構建和輸出設定、環境變數也可以之後再設定：
 
