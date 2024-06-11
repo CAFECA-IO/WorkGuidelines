@@ -87,9 +87,9 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 部署是你專案成功構建的結果。當你導入現有專案或模板，或者通過連接的整合推送 Git 提交或使用 CLI 中的 vercel deploy 時，會觸發部署。每次部署會自動生成一個 URL。
 
-## 使用 Vercel 部署 Next.js
+## 使用 Vercel 部署 Next.js 專案的步驟
 
-### 第一步驟
+### Step 1
 
 建立 Vercel 帳號：[註冊](https://vercel.com/signup) 或 [登入](https://vercel.com/login)
 
@@ -103,7 +103,7 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 ![2](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/03ab96fd-5394-448e-a6e1-42fc1ee51ee7)
 
-### 第二步驟
+### Step 2
 
 通過導入你現有的前端專案，在 Vercel 上建立一個新專案。
 
@@ -124,7 +124,7 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 ![5](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/97e6a491-1ec1-452a-9e1d-3b8c9a424131)
 
-### 第三步驟
+### Step 3
 
 按下部署按鈕。Vercel 將根據選擇的設定建立專案，並且部署。
 
