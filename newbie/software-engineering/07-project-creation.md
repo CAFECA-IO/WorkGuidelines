@@ -138,6 +138,16 @@ Vercel 起始就支援[熱門的前端框架](https://vercel.com/docs/frameworks
 
 ![8](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/c6ebad14-f62f-4fbc-bc43-cc38fcf9729b)
 
+### Step 4
+
+我們回到 GitHub 專案中的 code 頁面，左邊有 Deployments 的區塊可以點選。
+
+![9](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/b0c348c3-e69d-4be4-9cbd-5c9dce92f11a)
+
+點進去後有各個部署的紀錄，點進去可以看到部署的詳細資訊。
+
+![10](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/27f889b3-a0df-4f66-a657-a6b9c5af4b3f)
+
 ## Vercel 重要資訊總結
 
 1. **簡介**：
