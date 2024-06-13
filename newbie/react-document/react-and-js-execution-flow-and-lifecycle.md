@@ -264,7 +264,7 @@ setTimeout 3 執行完畢 pop 出 Call Stack
 
 所以按下按鈕後，會印出：
 
-```
+```plaintext
 Button clicked
 BComponent rendered
 CComponent rendered
@@ -443,7 +443,7 @@ console.log("5: After async function call");
 
 根據上述分析，最終的輸出順序如下：
 
-```
+```plaintext
 0: Before async function call
 1: Start of async function
 2: Inside Promise executor
