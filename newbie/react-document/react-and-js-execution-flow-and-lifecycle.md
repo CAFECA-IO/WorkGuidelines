@@ -197,7 +197,7 @@ const test = async () => {
 
 所以最後印出的結果為：
 
-```
+```plaintext
 1
 4
 5
@@ -211,7 +211,7 @@ CComponent rendered
 
 ### 以上的說明較為繁瑣，這裡提供一個更簡化的說明：
 
-```
+```plaintext
 home function 被 push 到 Call Stack
 
 AComponent function 被 push 到 Call Stack
