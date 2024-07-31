@@ -88,10 +88,12 @@ export default function TodoList() {
 
 我們只能在 JSX 中以兩種方式使用大括號：
 
-1. **作為文本** 直接放在 JSX 標籤內：
-   `<h1>{name}'s To Do List</h1>` 是有效的。但要注意： `<{tag}>Gregorio Y. Zara's To Do List</{tag}>` 是無效的。
-2. **作為屬性** 緊接在 `=` 符號後面：
-   `src={avatar}` 會讀取 `avatar` 變數。但要注意： `src="{avatar}"` 會傳遞字串 `"{avatar}"`。
+1. **作為文本** 直接放在 JSX 標籤內： <br />
+   `<h1>{name}'s To Do List</h1>` 是有效的。 <br />
+   但要注意： `<{tag}>Gregorio Y. Zara's To Do List</{tag}>` 是無效的。
+2. **作為屬性** 緊接在 `=` 符號後面： <br />
+   `src={avatar}` 會讀取 `avatar` 變數。 <br />
+   但要注意： `src="{avatar}"` 會傳遞字串 `"{avatar}"`。
 
 ## 使用「雙大括號」：在 JSX 中的 CSS 和其他物件 (Using “double curlies”: CSS and other objects in JSX)
 
@@ -400,11 +402,11 @@ export default function TodoList() {
 
 #### ► 筆者補充：
 
-這裡的表達式也可以使用模板字串的方式來寫：
-
-```jsx
-<img className='avatar' src={`${baseUrl}${person.imageId}${person.imageSize}.jpg`} alt={person.name} />
-```
+> 這裡的表達式也可以使用模板字串的方式來寫：
+>
+> ```jsx
+> <img className='avatar' src={`${baseUrl}${person.imageId}${person.imageSize}.jpg`} alt={person.name} />
+> ```
 
 #### 進階解決方案：
 
