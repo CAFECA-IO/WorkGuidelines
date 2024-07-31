@@ -280,7 +280,7 @@ export default function Bio() {
 }
 ```
 
-## 結語
+# 結語
 
 這篇文章主要是在介紹 JSX 的基本規則，並且示範如何將 HTML 標記轉換為 JSX 標記。
 
