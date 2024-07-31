@@ -1,4 +1,4 @@
-# 品質管理｜Quality Management
+# 品質管理｜ Quality Management
 
 ## 品質管理的定義
 
@@ -38,9 +38,9 @@
 ### 3. Quality Control (QC)
 
 品質控制團隊測試並審查產品是否符合組織和專案層面的品質保證標準和流程。此組件包括手動和自動化測試。
-軟體品質控制更注重產品並可同時開始與開發過程。企業應實施敏捷品質管理，因為它加速測試過程，確保及早識別和解決缺陷，降低重做成本並提高客戶滿意度。
+軟體品質控制更注重產品並可同時開始與開發過程。企業應實施敏捷品質管理，因為它加速測試過程，確保及早識別和解決錯誤，降低重做成本並提高客戶滿意度。
 
-> 簡單來說，品質控制 (QC) 包括用於滿足品質要求的活動和技術。這包括測試軟體、識別缺陷並確保進行修正。其目的是在將軟體釋出給用戶之前識別並修復缺陷。
+> 簡單來說，品質控制 (QC) 包括用於滿足品質要求的活動和技術。這包括測試軟體、識別錯誤並確保進行修正。其目的是在將軟體釋出給用戶之前識別並修復錯誤。
 
 ## 軟體品質管理的最佳實踐
 
@@ -49,7 +49,7 @@
 ![Source: Semaphore](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/b55cc562-ff4a-4fc9-9192-8368643c6196)
 
 **測試金字塔 (Testing Pyramid)** 是一種流行的測試方法，表示應在應用程式架構的不同層次上創建的測試相對數量。
-它包括三個層次：**單元測試、整合測試和端對端測試**。這種方法有助於在開發週期的早期識別缺陷，使它們更容易且成本較低地修復。
+它包括三個層次：**單元測試、整合測試和端對端測試**。這種方法有助於在開發週期的早期識別錯誤，使它們更容易且成本較低地修復。
 
 - **單元測試 (Unit tests) ：**
   小型、快速且獨立的測試，驗證個別元件 (individual components) 或代碼單元 (units of code) 的功能。
@@ -58,7 +58,7 @@
 
 - **整合測試 (Integration tests) ：**
   使用資料庫 (databases)、單獨的服務 (separate services) 或檔案系統 (file systems) 驗證應用程式的行為。
-它們可以幫助檢測組合多個組件時出現的缺陷，例如不相容的介面或不正確的資料交換。
+  它們可以幫助檢測組合多個組件時出現的錯誤，例如不相容的介面或不正確的資料交換。
 
 - **端對端測試 (End-to-end tests) ：**
   這些測試位於頂層，模擬使用者行為並測試整個應用程式的功能。
@@ -107,7 +107,7 @@
 
 ### 5. 遵循敏捷測試流程 (Follow Agile Testing Process)
 
-軟體品質流程的主要目標是儘早發現缺陷。在軟體開發過程中，缺陷越晚被發現，修復的成本就越高。在敏捷團隊中，開發者和測試人員並不是在固定的工作區域操作。
+軟體品質流程的主要目標是儘早發現錯誤。在軟體開發過程中，錯誤越晚被發現，修復的成本就越高。在敏捷團隊中，開發者和測試人員並不是在固定的工作區域操作。
 
 在[敏捷測試流程](https://blog.kms-solutions.asia/agile-testing-for-digital-team)中，測試任務被拆分成短暫的開發週期，通常由開發者和測試人員共同執行。即使在敏捷流程中，測試人員仍然發揮著至關重要的作用。自動化測試仍然是敏捷開發的核心，因為一個一致且迭代的測試流程對於建立無錯誤軟體來說是最確保的方法。
 
@@ -122,3 +122,50 @@
 ## 資料來源
 
 [Software Quality Management: How does It Work and Best Practices](https://blog.kms-solutions.asia/software-quality-management)
+
+# 團隊現況
+
+## 品質保證工作流程 (Quality Assurance Work Flow)
+
+1. 測試案例 (Test Cases)
+2. 測試報告 (Test Report)
+3. 錯誤問題 (Bug Issues)
+
+### 1. 測試案例 (Test Cases)
+
+測試案例存放位置： `Documents/${Project}/testcases/${Document}`
+
+例如 TBD 專案，測試案例的存放位置為: https://github.com/CAFECA-IO/Documents/tree/main/TBD/testcases
+
+#### 定義包括:
+
+- 需求規範 (Requirements Specification)
+- 錯誤問題 (Bug Issues)
+
+#### 基本資訊:
+
+- 使用者情境 (User Scenario)
+- 測試流程 (Test Flow)
+- 檢查清單 (Check List)
+- 注意事項 (Cautions)
+- 待驗證問題清單 (To Be Verified Issues List)
+
+### 2. 測試報告 (Test Report)
+
+- 測試報告路徑： `EventReport/test_report/${Document}`
+  例如：https://github.com/CAFECA-IO/EventReport/tree/main/test_report
+
+- 測試案例結果(Test Case Result)路徑： `Documents/${Project}/testresult/${Document}`
+  例如 TBD 專案，測試案例結果的存放位置為：https://github.com/CAFECA-IO/Documents/tree/main/TBD/testresult
+
+### 3. 錯誤問題 (Bug Issues)
+
+開立 Bug Issues 的格式如下:
+
+- 測試環境 (Test Environment)
+- 如何重現 (How To Reproduce)
+- 異常描述 (Exception Description)
+- 預期結果 (Expect Result)
+- 參考資料 (Reference)
+
+可以參考 [Bug 單範例](https://github.com/CAFECA-IO/TideBitEx/issues/1026)
