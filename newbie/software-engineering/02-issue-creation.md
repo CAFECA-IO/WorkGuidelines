@@ -93,3 +93,9 @@ Proposal
 1. 工作單下方按鈕點擊【Close as not planned】
 2. 將 Projects 狀態改為 `Won't Fix`
 3. 將標籤全部清除，只選擇 `wontfix`
+
+<details><summary>工作票棄用範例</summary>
+  
+![](https://github.com/user-attachments/assets/be399c71-5845-4cae-9a6d-a3cf40ca8421)
+
+</details>
