@@ -68,19 +68,21 @@ Proposal
 > [!IMPORTANT]
 > 注意：每張工作單預計最長時數為 8 小時，如果超過 8 小時就請盡可能拆成各項子任務工作單，並在原工作單裡註記所有新開的工作單，讓他們彼此有關聯。
 
-每次執行工作票，須於工作單中記錄花費時數：
+- 每次執行工作票，須於工作單中記錄花費時數：
 ![截圖 2024-01-03 下午6 08 21](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/b71f57d9-9fac-44d9-990e-c9dd2128ac6e)
 
-如果當天尚未執行完，並且花費時間尚未超過預估時間，需要記錄已花費時數和剩餘時數：
+- 如果當天尚未執行完，並且花費時間尚未超過預估時間，需要記錄已花費時數和剩餘時數：
 ![截圖 2024-01-03 下午6 00 31](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/e26b28c6-f9b8-4753-bc56-9fb82bde20bf)
 
-如果執行超過一天，可以於最後完成時，計算此張工作票的總花費時數：
+- 如果執行超過一天，可以於最後完成時，計算此張工作票的總花費時數：
 ![截圖 2024-01-03 下午6 07 20](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/9c1bb256-e506-4366-99c7-3b5e6e3a3579)
 （像這張單子最後總計有 24 小時，已超過 8 小時，建議一開始就拆成多個子任務工作單）
 
-### 主任務工作單範例
+#### 💡小技巧 : 主任務工作單 (此部分僅供參考，這沒有一定要這樣做)
 
-參考 : [[MainTask] 機器人聊天室chat-bot-lizzz #356](https://github.com/CAFECA-IO/BAIFA/issues/356)
+假如一開始就知道這個任務會有花費很多時間的話，我們可以建立一個主任務工作單來管理子任務。
+
+參考範例 : [[MainTask] 機器人聊天室chat-bot-lizzz #356](https://github.com/CAFECA-IO/BAIFA/issues/356)
 
 <img src="https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/0cf32954-5cef-40c0-9541-c0d6286b6607" alt="#356截圖1/2" width="60%">
 
