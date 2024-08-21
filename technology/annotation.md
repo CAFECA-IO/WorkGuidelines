@@ -8,10 +8,10 @@
 ## ToDo
 - Single Line
 ```typescript
-// ToDo: do something (date - author)
+// ToDo: (date - author) do something 
 ```
 ```typescript
-// ToDo: do something (20230310 - Luphia)
+// ToDo: (20230310 - Luphia) do something 
 ```
 
 - Multi-Line
@@ -31,23 +31,23 @@
 ## Deprecated
 - Single Line
 ```typescript
-// Deprecated: say something (date after 28 days - author)
+// Deprecated: (date after 28 days - author) say something 
 ```
 ```typescript
-// Deprecated: say something (20230407 - Luphia)
+// Deprecated: (20230407 - Luphia) say something 
 // eslint-disable-next-line no-console
 ```
 
 - Multi-Line
 ```typescript
-// Deprecated: say something (date after 28 days - Luphia) [start]
+// Deprecated: (date after 28 days - Luphia) [start] say something 
 { some code }
 { another code }
 { another code again }
 // Deprecated: [end]
 ```
 ```typescript
-// Deprecated: say something (20230407 - Luphia) [start]
+// Deprecated: (20230407 - Luphia) [start] say something 
 { some code }
 { another code }
 { another code again }
