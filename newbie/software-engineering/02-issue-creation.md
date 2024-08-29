@@ -94,7 +94,7 @@ Proposal
 ### 開發人員（除了 PM 以外）的步驟：
 1. 在工作單上記錄棄用原因
 2. 工作單最下方的 Close 按鈕右側有個選單，打開來點選【Close as not planned】，按鈕會出現灰色圖示，接著再按下【Close issue】。
-3. 將標籤全部清除，只選擇 `wontfix`
+3. 將 Labels 裡面所有的標籤全部移除，只選擇 `wontfix`
 
 <details><summary>截圖示範</summary>
 <p>
@@ -119,7 +119,7 @@ Proposal
 
 ### PM 專屬的步驟：
 1. 將工作單的 Assignees 清空
-2. 將 Projects 的狀態改為 won'tfix
+2. 將 Projects 的狀態改為 Won't Fix
 
 <details><summary>截圖示範</summary>
 <p>
