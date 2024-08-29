@@ -89,13 +89,49 @@ Proposal
 
 ## 工作票棄用
 
-工作票無法刪除，如果有工作票要被棄用，遵守以下流程:
-1. 工作單下方按鈕點擊【Close as not planned】
-2. 將 Projects 狀態改為 `Won't Fix`
+工作票無法自行刪除，如果有工作票要被棄用，需要依照以下流程進行工作票棄用。
+
+### 開發人員（除了 PM 以外）的步驟：
+1. 在工作單上記錄棄用原因
+2. 工作單最下方的 Close 按鈕右側有個選單，打開來點選【Close as not planned】，按鈕會出現灰色圖示，接著再按下【Close issue】。
 3. 將標籤全部清除，只選擇 `wontfix`
 
-<details><summary>工作票棄用範例</summary>
-  
-![](https://github.com/user-attachments/assets/be399c71-5845-4cae-9a6d-a3cf40ca8421)
+<details><summary>截圖示範</summary>
+<p>
 
-</details>
+#### 第一步＆第二步：
+
+<img src="https://github.com/user-attachments/assets/d8c51243-836b-4337-b65b-0e653592191d" width=720 />
+
+#### 第二步接續：
+
+<img src="https://github.com/user-attachments/assets/b14fabb8-7824-46be-be23-4d346321ed11" width=720 />
+
+#### 第三步：
+
+<img src="https://github.com/user-attachments/assets/5d6b3932-e6a6-4ce6-b8d9-e12b70812b94" width=720 />
+
+
+</p>
+</details> 
+
+
+
+### PM 專屬的步驟：
+1. 將工作單的 Assignees 清空
+2. 將 Projects 的狀態改為 won'tfix
+
+<details><summary>截圖示範</summary>
+<p>
+
+#### 第一步：
+
+<img src="https://github.com/user-attachments/assets/6fa21e49-4726-4252-bc54-45bfba8f568a" width=720 />
+
+#### 第二步：
+
+<img src="https://github.com/user-attachments/assets/f888ed12-8b77-492f-b5e5-fcd53f53b442" width=720 />
+
+
+</p>
+</details> 
