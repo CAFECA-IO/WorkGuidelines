@@ -99,15 +99,15 @@ Proposal
 <details><summary>截圖示範</summary>
 <p>
 
-#### 第一步＆第二步：
+**第一步＆第二步：**
 
 <img src="https://github.com/user-attachments/assets/d8c51243-836b-4337-b65b-0e653592191d" width=720 />
 
-#### 第二步接續：
+**第二步接續：**
 
 <img src="https://github.com/user-attachments/assets/b14fabb8-7824-46be-be23-4d346321ed11" width=720 />
 
-#### 第三步：
+**第三步：**
 
 <img src="https://github.com/user-attachments/assets/5d6b3932-e6a6-4ce6-b8d9-e12b70812b94" width=720 />
 
@@ -124,11 +124,11 @@ Proposal
 <details><summary>截圖示範</summary>
 <p>
 
-#### 第一步：
+**第一步：**
 
 <img src="https://github.com/user-attachments/assets/6fa21e49-4726-4252-bc54-45bfba8f568a" width=720 />
 
-#### 第二步：
+**第二步：**
 
 <img src="https://github.com/user-attachments/assets/f888ed12-8b77-492f-b5e5-fcd53f53b442" width=720 />
 
