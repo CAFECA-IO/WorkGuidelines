@@ -120,7 +120,7 @@ Proposal
 
 ### PM 專屬的步驟：
 1. 將工作單的 Assignees 清空
-2. 將 Projects 的狀態改為 Won't Fix
+2. 將 Projects 的 Status 改為 Won't Fix
 
 <details><summary>截圖示範 (點擊展開)</summary>
 <p>
