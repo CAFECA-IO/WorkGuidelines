@@ -96,7 +96,7 @@ Proposal
 2. 工作單最下方的 Close 按鈕右側有個選單，打開來點選【Close as not planned】，按鈕會出現灰色圖示，接著再按下【Close issue】。
 3. 將 Labels 裡面所有的標籤全部移除，只選擇 `wontfix`
 
-<details><summary>截圖示範</summary>
+<details><summary>截圖示範(點擊展開)</summary>
 <p>
 
 **第一步＆第二步：**
@@ -121,7 +121,7 @@ Proposal
 1. 將工作單的 Assignees 清空
 2. 將 Projects 的狀態改為 Won't Fix
 
-<details><summary>截圖示範</summary>
+<details><summary>截圖示範(點擊展開)</summary>
 <p>
 
 **第一步：**
