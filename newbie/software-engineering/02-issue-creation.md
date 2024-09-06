@@ -95,6 +95,7 @@ Proposal
 1. 在工作單上記錄棄用的原因
 2. 工作單最下方的 Close 按鈕右側有個選單，打開來點選【Close as not planned】，按鈕會出現灰色圖示，接著再按下【Close issue】。
 3. 將 Labels 裡面所有的標籤全部移除，只選擇 `wontfix`
+4. 不用調整 Project 的 Status，系統機器人會自動將它修改成 Weekly Review
 
 <details><summary>截圖示範 (點擊展開)</summary>
 <p>
