@@ -82,7 +82,7 @@ function Avatar({ person, size }) {
 }
 ```
 
-加入一些邏輯，讓 `Avatar` 使用 `person` 和 `size` 進行渲染，這樣就完成了。
+接著再加入一些邏輯，讓 `Avatar` 使用 `person` 和 `size` 進行渲染，這樣就完成了。
 
 現在我們可以透過不同的 props 設置 `Avatar` 以多種方式渲染。試著調整這些值吧！
 
