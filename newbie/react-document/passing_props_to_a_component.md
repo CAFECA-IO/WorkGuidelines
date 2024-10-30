@@ -148,8 +148,6 @@ function Avatar(props) {
 
 通常我們不需要整個 `props` 物件本身，因此可以將其解構為單獨的 props。
 
----
-
 ### 提醒
 
 在宣告 props 時，**別忘了在 `(` 和 `)` 之間的 `{` 和 `}`**
@@ -215,8 +213,6 @@ function Profile(props) {
 這樣就可以將 `Profile` 的所有 props 轉傳給 `Avatar`，而不需要列出每個屬性的名稱。
 
 **謹慎使用展開語法。** 如果我們在大多數元件中使用展開語法，這可能是設計上出了問題。通常，這表示我們應該將元件分割，並將子元件以 JSX 的形式傳遞。接下來會有更多說明！
-
----
 
 ## 透過 `children` 傳遞 JSX (Passing JSX as children)
 
