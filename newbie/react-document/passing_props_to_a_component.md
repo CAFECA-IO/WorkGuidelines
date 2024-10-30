@@ -293,7 +293,7 @@ export function getImageUrl(person, size = "s") {
 就像下圖的比喻，帶有 `children` prop 的父元件可以包裹任意子元件或者一般 JSX 標籤，像是一個插槽，可以插入任意 JSX。
 
 ![image](https://github.com/user-attachments/assets/8c197425-9d47-4db0-9859-8a8d16a7ee37)
-(Card 是一個長得像是拼圖的積木，帶有一個「children」插槽，可用於放置文字和 Avatar 等內容。)
+(Card 是一個長得像是拼圖的積木，帶有一個「children」插槽，可用於放置文字或 Avatar 元件等內容。)
 
 ## props 如何隨時間改變 (How props change over time)
 
