@@ -69,8 +69,8 @@ export default function Profile() {
 > 注意 :
 >
 > 如果 `person=` 後的雙大括號讓你感到困惑，請記住 [它們只是物件](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-double-curlies-css-and-other-objects-in-jsx) 在 JSX 大括號中的表示方式。
->
-> 現在可以在 `Avatar` 元件中讀取這些 props。
+
+現在可以在 `Avatar` 元件中讀取這些 props。
 
 ### 步驟 2：在子元件中讀取 props
 
