@@ -69,8 +69,8 @@ export default function Profile() {
 > 注意 :
 >
 > 如果 `person=` 後的雙大括號讓你感到困惑，請記住 [它們只是物件](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-double-curlies-css-and-other-objects-in-jsx) 在 JSX 大括號中的表示方式。
->
-> 現在可以在 `Avatar` 元件中讀取這些 props。
+
+現在可以在 `Avatar` 元件中讀取這些 props。
 
 ### 步驟 2：在子元件中讀取 props
 
@@ -82,9 +82,11 @@ function Avatar({ person, size }) {
 }
 ```
 
-加入一些邏輯，讓 `Avatar` 使用 `person` 和 `size` 進行渲染，這樣就完成了。
+接著再加入一些邏輯，讓 `Avatar` 使用 `person` 和 `size` 進行渲染，這樣就完成了。
 
 現在我們可以透過不同的 props 設置 `Avatar` 以多種方式渲染。試著調整這些值吧！
+
+👉 [範例捷徑](https://react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component) : 可以去範例調整 value 可以立即看到效果。
 
 utils.js
 
@@ -212,7 +214,7 @@ function Profile(props) {
 
 這樣就可以將 `Profile` 的所有 props 轉傳給 `Avatar`，而不需要列出每個屬性的名稱。
 
-**謹慎使用展開語法。** 如果我們在大多數元件中使用展開語法，這可能是設計上出了問題。通常，這表示我們應該將元件分割，並將子元件以 JSX 的形式傳遞。接下來會有更多說明！
+**謹慎使用展開語法** : 如果我們在大多數元件中使用展開語法，這可能是設計上出了問題。通常，這表示我們應該將元件分割，並將子元件以 JSX 的形式傳遞。接下來會有更多說明！
 
 ## 透過 `children` 傳遞 JSX (Passing JSX as children)
 
@@ -279,6 +281,8 @@ export function getImageUrl(person, size = "s") {
 ```
 
 來，試著將 `<Card>` 裡面的 `<Avatar>` 替換成一些文字，看看 `Card` 元件如何包裹任何嵌入的內容。
+
+👉 [範例捷徑](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children) : 快去調整看看。
 
 對於這個 `Card` 元件而言，它並不需要「知道」內部渲染的是什麼，因此很有彈性。這種靈活的模式在許多地方都可以看到。
 
@@ -440,3 +444,13 @@ export default function Profile() {
   );
 }
 ```
+
+# 結語
+
+這篇文章介紹了如何將 props 傳遞給元件，以及如何在元件中讀取 props。我們也學習了如何為 props 指定預設值，以及如何使用 JSX 展開語法來轉傳 props。
+
+對於 React 開發者而言，props 非常重要，因為 props 是元件之間溝通的橋樑。透過 props，我們可以將資訊從父元件傳遞到子元件。這樣的設計讓我們可以更容易地編寫可重複使用的元件，並且讓元件之間的關係更加清楚。
+
+# 本文參考資料
+
+[Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component)
