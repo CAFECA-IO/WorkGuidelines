@@ -86,6 +86,8 @@ function Avatar({ person, size }) {
 
 現在我們可以透過不同的 props 設置 `Avatar` 以多種方式渲染。試著調整這些值吧！
 
+👉 [範例捷徑](https://react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component)，可以去範例調整 value 可以立即看到效果
+
 utils.js
 
 ```jsx
