@@ -299,7 +299,7 @@ export function getImageUrl(person, size = "s") {
 
 下方的 `Clock` 元件接收了來自父元件的兩個 props：`color` 和 `time`。（此處省略父元件的程式碼，因為它使用了 [state](https://react.dev/learn/state-a-components-memory)，我們暫不深入探討。）
 
-試著在下方選擇框中更改顏色：👉  [範例捷徑](https://react.dev/learn/passing-props-to-a-component#how-props-change-over-time) ([codesandbox](https://codesandbox.io/api/v1/sandboxes/define?undefined&environment=create-react-app))
+試著在下方選擇框中更改顏色：👉  [範例捷徑](https://react.dev/learn/passing-props-to-a-component#how-props-change-over-time)
 
 ```jsx
 export default function Clock({ color, time }) {
