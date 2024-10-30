@@ -10,8 +10,9 @@
 
 # 將 Props 傳遞給元件 (Passing Props to a Component)
 
-React 元件之間透過 _props_ 進行溝通。每個父元件可以將一些資訊傳遞給其子元件，方法是給子元件 props。Props 可能會讓我們想到 HTML 屬性(attributes)。
+React 元件之間透過 _props_ 進行溝通。每個父元件可以將一些資訊傳遞給其子元件，方法是給子元件 props。
 
+Props 可能會讓我們想到 HTML 屬性(attributes)。
 但與 HTML 屬性不同，我們可以透過 props 傳遞任何 JavaScript 值，包括物件、陣列和函式。
 
 #### 這個章節將會學到幾個重點:
