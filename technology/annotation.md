@@ -29,7 +29,7 @@
  */
 ```
 
-### Eslint Disable
+## Eslint Disable
 If you need to temporarily disable eslint during development, you are only allowed to use `eslint-disable-next-line`, and you must add a `ToDo` comment above it.
 ```typescript
 // ToDo: (20241122 - Luphia) remove eslint-disable
