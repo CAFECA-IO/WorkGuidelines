@@ -4,6 +4,8 @@
 - Deprecated
 - Info
 
+**Make sure that all `ToDo` are completed and all content mark as `Deprecated` are removed before the version release**
+
 ## ToDo
 - Single Line
 ```typescript
@@ -28,7 +30,7 @@
 ```
 
 ### Eslint Disable
-If you need to temporarily disable eslint during development, you are only allowed to use `eslint-disable-next-line`, and you must add a `ToDo` comment above it. Make sure that all ToDos are completed before the version release
+If you need to temporarily disable eslint during development, you are only allowed to use `eslint-disable-next-line`, and you must add a `ToDo` comment above it.
 ```typescript
 // ToDo: (20241122 - Luphia) remove eslint-disable
 // eslint-disable-next-line no-console
