@@ -1,5 +1,5 @@
 # Annotation
-> v1.0.1 20230313
+> v1.0.2 20241122
 - ToDo
 - Deprecated
 - Till
@@ -28,6 +28,14 @@
  */
 ```
 
+### Eslint Disable
+If you need to temporarily disable eslint during development, you are only allowed to use `eslint-disable-next-line`, and you must add a `ToDo` comment above it. Make sure that all ToDos are completed before the version release
+```typescript
+// ToDo: (20241122 - Luphia) remove eslint-disable
+// eslint-disable-next-line no-console
+// console.log('Hi there');
+```
+
 ## Deprecated
 - Single Line
 ```typescript
@@ -52,31 +60,6 @@
 { another code }
 { another code again }
 // Deprecated: [end]
-```
-
-## Till
-- Single Line
-```typescript
-// Till: (date after 14 days - author) {some code or message}
-```
-```typescript
-// Till: (20230327 - Luphia) {some code or message}
-```
-
-- Multi-Line
-```typescript
-/* Till: (date after 14 days - author)
-{ some code or message }
-{ another code or message }
-{ another code or message again }
- */
-```
-```typescript
-/* Till: (20230327 - Luphia)
-{ some code or message }
-{ another code or message }
-{ another code or message again }
- */
 ```
 
 ## Info
