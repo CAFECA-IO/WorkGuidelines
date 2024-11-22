@@ -2,7 +2,6 @@
 > v1.0.2 20241122
 - ToDo
 - Deprecated
-- Till
 - Info
 
 ## ToDo
