@@ -173,7 +173,7 @@ return <li className='item'>{isPacked ? name + " ✅" : name}</li>;
 > 如果你有物件導向程式設計的背景，可能會假設上述兩個範例存在微妙的差異，因為其中一個可能會創造兩個不同的 `<li>`「實例」。但事實上，JSX 元素並不是「實例」，因為它們不包含任何內部狀態，也不是實際的 DOM 節點。它們更像是輕量的描述，就像藍圖一樣。因此，這兩個範例其實是*完全等價*的。 </br>
 > 在 [保留與重置狀態](https://react.dev/learn/preserving-and-resetting-state) 這篇文章有更詳細地解釋其運作原理。（也可以等待筆者日後翻譯此文）
 
-現在，假設你想將已完成項目的文字包裹在另一個 HTML 標籤中，例如使用 `<del>` 來加上刪除線。你可以添加更多的換行和括號，讓在每個情況下嵌套更多 JSX 時變得更容易：
+現在，假設你想將已完成項目的文字包裹在另一個 HTML 標籤中，例如使用 `<del>` 來加上刪除線。你可以新增更多的換行和括號，讓在每個情況下嵌套更多 JSX 時變得更容易：
 
 ```tsx
 function Item({ name, isPacked }) {
@@ -361,3 +361,106 @@ export default function PackingList() {
 - 在 JSX 中，`{cond ? <A /> : <B />}` 的意思是 **「如果 `cond` 成立，渲染 `<A />`，否則渲染 `<B />`」**。
 - 在 JSX 中，`{cond && <A />}` 的意思是 **「如果 `cond` 成立，渲染 `<A />`，否則什麼都不渲染」**。
 - 這些簡寫方式很常見，但如果你偏好使用一般的 `if`，也完全沒有問題。
+
+## 試試看一些挑戰 (Try out some challenges)
+
+### 挑戰 1 of 3： 使用 `? :` 為未完成項目顯示圖示
+
+使用條件運算子（`cond ? a : b`）在 `isPacked` 為 `false` 時渲染一個 ❌。
+
+```tsx
+function Item({ name, isPacked }) {
+  return (
+    <li className='item'>
+      {name} {isPacked && "✅"}
+    </li>
+  );
+}
+
+export default function PackingList() {
+  return (
+    <section>
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item isPacked={true} name='Space suit' />
+        <Item isPacked={true} name='Helmet with a golden leaf' />
+        <Item isPacked={false} name='Photo of Tam' />
+      </ul>
+    </section>
+  );
+}
+```
+
+### 挑戰 2/3：使用 `&&` 顯示項目的重要性
+
+在這個範例中，每個 `Item` 元件會接收一個以數字表示(numerical)的 `importance` 屬性。使用 `&&` 運算子，僅在 `importance` 不為零時渲染「_(Importance: X)_」斜體文字。最後你的項目清單應該如下：
+
+- Space suit _(Importance: 9)_
+- Helmet with a golden leaf
+- Photo of Tam _(Importance: 6)_
+
+別忘了在兩個標籤之間加上一個空格！
+
+```tsx
+function Item({ name, importance }) {
+  return <li className='item'>{name}</li>;
+}
+
+export default function PackingList() {
+  return (
+    <section>
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item importance={9} name='Space suit' />
+        <Item importance={0} name='Helmet with a golden leaf' />
+        <Item importance={6} name='Photo of Tam' />
+      </ul>
+    </section>
+  );
+}
+```
+
+### **挑戰 3/3：將一系列的 `? :` 重構為 `if` 和變數**
+
+這個 `Drink` 元件使用了一系列的 `? :` 條件，根據 `name` 屬性是 `"tea"` 還是 `"coffee"` 來顯示不同的資訊。
+
+問題在於，每種飲品的資訊分散在多個條件中。請重構此程式碼，使用單一的 `if` 陳述式來取代三個 `? :` 條件。
+
+```tsx
+function Drink({ name }) {
+  return (
+    <section>
+      <h1>{name}</h1>
+      <dl>
+        <dt>Part of plant</dt>
+        <dd>{name === "tea" ? "leaf" : "bean"}</dd>
+        <dt>Caffeine content</dt>
+        <dd>{name === "tea" ? "15–70 mg/cup" : "80–185 mg/cup"}</dd>
+        <dt>Age</dt>
+        <dd>{name === "tea" ? "4,000+ years" : "1,000+ years"}</dd>
+      </dl>
+    </section>
+  );
+}
+
+export default function DrinkList() {
+  return (
+    <div>
+      <Drink name='tea' />
+      <Drink name='coffee' />
+    </div>
+  );
+}
+```
+
+一旦你將程式碼重構為使用 `if`，你有沒有進一步簡化它的想法？
+
+# 結語
+
+這篇文章介紹了在 React 中進行條件式渲染的幾種方法。你學到了如何使用 `if` 語句、`? :` 運算子和 `&&` 運算子來根據條件渲染不同的 JSX。你還學到了如何使用變數來儲存 JSX，以及如何使用 `if` 陳述式來重構複雜的條件式。
+
+對於 React 開發者來說，這些技巧是很重要的，因為你經常需要根據應用程式的狀態來動態渲染 UI。
+
+# 本文參考資料
+
+https://react.dev/learn/conditional-rendering
