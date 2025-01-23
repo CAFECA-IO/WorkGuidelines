@@ -41,7 +41,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1202" alt="截圖 2025-01-23 下午5 32 53" src="https://github.com/user-attachments/assets/46cc0b14-7002-4e04-a90a-b5fb016d484f" />
+<img width="1202" alt="截圖" src="https://github.com/user-attachments/assets/46cc0b14-7002-4e04-a90a-b5fb016d484f" />
 
 (官網範例截圖)
 
@@ -82,7 +82,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1190" alt="截圖 2025-01-23 下午5 34 33" src="https://github.com/user-attachments/assets/25945a30-2fdc-4cdd-935e-27e21a6c3da7" />
+<img width="1190" alt="截圖" src="https://github.com/user-attachments/assets/25945a30-2fdc-4cdd-935e-27e21a6c3da7" />
 
 (官網範例截圖)
 
@@ -127,7 +127,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1201" alt="截圖 2025-01-23 下午5 35 04" src="https://github.com/user-attachments/assets/6ce4e5b3-c950-4e2b-b36c-15bfd437117a" />
+<img width="1201" alt="截圖" src="https://github.com/user-attachments/assets/6ce4e5b3-c950-4e2b-b36c-15bfd437117a" />
 
 (官網範例截圖)
 
@@ -206,7 +206,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1204" alt="截圖 2025-01-23 下午5 35 51" src="https://github.com/user-attachments/assets/8995d69e-27b2-494b-aa1f-5b476a441085" />
+<img width="1204" alt="截圖" src="https://github.com/user-attachments/assets/8995d69e-27b2-494b-aa1f-5b476a441085" />
 
 (官網範例截圖)
 
@@ -253,7 +253,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1201" alt="截圖 2025-01-23 下午5 36 16" src="https://github.com/user-attachments/assets/05cffce2-b3cd-4a89-8e91-0a51dbf74664" />
+<img width="1201" alt="截圖" src="https://github.com/user-attachments/assets/05cffce2-b3cd-4a89-8e91-0a51dbf74664" />
 
 (官網範例截圖)
 
@@ -314,7 +314,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1206" alt="截圖 2025-01-23 下午5 39 59" src="https://github.com/user-attachments/assets/856b2b0a-0204-406f-a0f8-45e310c49826" />
+<img width="1206" alt="截圖" src="https://github.com/user-attachments/assets/856b2b0a-0204-406f-a0f8-45e310c49826" />
 
 (官網範例截圖)
 
@@ -343,7 +343,7 @@ export default function PackingList() {
 }
 ```
 
-<img width="1186" alt="截圖 2025-01-23 下午5 40 20" src="https://github.com/user-attachments/assets/e536e268-9d18-41c4-99ff-5cafebc6b5e6" />
+<img width="1186" alt="截圖" src="https://github.com/user-attachments/assets/e536e268-9d18-41c4-99ff-5cafebc6b5e6" />
 
 (官網範例截圖)
 
