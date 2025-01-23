@@ -304,6 +304,8 @@ export default function PackingList() {
 }
 ```
 
+<img width="1206" alt="截圖 2025-01-23 下午5 39 59" src="https://github.com/user-attachments/assets/856b2b0a-0204-406f-a0f8-45e310c49826" />
+
 如同之前的範例，這種方法不僅適用於文字，也適用於任意 JSX 表達式：
 
 ```tsx
@@ -328,6 +330,8 @@ export default function PackingList() {
   );
 }
 ```
+
+<img width="1186" alt="截圖 2025-01-23 下午5 40 20" src="https://github.com/user-attachments/assets/e536e268-9d18-41c4-99ff-5cafebc6b5e6" />
 
 如果你對 JavaScript 不太熟悉，這些多樣的寫法一開始可能會讓你覺得有點難以消化。然而，學會這些寫法將有助於你閱讀和撰寫任何 JavaScript 程式碼，而不僅僅是 React 元件！你可以先選擇你偏好的方式開始，然後在忘記其他方式時，再回來參考這篇教學。
 
