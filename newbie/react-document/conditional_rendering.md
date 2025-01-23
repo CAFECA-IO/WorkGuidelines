@@ -380,6 +380,8 @@ export default function PackingList() {
 
 ## 試試看一些挑戰 (Try out some challenges)
 
+建議搭配[官網提供的小視窗](https://react.dev/learn/conditional-rendering#challenges)，可以直接在網頁上修改程式碼，並觀察結果。
+
 ### 挑戰 1 of 3： 使用 `? :` 為未完成項目顯示圖示
 
 使用條件運算子（`cond ? a : b`）在 `isPacked` 為 `false` 時渲染一個 ❌。
