@@ -41,6 +41,8 @@ export default function PackingList() {
 }
 ```
 
+<img width="1202" alt="截圖 2025-01-23 下午5 32 53" src="https://github.com/user-attachments/assets/46cc0b14-7002-4e04-a90a-b5fb016d484f" />
+
 可以注意到這裡，有些 `Item` 元件的 `isPacked` 屬性被設定為 `true`，而不是 `false`。
 
 如果是 `isPacked={true}`，意思就是這是已經打包的物品，我們用 `isPacked` 來表示是否已經打包。
@@ -77,6 +79,8 @@ export default function PackingList() {
   );
 }
 ```
+
+<img width="1190" alt="截圖 2025-01-23 下午5 34 33" src="https://github.com/user-attachments/assets/25945a30-2fdc-4cdd-935e-27e21a6c3da7" />
 
 試著編輯在每種情況下回傳的內容，觀察結果的變化！
 
@@ -118,6 +122,8 @@ export default function PackingList() {
   );
 }
 ```
+
+<img width="1201" alt="截圖 2025-01-23 下午5 35 04" src="https://github.com/user-attachments/assets/6ce4e5b3-c950-4e2b-b36c-15bfd437117a" />
 
 實際上，從元件回傳 null 並不常見，因為這可能會讓嘗試渲染該元件的開發者感到困惑。更常見的做法是，在父元件的 JSX 中有條件地包含或排除該元件。以下是實現方法！
 
@@ -194,6 +200,8 @@ export default function PackingList() {
 }
 ```
 
+<img width="1204" alt="截圖 2025-01-23 下午5 35 51" src="https://github.com/user-attachments/assets/8995d69e-27b2-494b-aa1f-5b476a441085" />
+
 這種風格適合處理簡單的條件，但要適度使用。如果你的元件因為過多巢狀條件標記(markup)而變得混亂，考慮將子元件抽取出來，讓程式碼更乾淨。在 React 中，標記(markup)是程式碼的一部分，因此你可以使用變數和函式等工具來整理複雜的運算式。
 
 ### 邏輯 AND 運算子 (`&&`)
@@ -236,6 +244,10 @@ export default function PackingList() {
   );
 }
 ```
+
+<img width="1201" alt="截圖 2025-01-23 下午5 36 16" src="https://github.com/user-attachments/assets/05cffce2-b3cd-4a89-8e91-0a51dbf74664" />
+
+[JavaScript 的 `&&` 運算式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) 在條件為真時，會回傳右邊的值（在這裡是勾選符號）。但如果條件為假，整個運算式就會回傳 `false`。React 將 `false` 視為 JSX 樹中的「空位」，就像 `null` 或 `undefined` 一樣，不會在其位置上渲染任何內容。
 
 > #### 💡 注意事項 - 不要將數字放在 `&&` 的左側
 >
