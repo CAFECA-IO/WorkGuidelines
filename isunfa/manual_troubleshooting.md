@@ -104,9 +104,9 @@ iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包�
 docker-compose.yml 中的設置
 
 - nginx: 監聽 80, 443，透過 ./nginx/templates 提供動態配置。
-- isunfa: 使用 node:20，掛載 ./isunfa 與 ${ISUNFA_FILE_PATH}/isunfa 兩個 Volume，並於啟動時運行 [isunfa-start.sh](http://isunfa-start.sh/)。
+- isunfa: 使用 node:20，掛載 ./isunfa 與 ${ISUNFA_FILE_PATH}/isunfa 兩個 Volume，並於啟動時運行 isunfa-start.sh。
 - faith: 同樣使用 node:20，掛載 ./faith 作為程式碼位置。
-- aich: 掛載 ./aich 與 ${AICH_FILE_PATH}/AICH，主要執行 [aich-start.sh](http://aich-start.sh/)。
+- aich: 掛載 ./aich 與 ${AICH_FILE_PATH}/AICH，主要執行 aich-start.sh。
 - ollama: Docker image 為 ollama/ollama:0.3.6, 預設不綁定外部 ports，預設僅在容器內部暴露 $OLLAMA_PORT（11434），可能依 CPU 或 GPU 需求調整。
 - qdrant: 使用 qdrant/qdrant:v1.11.0，將 qdrant_data 掛載到 /qdrant/storage。
 - postgres: 透過 .env.postgres 定義 POSTGRES_PORT、使用者、密碼等，會將資料儲存在 ./postgres/data。
@@ -130,7 +130,7 @@ CPU / GPU 配置檔
 1. 容器無法啟動 / 重啟循環
    - 主機層：主機快取不足或 Docker Daemon 未啟動(systemctl status docker 失敗)。
    - Docker 層：healthcheck fail, volumes 掛載失敗, depends_on 服務尚未啟動。
-   - code 層：[start.sh](http://start.sh/) 腳本無執行權限、npm install 不完全、.env 參數錯誤。
+   - code 層：start.sh 腳本無執行權限、npm install 不完全、.env 參數錯誤。
      → 檢視 docker compose logs <SERVICE_NAME> 預估是哪一層級產生錯誤。
 2. GPU 啟動失敗 (ollama)
    - 主機層：nvidia-smi 找不到顯示卡，nvidia-driver / nvidia-container-toolkit 未安裝。
@@ -169,7 +169,7 @@ CPU / GPU 配置檔
 
 • Docker 層檢查：docker logs aich 出現「Could not connect to Qdrant」。qdrant logs 正常，但啟動時間較長。
 
-• 程式碼層檢查：[aich-start.sh](http://aich-start.sh/) / .env.aich 裡的 QDRANT_HOST 設定沒問題。
+• 程式碼層檢查：aich-start.sh / .env.aich 裡的 QDRANT_HOST 設定沒問題。
 
 → 原因：start_period 設置太短，aich 正式可用前就執行 curl -f 導致檢查失敗。
 
@@ -201,7 +201,7 @@ iSunFA Server swarm 的問題排查可依「主機 (Host) → Docker (容器) �
 
 • Docker 層：docker compose ps & logs、healthcheck、memory/CPU/GPU 的配置、Volume 掛載路徑。
 
-• 程式碼層：.env 參數、[start.sh](http://start.sh/) 腳本、npm modules、Git 自動更新腳本。
+• 程式碼層：.env 參數、start.sh 腳本、npm modules、Git 自動更新腳本。
 
 ## 附錄 (Appendix)
 
