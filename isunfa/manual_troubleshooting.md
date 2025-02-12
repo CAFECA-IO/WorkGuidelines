@@ -2,7 +2,7 @@ Table of Contents
 
 - [■ 問題排除與除錯 (Troubleshooting \& Debugging)](#-問題排除與除錯-troubleshooting--debugging)
   - [前言 (Introduction)](#前言-introduction)
-    - [常見的錯誤可歸類為三個主要層級](#常見的錯誤可歸類為三個主要層級)
+    - [錯誤來自三個主要層級](#錯誤來自三個主要層級)
   - [問題描述與初步確認 (Initial Checks)](#問題描述與初步確認-initial-checks)
   - [服務容器狀態檢查 (Check Containers Status)](#服務容器狀態檢查-check-containers-status)
   - [環境與設定檔 (.env / docker-compose) 比對 (Configuration Check)](#環境與設定檔-env--docker-compose-比對-configuration-check)
@@ -39,7 +39,7 @@ iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包�
 
 如有需要，也可參考[「遷移 iSunFA 服務集群」章節](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)，幫助你在不同環境間對應各種設定或資料備份。
 
-### 常見的錯誤可歸類為三個主要層級
+### 錯誤來自三個主要層級
 
 1. **主機 (Host) 層級**：系統資源不足、Nvidia 驅動、網路設定，以及 Docker Daemon 本身與主機整合時可能出現的問題。
 2. **Docker / 容器層級**：容器相依設定 (depends_on)、memory/CPU/GPU 配置、network bridge、Volume 掛載、健康檢查 (healthcheck) 錯誤等。
@@ -47,7 +47,7 @@ iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包�
 
 ## 問題描述與初步確認 (Initial Checks)
 
-當發生問題時，建議先進行以下基礎確認：
+當出現服務無法存取、網頁報錯、甚至容器無法啟動等問題時，請先進行以下檢查：
 
 1. 環境區分：
 
@@ -70,13 +70,22 @@ iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包�
      cd /home/workspace/ServerSwarm/isunfa
      ```
 
-2. SSH / 網路連線：
-   - 確認當前終端機能否正常 SSH 進入指定 IP。
-   - 若無法 SSH，請先檢查網路、防火牆、或使用者密碼/金鑰。
-3. Docker / 伺服器狀態：
-   - 使用 `docker --version` / `systemctl status docker` 檢查 Docker 是否正常啟動。
-   - 確認 `/var/run/docker.sock` 權限，以及 docker-compose 是否安裝正確。
-   - 若有使用 GPU，請用 nvidia-smi 或 lsmod | grep nvidia 驗證主機是否辨識到 GPU。若無辨識到 GPU，請回頭參考專案的 README「確認 GPU 相關驅動程式是否安裝（可選）」一節。
+2. 哪個層級出問題？
+   - 主機 (Host) 層：
+     - systemctl status docker 觀察 Docker 服務是否在跑
+     - nvidia-smi 或 lsmod | grep nvidia 驗證主機是否辨識到 GPU
+     - `free -h` / `df -h` 檢查記憶體或磁碟是否不足
+   - Docker 層：
+     - docker ps / docker compose ps 檢查容器是否正常
+     - docker compose logs <SERVICE_NAME> 查看容器錯誤
+   - 程式碼 (Code) 層：
+     - 查看 Node.js / 啟動腳本 (e.g., isunfa-start.sh) 內部是否執行成功
+     - 確認 .env.\* 檔裡的環境變數有無錯誤
+     - 自動更新腳本 (check-update.sh) 參數是否合法
+3. 初始化檢查
+   - docker --version 或 docker compose version 確認版本正常。
+   - 若為 GPU 環境，請先完成 Nvidia driver / nvidia-container-toolkit 安裝設定。
+   - 確認 /var/run/docker.sock 權限, Docker Compose 是否已安裝並可執行。
 
 若這些基礎檢查均正常，則可進一步進行容器檢查與日誌分析。
 
