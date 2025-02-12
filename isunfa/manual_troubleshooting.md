@@ -6,8 +6,14 @@ Table of Contents
   - [服務容器狀態檢查 (Check Containers Status)](#服務容器狀態檢查-check-containers-status)
   - [環境與設定檔 (.env / docker-compose) 比對 (Configuration Check)](#環境與設定檔-env--docker-compose-比對-configuration-check)
   - [常見錯誤與對應處理方式 (Common Issues \& Solutions)](#常見錯誤與對應處理方式-common-issues--solutions)
+    - [1. 容器無法啟動 / 重啟循環](#1-容器無法啟動--重啟循環)
+    - [2. GPU 啟動失敗 (ollama)](#2-gpu-啟動失敗-ollama)
+    - [3. Postgres 數據庫連接錯誤](#3-postgres-數據庫連接錯誤)
+    - [4. 網頁 502 Bad Gateway / 無法存取](#4-網頁-502-bad-gateway--無法存取)
   - [進階排錯技巧 (Advanced Troubleshooting)](#進階排錯技巧-advanced-troubleshooting)
   - [除錯案例 (Case Studies)](#除錯案例-case-studies)
+    - [案例 1：AICH 無法完成健康檢查，重啟循環](#案例-1aich-無法完成健康檢查重啟循環)
+    - [案例 2：Ollama (GPU) 報錯「no nvidia device found」](#案例-2ollama-gpu-報錯no-nvidia-device-found)
   - [結論 (Conclusion)](#結論-conclusion)
   - [附錄 (Appendix)](#附錄-appendix)
     - [常用 Debug 指令參考](#常用-debug-指令參考)
@@ -127,26 +133,33 @@ CPU / GPU 配置檔
 
 以下整理常見問題：
 
-1. 容器無法啟動 / 重啟循環
-   - 主機層：主機快取不足或 Docker Daemon 未啟動(systemctl status docker 失敗)。
-   - Docker 層：healthcheck fail, volumes 掛載失敗, depends_on 服務尚未啟動。
-   - code 層：start.sh 腳本無執行權限、npm install 不完全、.env 參數錯誤。
-     → 檢視 docker compose logs <SERVICE_NAME> 預估是哪一層級產生錯誤。
-2. GPU 啟動失敗 (ollama)
-   - 主機層：nvidia-smi 找不到顯示卡，nvidia-driver / nvidia-container-toolkit 未安裝。
-   - Docker 層：未使用 docker-compose -f … -f docker-compose.gpu.yml up -d；或 GPU count=1 但主機實際無 GPU。
-   - code 層：ollama 映像檔內部版本不支援特定 driver (可能性較低)。
-     → 先在主機端修復 GPU 驅動，再確定 Docker config 正確呼叫 nvidia runtime。
-3. Postgres 數據庫連接錯誤
-   - 主機層：磁盤空間不足導致 Postgres 初始化失敗。
-   - Docker 層：.env.postgres PORT 不符合 docker-compose.yml expose；檔案衝突導致 data 損壞。
-   - code 層：isunfa, aich 等應用程式裡的 DATABASE_URL 填錯帳密或 host。
-     → 檢查 docker logs postgres 與 psql 連接測試，確保 DB 狀態與連線字串有效。
-4. 網頁 502 Bad Gateway / 無法存取
-   - 主機層：iptables / 防火牆阻擋 80, 443 等網路 port；DNS 未設定正確。
-   - Docker 層：nginx depends_on isunfa / faith / aich，但這些服務 unhealthy 導致 Proxy 無回覆。
-   - code 層：nginx.conf 動態模板 (/nginx/templates) 變數錯誤，跳轉錯誤 Host。
-     → docker compose logs nginx，或檢查 /etc/hosts、DNS 設置，並確定 .env.nginx 內 SERVER_NAME 正確。
+### 1. 容器無法啟動 / 重啟循環
+
+- 主機層：主機快取不足或 Docker Daemon 未啟動(systemctl status docker 失敗)。
+- Docker 層：healthcheck fail, volumes 掛載失敗, depends_on 服務尚未啟動。
+- code 層：start.sh 腳本無執行權限、npm install 不完全、.env 參數錯誤。
+  → 檢視 docker compose logs <SERVICE_NAME> 預估是哪一層級產生錯誤。
+
+### 2. GPU 啟動失敗 (ollama)
+
+- 主機層：nvidia-smi 找不到顯示卡，nvidia-driver / nvidia-container-toolkit 未安裝。
+- Docker 層：未使用 docker-compose -f … -f docker-compose.gpu.yml up -d；或 GPU count=1 但主機實際無 GPU。
+- code 層：ollama 映像檔內部版本不支援特定 driver (可能性較低)。
+  → 先在主機端修復 GPU 驅動，再確定 Docker config 正確呼叫 nvidia runtime。
+
+### 3. Postgres 數據庫連接錯誤
+
+- 主機層：磁盤空間不足導致 Postgres 初始化失敗。
+- Docker 層：.env.postgres PORT 不符合 docker-compose.yml expose；檔案衝突導致 data 損壞。
+- code 層：isunfa, aich 等應用程式裡的 DATABASE_URL 填錯帳密或 host。
+  → 檢查 docker logs postgres 與 psql 連接測試，確保 DB 狀態與連線字串有效。
+
+### 4. 網頁 502 Bad Gateway / 無法存取
+
+- 主機層：iptables / 防火牆阻擋 80, 443 等網路 port；DNS 未設定正確。
+- Docker 層：nginx depends_on isunfa / faith / aich，但這些服務 unhealthy 導致 Proxy 無回覆。
+- code 層：nginx.conf 動態模板 (/nginx/templates) 變數錯誤，跳轉錯誤 Host。
+  → docker compose logs nginx，或檢查 /etc/hosts、DNS 設置，並確定 .env.nginx 內 SERVER_NAME 正確。
 
 ## 進階排錯技巧 (Advanced Troubleshooting)
 
@@ -161,7 +174,7 @@ CPU / GPU 配置檔
 
 ## 除錯案例 (Case Studies)
 
-案例 1：AICH 無法完成健康檢查，重啟循環
+### 案例 1：AICH 無法完成健康檢查，重啟循環
 
 • Issue：docker compose ps 顯示 aich 為 unhealthy。
 
@@ -175,7 +188,7 @@ CPU / GPU 配置檔
 
 → 處理：提升 aich healthcheck start_period=2m → 5m，或確保 qdrant fully ready 後再啟動 aich。
 
-案例 2：Ollama (GPU) 報錯「no nvidia device found」
+### 案例 2：Ollama (GPU) 報錯「no nvidia device found」
 
 • Issue：docker compose logs ollama 顯示「Could not load CUDA driver」。
 
