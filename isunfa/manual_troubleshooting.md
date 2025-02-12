@@ -2,6 +2,7 @@ Table of Contents
 
 - [■ 問題排除與除錯 (Troubleshooting \& Debugging)](#-問題排除與除錯-troubleshooting--debugging)
   - [前言 (Introduction)](#前言-introduction)
+    - [常見的錯誤可歸類為三個主要層級](#常見的錯誤可歸類為三個主要層級)
   - [問題描述與初步確認 (Initial Checks)](#問題描述與初步確認-initial-checks)
   - [服務容器狀態檢查 (Check Containers Status)](#服務容器狀態檢查-check-containers-status)
   - [環境與設定檔 (.env / docker-compose) 比對 (Configuration Check)](#環境與設定檔-env--docker-compose-比對-configuration-check)
@@ -26,7 +27,7 @@ Table of Contents
 
 iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包含 isunfa、aich、faith、nginx、ollama、ofelia、postgres 及 GPU 加速等)，各服務之間相互依賴，若某容器發生錯誤，便可能影響整體系統功能。
 
-在正式開始除錯之前，請先參考[本專案的主要 README](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)，瞭解：
+在正式開始除錯之前，請先參考[ServerSwarm iSunFA 專案的主要 README](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)，瞭解：
 
 • 伺服器與容器啟動流程 (「環境建置」、「啟動 docker compose」章節)
 
@@ -38,11 +39,11 @@ iSunFA 透過 Docker Compose 在 Linux / macOS 上部署多個服務容器 (包�
 
 如有需要，也可參考[「遷移 iSunFA 服務集群」章節](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)，幫助你在不同環境間對應各種設定或資料備份。
 
-在使用過程中，常見的錯誤可能發生在三個主要層級：
+### 常見的錯誤可歸類為三個主要層級
 
-1. **主機 (Host) 層級：系統資源不足、Nvidia 驅動、網路設定，以及 Docker Daemon 本身與主機整合時可能出現的問題。**
-2. **Docker / 容器層級：容器相依設定 (depends_on)、memory/CPU/GPU 配置、network bridge、Volume 掛載、健康檢查 (healthcheck) 錯誤等。**
-3. **程式碼 (Code) 層級：Node.js 應用程式錯誤、npm 依賴缺失、環境變數 (.env) 配置不正確、啟動腳本 (start.sh)) 沒有正確執行等。**
+1. **主機 (Host) 層級**：系統資源不足、Nvidia 驅動、網路設定，以及 Docker Daemon 本身與主機整合時可能出現的問題。
+2. **Docker / 容器層級**：容器相依設定 (depends_on)、memory/CPU/GPU 配置、network bridge、Volume 掛載、健康檢查 (healthcheck) 錯誤等。
+3. **程式碼 (Code) 層級**：Node.js 應用程式錯誤、npm 依賴缺失、環境變數 (.env) 配置不正確、啟動腳本 (start.sh)) 沒有正確執行等。
 
 ## 問題描述與初步確認 (Initial Checks)
 
@@ -202,11 +203,7 @@ CPU / GPU 配置檔
 
 ## 結論 (Conclusion)
 
-本專案透過 docker-compose.yml 與 healthcheck + depends_on 機制，協助自動化及安全啟動多個容器。當服務無法正常使用時，可循以下路線做排查：
-
-(1) SSH / Docker / 硬體(GPU) 底層確認 → (2) docker compose ps & logs → (3) healthcheck 與設定檔 (ports/volumes) → (4) 進入容器檢查。
-
-若問題較複雜，請同時參考本專案的主要 README、或詢問了解容器配置與 Node.js 啟動腳本邏輯的團隊夥伴。在修正、重啟容器後，可透過瀏覽器再次測試各服務 (isunfa / faith / aich) 功能是否完全恢復。
+若問題較複雜，請同時參考 ServerSwarm iSunFA 專案的主要 README、或詢問了解容器配置與 Node.js 啟動腳本邏輯的團隊夥伴。在修正、重啟容器後，可透過瀏覽器再次測試各服務 (isunfa / faith / aich) 功能是否完全恢復。
 
 iSunFA Server swarm 的問題排查可依「主機 (Host) → Docker (容器) → code (app / 啟動腳本 / 更新腳本)」三層順序逐步深入。
 
@@ -214,11 +211,11 @@ iSunFA Server swarm 的問題排查可依「主機 (Host) → Docker (容器) �
 
 • Docker 層：docker compose ps & logs、healthcheck、memory/CPU/GPU 的配置、Volume 掛載路徑。
 
-• 程式碼層：.env 參數、start.sh 腳本、npm modules、Git 自動更新腳本。
+• 程式碼層：.env 參數、start.sh 腳本、npm、Git 自動更新腳本。
 
 ## 附錄 (Appendix)
 
-- [專案 README](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)
+- [ServerSwarm iSunFA 專案 README](https://github.com/CAFECA-IO/ServerSwarm/tree/develop/isunfa)
   - 更詳細的「環境建置」、「確認 GPU 驅動安裝」、「.env 設定」與「執行 docker compose」指令。
 - Docker 與服務官方文件
   - Docker: [https://docs.docker.com](https://docs.docker.com/)
