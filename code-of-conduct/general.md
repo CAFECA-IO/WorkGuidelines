@@ -10,6 +10,7 @@
 - 月計畫結報
 - Pull Request
 - KnowledgeManagement
+- 假勤規範
 
 ## 月計劃排定
 - 每月第一個工作日會分配本月目標，中午 12:00 前需完成本月工作事項規劃並記錄於 EventReport 專案。  
@@ -69,3 +70,9 @@ EX: [EventReport/2022/w17/Tzuhan.md](https://github.com/CAFECA-IO/EventReport/bl
 ## Knowledge Management
 - 需記錄研究成果
 - 需記錄研究效益
+
+## 假勤規範
+- 病假需檢附證明文件
+- 特休假一日（含）以內需提前 24 小時提出申請
+- 特休假一日（不含）以上三日（含）以內需提前 7 日提出申請
+- 特休假三日（不含）以上需提前 30 日提出申請
