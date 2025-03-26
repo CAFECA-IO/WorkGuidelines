@@ -1,5 +1,5 @@
 # Annotation
-> v1.0.3 20241130
+> v1.0.4 20250326
 - ToDo
 - Deprecated
 - Info
@@ -17,13 +17,15 @@
 
 - Multi-Line
 ```typescript
-/* ToDo: (date - author)
+/**
+ * ToDo: (date - author)
  * { do something }
  * { do another thing }
  */
 ```
 ```typescript
-/* ToDo: (20230310 - Luphia)
+/**
+ * ToDo: (20230310 - Luphia)
  * count down
  * remove loading status after ending
  */
@@ -85,14 +87,16 @@ doSomeThing(now);
 
 - Multi-Line
 ```typescript
-/* Info: (date - author)
+/**
+ * Info: (date - author)
  * { some message }
  * { another message }
  * { another message again }
  */
 ```
 ```typescript
-/* Info: (20230327 - Luphia)
+/**
+ * Info: (20230327 - Luphia)
  * some message
  * another message
  * another message again
