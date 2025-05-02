@@ -1,4 +1,3 @@
-
 # 前言
 
 此為 [Describing the UI: Unveiling the Power of React Components](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/describing-the-ui.md) 此篇文章的延伸內容之一。
@@ -39,27 +38,27 @@
 
 1. **將**資料移入一個陣列：
 
-```tsx
-const people = [
-  "Creola Katherine Johnson: mathematician",
-  "Mario José Molina-Pasquel Henríquez: chemist",
-  "Mohammad Abdus Salam: physicist",
-  "Percy Lavon Julian: chemist",
-  "Subrahmanyan Chandrasekhar: astrophysicist",
-];
-```
+   ```tsx
+   const people = [
+     "Creola Katherine Johnson: mathematician",
+     "Mario José Molina-Pasquel Henríquez: chemist",
+     "Mohammad Abdus Salam: physicist",
+     "Percy Lavon Julian: chemist",
+     "Subrahmanyan Chandrasekhar: astrophysicist",
+   ];
+   ```
 
 2. 使用 map 將 people 陣列中的成員轉換成新的 JSX 節點陣列 listItems：
 
-```tsx
-const listItems = people.map((person) => <li>{person}</li>);
-```
+   ```tsx
+   const listItems = people.map((person) => <li>{person}</li>);
+   ```
 
 3. **從元件中回傳** 包裹著 `listItems` 的 `<ul>`：
 
-```tsx
-return <ul>{listItems}</ul>;
-```
+   ```tsx
+   return <ul>{listItems}</ul>;
+   ```
 
 這是完整的程式碼結果：
 
