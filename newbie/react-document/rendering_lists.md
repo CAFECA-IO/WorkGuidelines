@@ -610,3 +610,13 @@ export default function Poem() {
 ```
 
 （這是一個少見的情況，使用陣列索引作為 key 是可以接受的，因為詩句的順序永遠不會變動。）
+
+# 結語
+
+這篇文章是筆者在學習 React 時，閱讀 [React 官方文件 - Rendering Lists](https://react.dev/learn/rendering-lists) 所做的翻譯筆記，希望能幫助更多的人學習 React。
+
+這篇文章主要介紹了如何使用 JavaScript 的 `map()` 和 `filter()` 方法來渲染清單，並且強調了在渲染清單時使用 `key` 的重要性。這些概念對於 React 開發者來說是非常基礎且重要的，希望能幫助你更深入地理解 React 的運作方式。
+
+# 本文參考資料
+
+https://react.dev/learn/rendering-lists
