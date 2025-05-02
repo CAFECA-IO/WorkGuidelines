@@ -153,3 +153,460 @@ const people = [
    ```tsx
    return <ul>{listItems}</ul>;
    ```
+
+完整程式碼：
+
+（可以到[官方文件原文](https://react.dev/learn/rendering-lists)提供的 [sandbox](https://codesandbox.io/p/sandbox/6t5thd) 直接操作看看）
+App.js
+
+```tsx
+import { people } from "./data.js";
+import { getImageUrl } from "./utils.js";
+
+export default function List() {
+  const chemists = people.filter((person) => person.profession === "chemist");
+  const listItems = chemists.map((person) => (
+    <li>
+      <img src={getImageUrl(person)} alt={person.name} />
+      <p>
+        <b>{person.name}:</b>
+        {" " + person.profession + " "}
+        known for {person.accomplishment}
+      </p>
+    </li>
+  ));
+  return <ul>{listItems}</ul>;
+}
+```
+
+data.js
+
+```tsx
+export const people = [
+  {
+    id: 0,
+    name: "Creola Katherine Johnson",
+    profession: "mathematician",
+    accomplishment: "spaceflight calculations",
+    imageId: "MK3eW3A",
+  },
+  {
+    id: 1,
+    name: "Mario José Molina-Pasquel Henríquez",
+    profession: "chemist",
+    accomplishment: "discovery of Arctic ozone hole",
+    imageId: "mynHUSa",
+  },
+  {
+    id: 2,
+    name: "Mohammad Abdus Salam",
+    profession: "physicist",
+    accomplishment: "electromagnetism theory",
+    imageId: "bE7W1ji",
+  },
+  {
+    id: 3,
+    name: "Percy Lavon Julian",
+    profession: "chemist",
+    accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
+    imageId: "IOjWm71",
+  },
+  {
+    id: 4,
+    name: "Subrahmanyan Chandrasekhar",
+    profession: "astrophysicist",
+    accomplishment: "white dwarf star mass calculations",
+    imageId: "lrWQx8l",
+  },
+];
+```
+
+utils.js
+
+```tsx
+export function getImageUrl(person) {
+  return "https://i.imgur.com/" + person.imageId + "s.jpg";
+}
+```
+
+### 注意事項
+
+箭頭函式在 `=>` 後面**直接接表達式**時會自動回傳，因此你不需要加上 `return`：
+
+```tsx
+const listItems = chemists.map(
+  (person) => <li>...</li> // 自動回傳！
+);
+```
+
+但如果你的 `=>` **後面是用 `{` 大括號包起來的區塊**，那你就**必須要明確寫出 `return`**！
+
+```tsx
+const listItems = chemists.map((person) => {
+  // 使用大括號
+  return <li>...</li>;
+});
+```
+
+這種使用 `=> {}` 的箭頭函式被稱為 [「區塊主體」（block body）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body)。它允許你撰寫多行程式碼，但你**一定要自己寫 `return`**。如果忘了寫，就會什麼都沒回傳！
+
+## 使用 `key` 保持清單項目的順序 (Keeping list items in order with `key`)
+
+你可能注意到，上面範例的 sandbox 都在開發者工具中出現這個錯誤訊息：
+
+```bash
+Warning: Each child in a list should have a unique “key” prop.
+```
+
+你需要為每個陣列項目加上一個 `key` —— 它必須是在該陣列中**能唯一識別該項目**的字串或數字：
+
+```tsx
+<li key={person.id}>...</li>
+```
+
+> 注意：
+>
+> 只要 JSX 元素是直接寫在 `map()` 裡的，就**一定要加上 key**！
+
+`key` 的作用是讓 React 能夠知道每個元件對應到陣列中的哪一筆資料，這樣在重新渲染時才能正確比對。如果你的陣列資料有可能會變動（像是排序、插入或刪除），一個設計良好的 `key` 能幫助 React 判斷哪些元素被變更，並且正確地更新 DOM tree。
+
+與其在渲染時動態產生 key，你應該在資料本身中就包含這個欄位：
+
+完整程式碼：
+
+（可以到[官方文件原文](https://react.dev/learn/rendering-lists)提供的 [sandbox](https://codesandbox.io/p/sandbox/lsx4qp?file=%2Fsrc%2FApp.js) 直接操作看看）
+
+1. App.js
+
+   ```tsx
+   import { people } from "./data.js";
+   import { getImageUrl } from "./utils.js";
+
+   export default function List() {
+     const listItems = people.map((person) => (
+       <li key={person.id}>
+         <img src={getImageUrl(person)} alt={person.name} />
+         <p>
+           <b>{person.name}</b>
+           {" " + person.profession + " "}
+           known for {person.accomplishment}
+         </p>
+       </li>
+     ));
+     return <ul>{listItems}</ul>;
+   }
+   ```
+
+2. data.js
+
+   ```tsx
+   export const people = [
+     {
+       id: 0, // Used in JSX as a key
+       name: "Creola Katherine Johnson",
+       profession: "mathematician",
+       accomplishment: "spaceflight calculations",
+       imageId: "MK3eW3A",
+     },
+     {
+       id: 1, // Used in JSX as a key
+       name: "Mario José Molina-Pasquel Henríquez",
+       profession: "chemist",
+       accomplishment: "discovery of Arctic ozone hole",
+       imageId: "mynHUSa",
+     },
+     {
+       id: 2, // Used in JSX as a key
+       name: "Mohammad Abdus Salam",
+       profession: "physicist",
+       accomplishment: "electromagnetism theory",
+       imageId: "bE7W1ji",
+     },
+     {
+       id: 3, // Used in JSX as a key
+       name: "Percy Lavon Julian",
+       profession: "chemist",
+       accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
+       imageId: "IOjWm71",
+     },
+     {
+       id: 4, // Used in JSX as a key
+       name: "Subrahmanyan Chandrasekhar",
+       profession: "astrophysicist",
+       accomplishment: "white dwarf star mass calculations",
+       imageId: "lrWQx8l",
+     },
+   ];
+   ```
+
+3. utils.js
+
+   ```tsx
+   export function getImageUrl(person) {
+     return "https://i.imgur.com/" + person.imageId + "s.jpg";
+   }
+   ```
+
+### 💡 深入探討
+
+#### **每個清單項目要顯示多個 DOM 節點時怎麼做？**
+
+當每一筆資料不只需要渲染一個，而是**多個 DOM 節點**時該怎麼處理？
+
+你不能用簡短的 [`<>...</>` Fragment](https://react.dev/reference/react/Fragment) 語法，因為它**不能設定 `key`**。
+
+這時有兩個選擇：
+
+你可以把它們包在一個 `<div>` 裡，或者使用稍微長一點、但更明確的 [`<Fragment>` 語法：](https://react.dev/reference/react/Fragment#rendering-a-list-of-fragments)
+
+```tsx
+import { Fragment } from "react";
+
+// ...
+
+const listItems = people.map((person) => (
+  <Fragment key={person.id}>
+    <h1>{person.name}</h1>
+    <p>{person.bio}</p>
+  </Fragment>
+));
+```
+
+Fragment 在實際的 DOM 中不會留下痕跡，所以渲染結果會是一個扁平的清單，像是 `<h1>`, `<p>`, `<h1>`, `<p>`，依此類推。
+
+### 要從哪裡取得 `key`
+
+不同來源的資料會提供不同的 `key` 來源：
+
+- **來自資料庫的資料：** 如果你的資料是從資料庫來的，可以直接使用資料庫的主鍵(keys)或 IDs，因為它們本質上是唯一的(unique by nature)。
+- **本地產生的資料：** 如果你的資料是在本地產生並儲存在本地端的(例如筆記應用程式中的筆記)，在建立資料時可以使用遞增計數器(incrementing counter)、[`crypto.randomUUID()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID) 或像 [`uuid`](https://www.npmjs.com/package/uuid) 這類的套件來產生唯一 ID。
+
+### 使用 `key` 的規則
+
+- **`key` 在同一層級中必須是唯一的。** 不過，不同陣列中的 JSX 節點可以使用相同的 `key`。
+- **`key` 不應該變動，** 否則會失去 `key` 的作用！請不要在渲染(render)時才動態產生 `key`。
+
+### 為什麼 React 需要 `key`？
+
+想像一下你的電腦桌面上的檔案都沒有名字，而你只能用順序來辨識它們：第一個檔案、第二個檔案、第三個檔案……這在一開始也許還能應付，但一旦你刪除一個檔案，整個順序就會混亂。第二個檔案會變成第一個，第三個變成第二個，以此類推。
+
+資料夾裡的「檔名」和陣列中的 JSX `key` 扮演的就是類似的角色：它們讓我們可以在同一層級中獨立辨識每一項目。相較於位置，**精心設計的 `key` 傳遞的是更穩定的識別方式**。即使某一項在陣列中的位置因為排序而改變，只要 `key` 不變，React 就能正確辨識這是同一項目，並維持它的生命週期。
+
+### ⚠️ 注意事項
+
+你可能會想用陣列中項目的索引作為 `key`。事實上，如果你沒有指定 `key`，React 就會自動使用索引。不過，當項目被插入、刪除，或陣列順序被重新排列時，渲染的順序會改變。使用索引作為 key，常常會導致一些難以察覺且令人困惑的 bug。
+
+同樣地，也**不要**在渲染時即時產生 key，例如使用 `key={Math.random()}`。這會讓每次渲染時的 key 都對不上，導致所有元件和 DOM 每次都會被重新建立。不僅效能變慢，還會導致列表中原本的使用者輸入遺失。你應該使用**根據資料產生的穩定 ID**。
+
+請注意，元件本身**不會接收到 `key` 作為 prop**。它是 React 自己內部使用的提示。如果你的元件需要一個 ID，你必須另外傳入一個 prop，例如：`<Profile key={id} userId={id} />`。
+
+## 總結
+
+本頁你學到了：
+
+- 如何將資料從元件中抽離，儲存在像陣列或物件這樣的資料結構中。
+- 如何使用 JavaScript 的 `map()` 產生一組類似的元件。
+- 如何使用 JavaScript 的 `filter()` 建立過濾後的陣列。
+- 為什麼要在集合中的每個元件上設定 `key`，以及如何設定，這樣 React 才能即使在位置或資料變更時，依然正確追蹤每個元件。
+
+## 試試看一些挑戰 (Try out some challenges)
+
+建議搭配[官網提供的小視窗](https://react.dev/learn/rendering-lists#challenges)，可以直接在網頁上修改程式碼，並觀察結果。
+
+### 挑戰 1 / 4：將一個清單分成兩部分
+
+這個範例會顯示所有人的清單。
+
+請修改程式碼，讓它改為依序顯示兩個清單：**化學家（Chemists）** 和 **其他人（Everyone Else）**。就像先前一樣，你可以透過判斷 `person.profession === 'chemist'` 來判斷這個人是否為化學家。
+
+App.js：
+
+```tsx
+import { people } from "./data.js";
+import { getImageUrl } from "./utils.js";
+
+export default function List() {
+  const listItems = people.map((person) => (
+    <li key={person.id}>
+      <img src={getImageUrl(person)} alt={person.name} />
+      <p>
+        <b>{person.name}:</b>
+        {" " + person.profession + " "}
+        known for {person.accomplishment}
+      </p>
+    </li>
+  ));
+  return (
+    <article>
+      <h1>Scientists</h1>
+      <ul>{listItems}</ul>
+    </article>
+  );
+}
+```
+
+data.js：
+
+```tsx
+export const people = [
+  {
+    id: 0,
+    name: "Creola Katherine Johnson",
+    profession: "mathematician",
+    accomplishment: "spaceflight calculations",
+    imageId: "MK3eW3A",
+  },
+  {
+    id: 1,
+    name: "Mario José Molina-Pasquel Henríquez",
+    profession: "chemist",
+    accomplishment: "discovery of Arctic ozone hole",
+    imageId: "mynHUSa",
+  },
+  {
+    id: 2,
+    name: "Mohammad Abdus Salam",
+    profession: "physicist",
+    accomplishment: "electromagnetism theory",
+    imageId: "bE7W1ji",
+  },
+  {
+    id: 3,
+    name: "Percy Lavon Julian",
+    profession: "chemist",
+    accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
+    imageId: "IOjWm71",
+  },
+  {
+    id: 4,
+    name: "Subrahmanyan Chandrasekhar",
+    profession: "astrophysicist",
+    accomplishment: "white dwarf star mass calculations",
+    imageId: "lrWQx8l",
+  },
+];
+```
+
+### 挑戰 2 / 4：在一個元件中嵌套清單
+
+從這個陣列中建立食譜清單！對於陣列中的每一筆食譜資料，顯示它的名稱作為 `<h2>`，並在 `<ul>` 中列出其食材。
+
+App.js：
+
+```tsx
+import { recipes } from "./data.js";
+
+export default function RecipeList() {
+  return (
+    <div>
+      <h1>Recipes</h1>
+    </div>
+  );
+}
+```
+
+data.js：
+
+```tsx
+export const recipes = [
+  {
+    id: "greek-salad",
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+  },
+  {
+    id: "hawaiian-pizza",
+    name: "Hawaiian Pizza",
+    ingredients: ["pizza crust", "pizza sauce", "mozzarella", "ham", "pineapple"],
+  },
+  {
+    id: "hummus",
+    name: "Hummus",
+    ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
+  },
+];
+```
+
+### 挑戰 3 / 4：拆出一個清單項目的元件
+
+這個 `RecipeList` 元件中有兩層 `map`。為了讓程式更簡潔，請把它拆出一個 `Recipe` 元件，並接受 `id`、`name` 和 `ingredients` 作為 props。請思考：你應該將外層的 key 放在哪裡？為什麼？
+
+```tsx
+import { recipes } from "./data.js";
+
+export default function RecipeList() {
+  return (
+    <div>
+      <h1>Recipes</h1>
+      {recipes.map((recipe) => (
+        <div key={recipe.id}>
+          <h2>{recipe.name}</h2>
+          <ul>
+            {recipe.ingredients.map((ingredient) => (
+              <li key={ingredient}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+data.js：
+
+```tsx
+export const recipes = [
+  {
+    id: "greek-salad",
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+  },
+  {
+    id: "hawaiian-pizza",
+    name: "Hawaiian Pizza",
+    ingredients: ["pizza crust", "pizza sauce", "mozzarella", "ham", "pineapple"],
+  },
+  {
+    id: "hummus",
+    name: "Hummus",
+    ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
+  },
+];
+```
+
+### 挑戰 4 / 4：帶分隔線的清單
+
+這個範例會顯示橘志坂北枝（Tachibana Hokushi）的一首知名俳句，每一行包在一個 `<p>` 標籤中。你的任務是要在每段 `<p>` 中間插入一個 `<hr />` 分隔線。最後的 HTML 結構應如下所示：
+
+```tsx
+<article>
+  <p>I write, erase, rewrite</p>
+  <hr />
+  <p>Erase again, and then</p>
+  <hr />
+  <p>A poppy blooms.</p>
+</article>
+```
+
+這首俳句只有三行，但你的解法應該可以處理任意行數。請注意：`<hr />` 只能出現在 `<p>` 元素**之間**，不要出現在開頭或結尾！
+
+App.js：
+
+```tsx
+const poem = {
+  lines: ["I write, erase, rewrite", "Erase again, and then", "A poppy blooms."],
+};
+
+export default function Poem() {
+  return (
+    <article>
+      {poem.lines.map((line, index) => (
+        <p key={index}>{line}</p>
+      ))}
+    </article>
+  );
+}
+```
+
+（這是一個少見的情況，使用陣列索引作為 key 是可以接受的，因為詩句的順序永遠不會變動。）
