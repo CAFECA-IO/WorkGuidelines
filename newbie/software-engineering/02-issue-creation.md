@@ -5,7 +5,35 @@
 
 ## 開立工作票步驟
 
-### 1. 於 GitHub 新增 issue
+### 1. 於 GitHub 新增 issue (方法有兩種 1. 從 repo 2. 從 Project)
+
+#### 從 repo 新增 issue
+
+<details><summary>點擊展開截圖</summary>
+<p>
+
+![CleanShot 2025-05-05 at 19 13 47@2x](https://github.com/user-attachments/assets/8fbfda56-1ae3-45e1-b3f6-c862c883c00b)
+![CleanShot 2025-05-05 at 19 18 23@2x](https://github.com/user-attachments/assets/0de072ee-0a0e-429e-b3e0-3d0afd9258d9)
+
+
+</p>
+</details> 
+
+#### 從 Project 新增 issue
+
+<details><summary>點擊展開截圖</summary>
+<p>
+
+![1](https://github.com/user-attachments/assets/34c31828-b499-44e6-9888-4dd21f7cd3f4)
+![2](https://github.com/user-attachments/assets/188e0b47-9df0-4f55-a62d-14c77fd7bf4d)
+![3](https://github.com/user-attachments/assets/1bd6247f-3ac6-4afd-9b1b-1a2b31f51efd)
+![4](https://github.com/user-attachments/assets/8790e957-a983-4802-9b2d-0d63dc50a603)
+![5](https://github.com/user-attachments/assets/49a0c227-095e-408e-a81e-15d74155f9a1)
+
+</p>
+</details> 
+
+
 ### 2. 輸入標題和敘述，敘述欄位不可空白
 ### 3. 選擇指定對象 `Assignees`，通常為自己
 ### 4. 選擇標籤 `Labels`，選擇預計點數
