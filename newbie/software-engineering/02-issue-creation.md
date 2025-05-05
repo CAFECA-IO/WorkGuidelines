@@ -26,7 +26,7 @@
 ### 7. 此張工作票如果有產生 Branch 或 Pull Request，就在 Development 欄位綁定該分支和PR
 
 ### 範例：
-![截圖 2024-01-03 下午3 02 20](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/4400173f-980d-459c-ac97-2fa739174037)
+![ex](https://github.com/user-attachments/assets/41bdcd20-667d-40cd-8437-1dfcc6179d80)
 
 
 ## Status & Close date 欄位說明
