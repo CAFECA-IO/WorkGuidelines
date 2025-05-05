@@ -496,12 +496,12 @@ An example module dependency tree:
 
 # 所有章節的延伸閱讀清單
 
-- [How to write your first React component](https://react.dev/learn/your-first-component)
-- [When and how to create multi-component files](https://react.dev/learn/importing-and-exporting-components)
-- [How to add markup to JavaScript with JSX](https://react.dev/learn/writing-markup-with-jsx)
-- [How to use curly braces with JSX to access JavaScript functionality from your components](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
-- [How to configure components with props](https://react.dev/learn/passing-props-to-a-component)
-- [How to conditionally render components](https://react.dev/learn/conditional-rendering)
-- [How to render multiple components at a time](https://react.dev/learn/rendering-lists)
-- [How to avoid confusing bugs by keeping components pure](https://react.dev/learn/keeping-components-pure)
-- [Why understanding your UI as trees is useful](https://react.dev/learn/understanding-your-ui-as-a-tree)
+1. [How to write your first React component](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/1-your-first-component.md)
+2. [When and how to create multi-component files](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/2-importing-and-exporting-components.md)
+3. [How to add markup to JavaScript with JSX](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/3-writing-markup-with-jsx.md)
+4. [How to use curly braces with JSX to access JavaScript functionality from your components](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/4-javascript-in-jsx-with-curly-braces.md)
+5. [How to configure components with props](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/5-passing-props-to-a-component.md)
+6. [How to conditionally render components](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/6-conditional-rendering.md)
+7. [How to render multiple components at a time](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/newbie/react-document/learn-react/7-rendering-lists.md)
+8. How to avoid confusing bugs by keeping components pure
+9. Why understanding your UI as trees is useful
