@@ -11,12 +11,19 @@
 ### 4. 選擇標籤 Labels，包含時數和種類
 - 時數：在 **1** 至 **8** 等純數字的紅色標籤之中選擇一個，此為我們預計這張工作票會完成的時數，1表示為1小時，以此類推。
 - 種類：工作票的種類。假設此張工作票會產出文件就選擇 documentation、會產出程式就選擇 enhancement。
-### 5. 選擇專案 Projects，並指定狀態(Status)
+  
+### 5. 選擇 Type : 
+假設此張工作票會產出文件就選擇 Task、會產出程式就選擇 Feature、是 Bug 單就選 bug。
+- Bug
+- Feature : enhancement
+- Task : documentation 與其他類型工作票
+
+### 6. 選擇專案 Projects，並指定狀態(Status)
 
 - 選擇該工作票隸屬的專案，系統機器人會將狀態設定為 `Todo`，如果系統機器人未自動填入，再自行人工選取`Todo`，總之狀態欄位的值不可以為空。
 - 請依情況更新狀態，狀態定義與變化流程請見下方標題【Status & Close date 欄位說明】。
 
-### 6. 此張工作票如果有產生 Branch 或 Pull Request，就在 Development 欄位綁定該分支和PR
+### 7. 此張工作票如果有產生 Branch 或 Pull Request，就在 Development 欄位綁定該分支和PR
 
 ### 範例：
 ![截圖 2024-01-03 下午3 02 20](https://github.com/CAFECA-IO/KnowledgeManagement/assets/105651918/4400173f-980d-459c-ac97-2fa739174037)
