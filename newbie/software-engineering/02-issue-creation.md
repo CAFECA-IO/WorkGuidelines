@@ -18,7 +18,7 @@
 - Feature : enhancement
 - Task : documentation 與其他類型工作票
 
-### 6. 選擇專案 `Projects`，並指定狀態(Status)
+### 6. 選擇專案 `Projects`，並指定狀態(`Status`)
 
 - 選擇該工作票隸屬的專案，系統機器人會將狀態設定為 `Todo`，如果系統機器人未自動填入，再自行人工選取`Todo`，總之狀態欄位的值不可以為空。
 - 請依情況更新狀態，狀態定義與變化流程請見下方標題【Status & Close date 欄位說明】。
