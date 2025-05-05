@@ -7,23 +7,23 @@
 
 ### 1. 於 GitHub 新增 issue
 ### 2. 輸入標題和敘述，敘述欄位不可空白
-### 3. 選擇指定對象 Assignee，通常為自己
-### 4. 選擇標籤 Labels，選擇預計點數
+### 3. 選擇指定對象 `Assignees`，通常為自己
+### 4. 選擇標籤 `Labels`，選擇預計點數
 - 點數：在 **1** 至 **8** 等純數字的紅色標籤之中選擇一個，此為我們預計這張工作票會完成的時數，1表示為1小時，以此類推。
 - 注意：以前我們會再選擇一個 enhancement 或 documentation 或 bug 等標籤，現在已不需要選擇這些標籤，請選擇點數就好。
   
-### 5. 選擇 Type : (Bug / Feature / Task)
+### 5. 選擇 `Type` : (Bug / Feature / Task)
 假設此張工作票會產出文件就選擇 Task、會產出程式就選擇 Feature、是 Bug 單就選 bug。
 - Bug
 - Feature : enhancement
 - Task : documentation 與其他類型工作票
 
-### 6. 選擇專案 Projects，並指定狀態(Status)
+### 6. 選擇專案 `Projects`，並指定狀態(Status)
 
 - 選擇該工作票隸屬的專案，系統機器人會將狀態設定為 `Todo`，如果系統機器人未自動填入，再自行人工選取`Todo`，總之狀態欄位的值不可以為空。
 - 請依情況更新狀態，狀態定義與變化流程請見下方標題【Status & Close date 欄位說明】。
 
-### 7. 此張工作票如果有產生 Branch 或 Pull Request，就在 Development 欄位綁定該分支和PR
+### 7. 此張工作票如果有產生 Branch 或 Pull Request，就在 `Development` 欄位綁定該分支和PR
 
 ### 範例：
 ![ex](https://github.com/user-attachments/assets/41bdcd20-667d-40cd-8437-1dfcc6179d80)
