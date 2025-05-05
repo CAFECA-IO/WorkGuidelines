@@ -277,76 +277,76 @@ Warning: Each child in a list should have a unique “key” prop.
 
 （可以到[官方文件原文](https://react.dev/learn/rendering-lists)提供的 [sandbox](https://codesandbox.io/p/sandbox/lsx4qp?file=%2Fsrc%2FApp.js) 直接操作看看）
 
-1. App.js
+- App.js
 
-   ```tsx
-   import { people } from "./data.js";
-   import { getImageUrl } from "./utils.js";
+  ```tsx
+  import { people } from "./data.js";
+  import { getImageUrl } from "./utils.js";
 
-   export default function List() {
-     const listItems = people.map((person) => (
-       <li key={person.id}>
-         <img src={getImageUrl(person)} alt={person.name} />
-         <p>
-           <b>{person.name}</b>
-           {" " + person.profession + " "}
-           known for {person.accomplishment}
-         </p>
-       </li>
-     ));
-     return <ul>{listItems}</ul>;
-   }
-   ```
+  export default function List() {
+    const listItems = people.map((person) => (
+      <li key={person.id}>
+        <img src={getImageUrl(person)} alt={person.name} />
+        <p>
+          <b>{person.name}</b>
+          {" " + person.profession + " "}
+          known for {person.accomplishment}
+        </p>
+      </li>
+    ));
+    return <ul>{listItems}</ul>;
+  }
+  ```
 
-2. data.js
+- data.js
 
-   ```tsx
-   export const people = [
-     {
-       id: 0, // Used in JSX as a key
-       name: "Creola Katherine Johnson",
-       profession: "mathematician",
-       accomplishment: "spaceflight calculations",
-       imageId: "MK3eW3A",
-     },
-     {
-       id: 1, // Used in JSX as a key
-       name: "Mario José Molina-Pasquel Henríquez",
-       profession: "chemist",
-       accomplishment: "discovery of Arctic ozone hole",
-       imageId: "mynHUSa",
-     },
-     {
-       id: 2, // Used in JSX as a key
-       name: "Mohammad Abdus Salam",
-       profession: "physicist",
-       accomplishment: "electromagnetism theory",
-       imageId: "bE7W1ji",
-     },
-     {
-       id: 3, // Used in JSX as a key
-       name: "Percy Lavon Julian",
-       profession: "chemist",
-       accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
-       imageId: "IOjWm71",
-     },
-     {
-       id: 4, // Used in JSX as a key
-       name: "Subrahmanyan Chandrasekhar",
-       profession: "astrophysicist",
-       accomplishment: "white dwarf star mass calculations",
-       imageId: "lrWQx8l",
-     },
-   ];
-   ```
+  ```tsx
+  export const people = [
+    {
+      id: 0, // Used in JSX as a key
+      name: "Creola Katherine Johnson",
+      profession: "mathematician",
+      accomplishment: "spaceflight calculations",
+      imageId: "MK3eW3A",
+    },
+    {
+      id: 1, // Used in JSX as a key
+      name: "Mario José Molina-Pasquel Henríquez",
+      profession: "chemist",
+      accomplishment: "discovery of Arctic ozone hole",
+      imageId: "mynHUSa",
+    },
+    {
+      id: 2, // Used in JSX as a key
+      name: "Mohammad Abdus Salam",
+      profession: "physicist",
+      accomplishment: "electromagnetism theory",
+      imageId: "bE7W1ji",
+    },
+    {
+      id: 3, // Used in JSX as a key
+      name: "Percy Lavon Julian",
+      profession: "chemist",
+      accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
+      imageId: "IOjWm71",
+    },
+    {
+      id: 4, // Used in JSX as a key
+      name: "Subrahmanyan Chandrasekhar",
+      profession: "astrophysicist",
+      accomplishment: "white dwarf star mass calculations",
+      imageId: "lrWQx8l",
+    },
+  ];
+  ```
 
-3. utils.js
+- utils.js
 
-   ```tsx
-   export function getImageUrl(person) {
-     return "https://i.imgur.com/" + person.imageId + "s.jpg";
-   }
-   ```
+  ```tsx
+  export function getImageUrl(person) {
+    return "https://i.imgur.com/" + person.imageId + "s.jpg";
+  }
+  ```
 
 ### 💡 深入探討
 
