@@ -157,81 +157,82 @@ const people = [
 完整程式碼：
 
 （可以到[官方文件原文](https://react.dev/learn/rendering-lists)提供的 [sandbox](https://codesandbox.io/p/sandbox/6t5thd) 直接操作看看）
-App.js
 
-```tsx
-import { people } from "./data.js";
-import { getImageUrl } from "./utils.js";
+- App.js
 
-export default function List() {
-  const chemists = people.filter((person) => person.profession === "chemist");
-  const listItems = chemists.map((person) => (
-    <li>
-      <img src={getImageUrl(person)} alt={person.name} />
-      <p>
-        <b>{person.name}:</b>
-        {" " + person.profession + " "}
-        known for {person.accomplishment}
-      </p>
-    </li>
-  ));
-  return <ul>{listItems}</ul>;
-}
-```
+  ```tsx
+  import { people } from "./data.js";
+  import { getImageUrl } from "./utils.js";
 
-data.js
+  export default function List() {
+    const chemists = people.filter((person) => person.profession === "chemist");
+    const listItems = chemists.map((person) => (
+      <li>
+        <img src={getImageUrl(person)} alt={person.name} />
+        <p>
+          <b>{person.name}:</b>
+          {" " + person.profession + " "}
+          known for {person.accomplishment}
+        </p>
+      </li>
+    ));
+    return <ul>{listItems}</ul>;
+  }
+  ```
 
-```tsx
-export const people = [
-  {
-    id: 0,
-    name: "Creola Katherine Johnson",
-    profession: "mathematician",
-    accomplishment: "spaceflight calculations",
-    imageId: "MK3eW3A",
-  },
-  {
-    id: 1,
-    name: "Mario José Molina-Pasquel Henríquez",
-    profession: "chemist",
-    accomplishment: "discovery of Arctic ozone hole",
-    imageId: "mynHUSa",
-  },
-  {
-    id: 2,
-    name: "Mohammad Abdus Salam",
-    profession: "physicist",
-    accomplishment: "electromagnetism theory",
-    imageId: "bE7W1ji",
-  },
-  {
-    id: 3,
-    name: "Percy Lavon Julian",
-    profession: "chemist",
-    accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
-    imageId: "IOjWm71",
-  },
-  {
-    id: 4,
-    name: "Subrahmanyan Chandrasekhar",
-    profession: "astrophysicist",
-    accomplishment: "white dwarf star mass calculations",
-    imageId: "lrWQx8l",
-  },
-];
-```
+- data.js
 
-utils.js
+  ```tsx
+  export const people = [
+    {
+      id: 0,
+      name: "Creola Katherine Johnson",
+      profession: "mathematician",
+      accomplishment: "spaceflight calculations",
+      imageId: "MK3eW3A",
+    },
+    {
+      id: 1,
+      name: "Mario José Molina-Pasquel Henríquez",
+      profession: "chemist",
+      accomplishment: "discovery of Arctic ozone hole",
+      imageId: "mynHUSa",
+    },
+    {
+      id: 2,
+      name: "Mohammad Abdus Salam",
+      profession: "physicist",
+      accomplishment: "electromagnetism theory",
+      imageId: "bE7W1ji",
+    },
+    {
+      id: 3,
+      name: "Percy Lavon Julian",
+      profession: "chemist",
+      accomplishment: "pioneering cortisone drugs, steroids and birth control pills",
+      imageId: "IOjWm71",
+    },
+    {
+      id: 4,
+      name: "Subrahmanyan Chandrasekhar",
+      profession: "astrophysicist",
+      accomplishment: "white dwarf star mass calculations",
+      imageId: "lrWQx8l",
+    },
+  ];
+  ```
 
-```tsx
-export function getImageUrl(person) {
-  return "https://i.imgur.com/" + person.imageId + "s.jpg";
-}
-```
+- utils.js
 
-### 注意事項
+  ```tsx
+  export function getImageUrl(person) {
+    return "https://i.imgur.com/" + person.imageId + "s.jpg";
+  }
+  ```
 
-箭頭函式在 `=>` 後面**直接接表達式**時會自動回傳，因此你不需要加上 `return`：
+### ⚠️ 注意事項
+
+箭頭函式在 `=>` 後面直接接表達式時會自動回傳，因此你不需要加上 `return`：
 
 ```tsx
 const listItems = chemists.map(
@@ -239,7 +240,7 @@ const listItems = chemists.map(
 );
 ```
 
-但如果你的 `=>` **後面是用 `{` 大括號包起來的區塊**，那你就**必須要明確寫出 `return`**！
+但如果你的 `=>` 後面是用 `{` 大括號包起來的區塊，那你就必須要明確寫出 `return`！
 
 ```tsx
 const listItems = chemists.map((person) => {
@@ -248,7 +249,7 @@ const listItems = chemists.map((person) => {
 });
 ```
 
-這種使用 `=> {}` 的箭頭函式被稱為 [「區塊主體」（block body）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body)。它允許你撰寫多行程式碼，但你**一定要自己寫 `return`**。如果忘了寫，就會什麼都沒回傳！
+這種使用 `=> {}` 的箭頭函式被稱為 [「區塊主體」（block body）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body)。它允許你撰寫多行程式碼，但你一定要自己寫 `return`。如果忘了寫，就會什麼都沒回傳！
 
 ## 使用 `key` 保持清單項目的順序 (Keeping list items in order with `key`)
 
@@ -258,15 +259,15 @@ const listItems = chemists.map((person) => {
 Warning: Each child in a list should have a unique “key” prop.
 ```
 
-你需要為每個陣列項目加上一個 `key` —— 它必須是在該陣列中**能唯一識別該項目**的字串或數字：
+你需要為每個陣列項目加上一個 `key` —— 它必須是在該陣列中能唯一識別該項目的字串或數字：
 
 ```tsx
 <li key={person.id}>...</li>
 ```
 
-> 注意：
+> 小筆記：
 >
-> 只要 JSX 元素是直接寫在 `map()` 裡的，就**一定要加上 key**！
+> 只要 JSX 元素是直接寫在 `map()` 裡的，就一定要加上 key！
 
 `key` 的作用是讓 React 能夠知道每個元件對應到陣列中的哪一筆資料，這樣在重新渲染時才能正確比對。如果你的陣列資料有可能會變動（像是排序、插入或刪除），一個設計良好的 `key` 能幫助 React 判斷哪些元素被變更，並且正確地更新 DOM tree。
 
@@ -349,7 +350,7 @@ Warning: Each child in a list should have a unique “key” prop.
 
 ### 💡 深入探討
 
-#### **每個清單項目要顯示多個 DOM 節點時怎麼做？**
+#### 每個清單項目要顯示多個 DOM 節點時怎麼做？
 
 當每一筆資料不只需要渲染一個，而是**多個 DOM 節點**時該怎麼處理？
 
