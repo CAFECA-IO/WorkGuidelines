@@ -12,7 +12,7 @@
 - 時數：在 **1** 至 **8** 等純數字的紅色標籤之中選擇一個，此為我們預計這張工作票會完成的時數，1表示為1小時，以此類推。
 - 種類：工作票的種類。假設此張工作票會產出文件就選擇 documentation、會產出程式就選擇 enhancement。
   
-### 5. 選擇 Type : 
+### 5. 選擇 Type : (Bug / Feature / Task)
 假設此張工作票會產出文件就選擇 Task、會產出程式就選擇 Feature、是 Bug 單就選 bug。
 - Bug
 - Feature : enhancement
