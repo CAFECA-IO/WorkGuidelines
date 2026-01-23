@@ -1,11 +1,5 @@
 # Full Stack Vibe Coding Work Guidelines
 
-本文說明 Full Stack Vibe Coding 的整體開發流程，並介紹 [Google Antigravity](https://antigravity.google/) AI Agent 在專案中的使用方式。
-
-開發過程中請依照本文件流程執行，並特別留意文末的 **⚠️注意事項**。
-
-開發請統一使用 Google Antigravity 作為 AI 開發輔助工具。
-
 - [專案初始化](#專案初始化)
 - [設置 pre-commit](#設置-pre-commit)
 - [✨AI Agent 入門指南](#ai-agent-入門指南)
@@ -13,6 +7,12 @@
 - [規劃 Mock API](#規劃-mock-api)
 - [串接 API](#串接-api)
 - [⚠️注意事項](#%EF%B8%8F注意事項)
+
+本文說明 Full Stack Vibe Coding 的整體開發流程，並介紹 [Google Antigravity](https://antigravity.google/) AI Agent 在專案中的使用方式。
+
+開發過程中請依照本文件流程執行，並特別留意文末的 **⚠️注意事項**。
+
+開發請統一使用 Google Antigravity 作為 AI 開發輔助工具。
 
 ## 專案初始化
 ### 初始化 Next.js 專案
