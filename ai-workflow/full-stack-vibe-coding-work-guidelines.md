@@ -33,6 +33,7 @@ npx create-next-app@latest . --use-npm
 - `eslint.config.mjs` (file)：這是我們團隊共用的程式碼規範設定，包含[命名規範](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/coding-convention/naming-convention.md)、Coding style 等檢查，用於維持程式碼風格一致。
 - `src/lib/utils`(folder)：這裡配置了 Logger、API request & response 等常用的 class 和 function。可直接複製使用，避免重複實作基礎功能。
 - `scripts/update_version.ts`(file)：這是 commit 時自動更新版本號的腳本，用於降低多人協作時產生版本衝突的機率。後續章節將說明實際使用方式。
+- `.gitignore`(file)：這裡定義讓 Git 忽略的資料，記錄在此的檔案和資料夾不會被 Git 追蹤。
 
 ## 設置 pre-commit
 設置 pre-commit 的詳細說明請參考以下文件：
