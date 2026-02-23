@@ -36,8 +36,7 @@ npx create-next-app@latest . --use-npm
 - `.gitignore`(file)：這裡定義讓 Git 忽略的資料，記錄在此的檔案和資料夾不會被 Git 追蹤。
 
 ## 設置 pre-commit
-設置 pre-commit 的詳細說明請參考以下文件：
-- （待補上）
+設置 pre-commit 的詳細說明請參考 [Pre-commit (Updated 2026)](https://github.com/CAFECA-IO/WorkGuidelines/blob/main/technology/precommit-updated-2026.md)。
 
 ### 設定 `package.json`
 `package.json` 中應該要有以下必要腳本（記得移除註解）：
